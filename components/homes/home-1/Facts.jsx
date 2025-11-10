@@ -46,7 +46,7 @@ export default function Facts() {
                         fontSize: '0.9rem',
                         textTransform: 'uppercase',
                         letterSpacing: '0.15em',
-                        color: 'var(--majaz-text-primary)',
+                        color: '#D4AF37',
                         marginTop: '1rem'
                       }}
                     >{counter.title}</h6>
