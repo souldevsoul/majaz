@@ -132,16 +132,17 @@ export default function Header({ isAuthenticated = false }: HeaderProps) {
 
       <style jsx>{`
         .header {
-          position: sticky;
+          position: absolute;
           top: 0;
           left: 0;
           right: 0;
-          z-index: var(--z-sticky);
+          z-index: 999;
           background: transparent;
           transition: all var(--transition-base);
         }
 
         .header.scrolled {
+          position: fixed;
           background: var(--majaz-glass-bg);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
@@ -180,14 +181,22 @@ export default function Header({ isAuthenticated = false }: HeaderProps) {
         }
 
         .logo-divider {
-          color: var(--majaz-border);
+          color: rgba(255, 255, 255, 0.5);
           font-weight: 300;
+        }
+
+        .header.scrolled .logo-divider {
+          color: var(--majaz-border);
         }
 
         .logo-arabic {
           font-family: var(--font-arabic);
           font-size: 1.25rem;
           font-weight: 600;
+          color: rgba(255, 255, 255, 0.8);
+        }
+
+        .header.scrolled .logo-arabic {
           color: var(--majaz-text-muted);
         }
 
@@ -201,7 +210,7 @@ export default function Header({ isAuthenticated = false }: HeaderProps) {
 
         .nav-link {
           padding: 0.625rem 1rem;
-          color: var(--majaz-text-primary);
+          color: #ffffff;
           text-decoration: none;
           font-size: 0.9375rem;
           font-weight: 500;
@@ -218,6 +227,10 @@ export default function Header({ isAuthenticated = false }: HeaderProps) {
 
         .nav-link.active {
           color: var(--majaz-gold);
+        }
+
+        .header.scrolled .nav-link {
+          color: var(--majaz-text-primary);
         }
 
         .nav-link.active::after {
