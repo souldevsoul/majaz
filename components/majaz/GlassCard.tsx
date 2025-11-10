@@ -7,15 +7,17 @@ interface GlassCardProps {
   className?: string
   hover?: boolean
   onClick?: () => void
+  style?: React.CSSProperties
 }
 
-export default function GlassCard({ children, className = '', hover = true, onClick }: GlassCardProps) {
+export default function GlassCard({ children, className = '', hover = true, onClick, style }: GlassCardProps) {
   return (
     <div
       className={`glass-card ${hover ? 'glass-card-hover' : ''} ${className}`}
       onClick={onClick}
       style={{
-        cursor: onClick ? 'pointer' : 'default'
+        cursor: onClick ? 'pointer' : 'default',
+        ...style
       }}
     >
       {children}
