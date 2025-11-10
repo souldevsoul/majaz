@@ -1,5 +1,6 @@
 "use client";
 import FilterSidebar from "@/components/common/FilterSidebar";
+import "./globals.css";
 import "../public/main.scss";
 import "photoswipe/dist/photoswipe.css";
 import "rc-slider/assets/index.css";
@@ -7,16 +8,16 @@ import { useEffect } from "react";
 import MobileMenu from "@/components/headers/MobileMenu";
 import Context from "@/context/Context";
 import BackToTop from "@/components/common/BackToTop";
-import { usePathname } from "next/navigation"; // Import usePathname
+import { usePathname } from "next/navigation";
 
 export default function RootLayout({ children }) {
-  const pathname = usePathname(); // Get pathname directly
+  const pathname = usePathname();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // Import the script only on the client side
+      // Import Bootstrap
       import("bootstrap/dist/js/bootstrap.esm").then(() => {
-        // Module is imported, you can access any exported functionality if
+        // Bootstrap loaded
       });
     }
 
@@ -32,10 +33,35 @@ export default function RootLayout({ children }) {
   }, [pathname]);
 
   return (
-    <html lang="en">
+    <html lang="en" dir="ltr">
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>MAJAZ - Premium Vehicle Concierge for UAE</title>
+        <meta
+          name="description"
+          content="Luxury vehicle assessment and concierge services in Dubai and UAE"
+        />
+
+        {/* MAJAZ Brand Fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Playfair Display - Headlines */}
         <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+
+        {/* Inter - Body Text */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+
+        {/* IBM Plex Sans Arabic - Arabic Support */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
@@ -44,7 +70,8 @@ export default function RootLayout({ children }) {
           <MobileMenu />
           <div className="boxcar-wrapper">
             {children}
-          </div> <FilterSidebar />{" "}
+          </div>
+          <FilterSidebar />
         </Context>
         <BackToTop />
       </body>

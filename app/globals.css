@@ -1,0 +1,366 @@
+/**
+ * MAJAZ Global Styles
+ * Premium Vehicle Concierge for UAE
+ *
+ * Brand Identity:
+ * - Colors: Black (#111111), Gold (#D4AF37), Ivory (#FFFFF0)
+ * - Typography: Playfair Display (headlines), Inter (body), IBM Plex Sans Arabic
+ * - Aesthetic: Luxury concierge, golden hour Dubai, glass morphism
+ */
+
+/* ============================================ */
+/* CSS VARIABLES - MAJAZ BRAND */
+/* ============================================ */
+
+:root {
+  /* Primary Colors */
+  --majaz-black: #111111;
+  --majaz-gold: #D4AF37;
+  --majaz-ivory: #FFFFF0;
+
+  /* Secondary/Surface Colors */
+  --majaz-rich-black: #0A0A0A;
+  --majaz-dark-grey: #1A1A1A;
+  --majaz-smoke: #2D2D2D;
+  --majaz-charcoal: #3D3D3D;
+
+  /* Gold Variations */
+  --majaz-gold-light: #E5C76B;
+  --majaz-gold-dark: #B8941E;
+  --majaz-gold-muted: #C9A961;
+
+  /* Functional Colors */
+  --majaz-success: #28A745;
+  --majaz-warning: #FFC107;
+  --majaz-error: #DC3545;
+  --majaz-info: #17A2B8;
+
+  /* Text Colors */
+  --majaz-text-primary: #FFFFF0;
+  --majaz-text-secondary: #D4AF37;
+  --majaz-text-muted: #A8A8A8;
+  --majaz-text-on-light: #111111;
+
+  /* Background Colors */
+  --majaz-bg-primary: #0A0A0A;
+  --majaz-bg-secondary: #1A1A1A;
+  --majaz-bg-surface: #2D2D2D;
+  --majaz-bg-light: #F8F8F8;
+
+  /* Border Colors */
+  --majaz-border: rgba(212, 175, 55, 0.2);
+  --majaz-border-light: rgba(212, 175, 55, 0.1);
+  --majaz-border-strong: rgba(212, 175, 55, 0.4);
+
+  /* Glass Morphism */
+  --majaz-glass-bg: rgba(26, 26, 26, 0.8);
+  --majaz-glass-border: rgba(212, 175, 55, 0.2);
+  --majaz-glass-shadow: rgba(0, 0, 0, 0.4);
+
+  /* Shadows */
+  --majaz-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --majaz-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --majaz-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --majaz-shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.4);
+  --majaz-shadow-gold: 0 4px 16px rgba(212, 175, 55, 0.3);
+
+  /* Gradients */
+  --majaz-gradient-gold: linear-gradient(135deg, #D4AF37 0%, #B8941E 100%);
+  --majaz-gradient-dark: linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%);
+  --majaz-gradient-overlay: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, rgba(10, 10, 10, 0.8) 100%);
+
+  /* Spacing (8px base) */
+  --spacing-xs: 0.25rem;    /* 4px */
+  --spacing-sm: 0.5rem;     /* 8px */
+  --spacing-md: 1rem;       /* 16px */
+  --spacing-lg: 1.5rem;     /* 24px */
+  --spacing-xl: 2rem;       /* 32px */
+  --spacing-2xl: 3rem;      /* 48px */
+  --spacing-3xl: 4rem;      /* 64px */
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+
+  /* Z-Index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+
+  /* Typography Scale */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  --font-size-6xl: 3.75rem;   /* 60px */
+
+  /* Font Families */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-arabic: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+/* ============================================ */
+/* RTL SUPPORT */
+/* ============================================ */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] body {
+  font-family: var(--font-arabic), var(--font-body);
+}
+
+/* ============================================ */
+/* GLOBAL RESETS & BASE STYLES */
+/* ============================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--majaz-text-primary);
+  background-color: var(--majaz-bg-primary);
+}
+
+/* ============================================ */
+/* TYPOGRAPHY */
+/* ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--majaz-text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+h1 { font-size: var(--font-size-6xl); }
+h2 { font-size: var(--font-size-5xl); }
+h3 { font-size: var(--font-size-4xl); }
+h4 { font-size: var(--font-size-3xl); }
+h5 { font---size-2xl); }
+h6 { font-size: var(--font-size-xl); }
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+a {
+  color: var(--majaz-gold);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+a:hover {
+  color: var(--majaz-gold-light);
+}
+
+/* ============================================ */
+/* GLASS MORPHISM UTILITIES */
+/* ============================================ */
+
+.glass {
+  background: var(--majaz-glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--majaz-glass-border);
+  box-shadow: 0 8px 32px var(--majaz-glass-shadow);
+}
+
+.glass-card {
+  background: var(--majaz-glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--majaz-glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: 0 8px 32px var(--majaz-glass-shadow);
+  transition: all var(--transition-base);
+}
+
+.glass-card:hover {
+  border-color: var(--majaz-border-strong);
+  box-shadow: var(--majaz-shadow-gold);
+  transform: translateY(-2px);
+}
+
+/* ============================================ */
+/* BUTTON STYLES */
+/* ============================================ */
+
+.btn-majaz-primary {
+  background: var(--majaz-gradient-gold);
+  color: var(--majaz-black);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--majaz-shadow-md);
+}
+
+.btn-majaz-primary:hover {
+  box-shadow: var(--majaz-shadow-gold);
+  transform: translateY(-2px);
+}
+
+.btn-majaz-secondary {
+  background: transparent;
+  color: var(--majaz-gold);
+  border: 2px solid var(--majaz-gold);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.btn-majaz-secondary:hover {
+  background: var(--majaz-gold);
+  color: var(--majaz-black);
+}
+
+/* ============================================ */
+/* UTILITY CLASSES */
+/* ============================================ */
+
+.text-gold { color: var(--majaz-gold); }
+.text-ivory { color: var(--majaz-ivory); }
+.text-muted { color: var(--majaz-text-muted); }
+
+.bg-dark { background-color: var(--majaz-bg-primary); }
+.bg-darker { background-color: var(--majaz-rich-black); }
+.bg-surface { background-color: var(--majaz-bg-surface); }
+
+.border-gold { border-color: var(--majaz-border); }
+.border-gold-light { border-color: var(--majaz-border-light); }
+.border-gold-strong { border-color: var(--majaz-border-strong); }
+
+.shadow-sm { box-shadow: var(--majaz-shadow-sm); }
+.shadow-md { box-shadow: var(--majaz-shadow-md); }
+.shadow-lg { box-shadow: var(--majaz-shadow-lg); }
+.shadow-xl { box-shadow: var(--majaz-shadow-xl); }
+.shadow-gold { box-shadow: var(--majaz-shadow-gold); }
+
+/* ============================================ */
+/* ANIMATIONS */
+/* ============================================ */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes goldShimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.fade-in {
+  animation: fadeIn var(--transition-base) ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp var(--transition-base) ease-in-out;
+}
+
+/* ============================================ */
+/* RESPONSIVE UTILITIES */
+/* ============================================ */
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-6xl: 2.5rem;   /* 40px */
+    --font-size-5xl: 2rem;     /* 32px */
+    --font-size-4xl: 1.75rem;  /* 28px */
+  }
+
+  .glass-card {
+    padding: var(--spacing-lg);
+  }
+}
+
+/* ============================================ */
+/* SCROLLBAR STYLING */
+/* ============================================ */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--majaz-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--majaz-gold);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--majaz-gold-light);
+}
+
+/* ============================================ */
+/* PRINT STYLES */
+/* ============================================ */
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .glass,
+  .glass-card {
+    background: white;
+    border: 1px solid #ccc;
+    backdrop-filter: none;
+  }
+}

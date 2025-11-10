@@ -1,0 +1,410 @@
+// Prisma Schema for MAJAZ - UAE Car Assessment Platform
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// USER MANAGEMENT
+// ============================================
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  emailVerified DateTime?
+  name          String?
+  phone         String?
+  password      String?
+  image         String?
+  locale        String    @default("en") // en or ar
+  countryPref   String    @default("UAE")
+
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Relations
+  accounts      Account[]
+  sessions      Session[]
+  requests      Request[]
+
+  @@map("users")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verification_tokens")
+}
+
+// ============================================
+// ASSESSMENT REQUEST SYSTEM
+// ============================================
+
+enum RequestStatus {
+  PENDING_PAYMENT
+  PAYMENT_RECEIVED
+  SCRAPING
+  PARSING
+  ANALYZING
+  GENERATING_REPORT
+  COMPLETED
+  FAILED
+  REFUNDED
+}
+
+enum RequestMode {
+  REMOTE_ASSESSMENT    // Paste link, get report
+  ONSITE_INSPECTION    // Physical inspection
+  SOURCING            // We find the car
+  DELEGATED_BIDDING   // We bid on behalf
+}
+
+enum ServiceTier {
+  REMOTE_48H
+  REMOTE_24H
+  REMOTE_SAME_DAY
+  ONSITE_48H
+  ONSITE_24H
+}
+
+model Request {
+  id              String         @id @default(cuid())
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Request Details
+  mode            RequestMode
+  status          RequestStatus  @default(PENDING_PAYMENT)
+  serviceTier     ServiceTier
+  country         String         // UAE, KSA, etc
+
+  // Pricing
+  serviceFeeAED   Decimal        @db.Decimal(10, 2)
+  depositAED      Decimal?       @db.Decimal(10, 2)
+  depositPct      Int?           // Usually 20%
+  currency        String         @default("AED")
+
+  // Payment
+  stripePaymentId String?
+  stripeDepositId String?
+  paidAt          DateTime?
+
+  // For sourcing requests
+  sourcingBrief   String?        @db.Text
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  completedAt     DateTime?
+
+  // Relations
+  listing         Listing?
+  vehicle         Vehicle?
+  estimate        Estimate?
+  reports         Report[]
+  events          Event[]
+  messages        Message[]
+
+  @@map("requests")
+}
+
+// ============================================
+// LISTING (AUCTION/MARKETPLACE LINK)
+// ============================================
+
+enum ListingSource {
+  EMIRATES_AUCTION
+  AWAL_MAZAD
+  DUBIZZLE
+  CAR_SWITCH
+  AUTO_TRADER_UAE
+  HARAJ
+  MARHABA
+  OTHER
+}
+
+enum TitleStatus {
+  CLEAN
+  SALVAGE
+  REBUILT
+  LIEN
+  UNKNOWN
+}
+
+model Listing {
+  id              String         @id @default(cuid())
+  requestId       String         @unique
+  request         Request        @relation(fields: [requestId], references: [id], onDelete: Cascade)
+
+  source          ListingSource
+  url             String
+  lotId           String?
+  sellerType      String?        // dealer, fleet, bank, government, private
+  titleStatus     TitleStatus?
+  location        String?
+  auctionCloseAt  DateTime?
+
+  // Scraped data
+  rawHtml         String?        @db.Text
+  rawJson         Json?
+  photos          String[]       // Array of URLs
+  scrapedAt       DateTime?
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@map("listings")
+}
+
+// ============================================
+// VEHICLE (EXTRACTED/PARSED DATA)
+// ============================================
+
+enum FuelType {
+  PETROL
+  DIESEL
+  HYBRID
+  ELECTRIC
+  CNG
+  LPG
+}
+
+enum Transmission {
+  AUTOMATIC
+  MANUAL
+  CVT
+  DCT
+}
+
+enum DriveType {
+  FWD
+  RWD
+  AWD
+  FOURWD
+}
+
+model Vehicle {
+  id              String         @id @default(cuid())
+  requestId       String         @unique
+  request         Request        @relation(fields: [requestId], references: [id], onDelete: Cascade)
+
+  // Core specs
+  vin             String?
+  year            Int?
+  make            String?
+  model           String?
+  trim            String?
+  bodyType        String?
+  mileage         Int?           // in km
+  fuel            FuelType?
+  transmission    Transmission?
+  drivetrain      DriveType?
+  engineSize      String?        // e.g., "2.0L"
+  horsepower      Int?
+
+  // Options/Features
+  color           String?
+  interiorColor   String?
+  optionsJson     Json?          // Extracted features
+
+  // Condition notes
+  damageNotes     String?        @db.Text
+  serviceHistory  String?        @db.Text
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@map("vehicles")
+}
+
+// ============================================
+// ESTIMATE (PRICING ANALYSIS)
+// ============================================
+
+model Estimate {
+  id              String         @id @default(cuid())
+  requestId       String         @unique
+  request         Request        @relation(fields: [requestId], references: [id], onDelete: Cascade)
+
+  // Fair value range
+  fairLow         Decimal        @db.Decimal(10, 2)
+  fairHigh        Decimal        @db.Decimal(10, 2)
+  safeMaxBid      Decimal        @db.Decimal(10, 2)
+  currency        String         @default("AED")
+
+  // Risk assessment
+  riskScore       Int            // 0-100
+  repairBudget    Decimal?       @db.Decimal(10, 2)
+
+  // Comparables
+  comps           Json?          // Array of comparable sales
+  compsSource     String?        // Perplexity, manual, etc
+
+  // Analysis notes
+  notes           String?        @db.Text
+  warnings        String[]       // Safety/risk warnings
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@map("estimates")
+}
+
+// ============================================
+// REPORT (GENERATED OUTPUT)
+// ============================================
+
+enum ReportLanguage {
+  EN
+  AR
+}
+
+model Report {
+  id              String          @id @default(cuid())
+  requestId       String
+  request         Request         @relation(fields: [requestId], references: [id], onDelete: Cascade)
+
+  language        ReportLanguage  @default(EN)
+  version         Int             @default(1)
+
+  // Content
+  htmlContent     String          @db.Text
+  pdfUrl          String?
+
+  // Metadata
+  generatedAt     DateTime        @default(now())
+  sentToUser      Boolean         @default(false)
+  sentAt          DateTime?
+
+  @@map("reports")
+}
+
+// ============================================
+// EVENT LOG
+// ============================================
+
+enum EventType {
+  REQUEST_CREATED
+  PAYMENT_RECEIVED
+  DEPOSIT_RECEIVED
+  SCRAPING_STARTED
+  SCRAPING_COMPLETED
+  SCRAPING_FAILED
+  PARSING_COMPLETED
+  COMPS_FETCHED
+  ESTIMATE_GENERATED
+  REPORT_GENERATED
+  REPORT_SENT
+  STATUS_CHANGED
+  MESSAGE_SENT
+  REFUND_ISSUED
+}
+
+model Event {
+  id              String         @id @default(cuid())
+  requestId       String
+  request         Request        @relation(fields: [requestId], references: [id], onDelete: Cascade)
+
+  type            EventType
+  description     String?
+  payload         Json?
+
+  createdAt       DateTime       @default(now())
+
+  @@map("events")
+}
+
+// ============================================
+// MESSAGES/CHAT
+// ============================================
+
+model Message {
+  id              String         @id @default(cuid())
+  requestId       String
+  request         Request        @relation(fields: [requestId], references: [id], onDelete: Cascade)
+
+  senderId        String         // userId or "system" or "operator"
+  senderName      String
+  senderType      String         // user, operator, system
+
+  content         String         @db.Text
+  attachments     String[]       // URLs to files
+
+  read            Boolean        @default(false)
+  readAt          DateTime?
+
+  createdAt       DateTime       @default(now())
+
+  @@map("messages")
+}
+
+// ============================================
+// TEAM MEMBERS (INSPECTORS/OPERATORS)
+// ============================================
+
+enum TeamRole {
+  INSPECTOR
+  OPERATOR
+  ADMIN
+}
+
+model TeamMember {
+  id              String         @id @default(cuid())
+  name            String
+  nameAr          String?        // Arabic name
+  role            TeamRole
+  title           String         // e.g., "Senior Inspector"
+  titleAr         String?        // Arabic title
+  bio             String?        @db.Text
+  bioAr           String?        @db.Text
+  email           String         @unique
+  phone           String?
+  image           String?
+  location        String?        // e.g., "Dubai"
+  active          Boolean        @default(true)
+
+  // Stats
+  inspectionsCompleted Int       @default(0)
+  rating          Decimal?       @db.Decimal(3, 2) // e.g., 4.95
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@map("team_members")
+}
