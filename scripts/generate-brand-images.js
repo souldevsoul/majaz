@@ -9,6 +9,7 @@
  * 2. Run: node scripts/generate-brand-images.js
  */
 
+require('dotenv').config();
 const Replicate = require('replicate');
 const fs = require('fs');
 const path = require('path');

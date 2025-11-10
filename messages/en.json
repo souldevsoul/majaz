@@ -1,0 +1,533 @@
+{
+  "common": {
+    "appName": "MAJAZ",
+    "tagline": "Premium Vehicle Concierge for UAE",
+    "currency": "Currency",
+    "language": "Language",
+    "loading": "Loading...",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "download": "Download",
+    "upload": "Upload",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "optional": "Optional",
+    "required": "Required"
+  },
+
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "pricing": "Pricing",
+    "howItWorks": "How It Works",
+    "team": "Our Team",
+    "partners": "Partners",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "dashboard": "Dashboard",
+    "logout": "Logout",
+    "profile": "Profile",
+    "myRequests": "My Requests",
+    "messages": "Messages",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy"
+  },
+
+  "hero": {
+    "title": "Bespoke Vehicle Intelligence",
+    "subtitle": "Premium Pre-Purchase Assessment & Concierge Services in Dubai and UAE",
+    "description": "Trust MAJAZ to protect your automotive investment with expert inspection, detailed reports, and personalized concierge service.",
+    "ctaPrimary": "Begin Assessment",
+    "ctaSecondary": "Learn More",
+    "stats": {
+      "vehicles": "Vehicles Assessed",
+      "clients": "Satisfied Clients",
+      "inspectors": "Expert Inspectors",
+      "rating": "Client Rating"
+    }
+  },
+
+  "features": {
+    "title": "Why Choose MAJAZ",
+    "subtitle": "Your Trusted Automotive Advisor",
+    "list": {
+      "expertise": {
+        "title": "Expert Analysis",
+        "description": "Certified inspectors with decades of combined automotive experience"
+      },
+      "speed": {
+        "title": "Rapid Turnaround",
+        "description": "Get your comprehensive report in as little as 24 hours"
+      },
+      "trust": {
+        "title": "Complete Transparency",
+        "description": "Detailed reports with photos, comparables, and fair market analysis"
+      },
+      "concierge": {
+        "title": "White-Glove Service",
+        "description": "Personal concierge to handle inspection, bidding, and delivery"
+      }
+    }
+  },
+
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Simple, Fast, Trustworthy",
+    "steps": {
+      "paste": {
+        "title": "Share the Listing",
+        "description": "Paste the auction or marketplace link, or describe what you're looking for"
+      },
+      "quote": {
+        "title": "Instant Quote",
+        "description": "Receive transparent pricing for your selected service tier"
+      },
+      "payment": {
+        "title": "Secure Payment",
+        "description": "Pay securely with international cards. Optional 20% deposit for bidding services"
+      },
+      "assessment": {
+        "title": "Professional Assessment",
+        "description": "Our expert team inspects, analyzes comparables, and generates your detailed report"
+      },
+      "report": {
+        "title": "Receive Report",
+        "description": "Get your comprehensive PDF report with fair value, risks, and recommendations"
+      }
+    }
+  },
+
+  "pricing": {
+    "title": "Transparent Pricing",
+    "subtitle": "Choose the service that suits your needs",
+    "tiers": {
+      "remote48": {
+        "name": "Remote Assessment",
+        "sla": "48 Hours",
+        "price": 49,
+        "features": [
+          "Complete listing scrape",
+          "AI-powered data extraction",
+          "Market comparables analysis",
+          "Fair value estimate",
+          "Safe max bid recommendation",
+          "Risk assessment",
+          "Comprehensive PDF report"
+        ]
+      },
+      "remote24": {
+        "name": "Express Remote",
+        "sla": "24 Hours",
+        "price": 89,
+        "popular": true,
+        "features": [
+          "Everything in Remote Assessment",
+          "Priority processing",
+          "24-hour delivery guarantee",
+          "Enhanced market analysis",
+          "Video summary (optional)"
+        ]
+      },
+      "remoteSameDay": {
+        "name": "Same-Day Remote",
+        "sla": "Same Day",
+        "price": 129,
+        "features": [
+          "Everything in Express Remote",
+          "Same-day delivery",
+          "Urgent processing",
+          "Dedicated analyst",
+          "Phone consultation"
+        ]
+      },
+      "onsite48": {
+        "name": "On-Site Inspection",
+        "sla": "48 Hours",
+        "price": 169,
+        "features": [
+          "Everything in Remote Assessment",
+          "Physical vehicle inspection",
+          "Detailed photo documentation",
+          "Test drive assessment",
+          "Mechanical inspection",
+          "Paint thickness measurements",
+          "Undercarriage inspection"
+        ]
+      },
+      "onsite24": {
+        "name": "Express On-Site",
+        "sla": "24 Hours",
+        "price": 209,
+        "premium": true,
+        "features": [
+          "Everything in On-Site Inspection",
+          "24-hour turnaround",
+          "Priority scheduling",
+          "Comprehensive video walkaround",
+          "Executive summary call"
+        ]
+      }
+    },
+    "addOns": {
+      "title": "Optional Add-Ons",
+      "deposit": {
+        "name": "Delegated Bidding",
+        "description": "20% refundable deposit - we bid on your behalf",
+        "note": "Deposit refunded if auction lost, applied to purchase if won"
+      },
+      "sourcing": {
+        "name": "Vehicle Sourcing",
+        "price": 59,
+        "description": "Can't find the right car? We'll source it for you"
+      }
+    },
+    "currencyNote": "Prices shown in {currency}. All major currencies accepted."
+  },
+
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about MAJAZ",
+    "categories": {
+      "general": {
+        "title": "General Questions",
+        "questions": {
+          "whatIsMajaz": {
+            "q": "What is MAJAZ?",
+            "a": "MAJAZ is a premium vehicle assessment and concierge service serving Dubai and the UAE. We provide expert pre-purchase inspections, market analysis, and optional bidding services to protect your automotive investment."
+          },
+          "howLong": {
+            "q": "How long does an assessment take?",
+            "a": "Depending on your chosen service tier: 48 hours (standard), 24 hours (express), or same-day. On-site inspections may require scheduling based on vehicle location."
+          },
+          "coverage": {
+            "q": "Which platforms do you cover?",
+            "a": "We support all major UAE platforms including Emirates Auction, Awalmaz ad, dubizzle Motors, CarSwitch, AutoTrader UAE, and more."
+          }
+        }
+      },
+      "pricing": {
+        "title": "Pricing & Payments",
+        "questions": {
+          "currencies": {
+            "q": "What currencies do you accept?",
+            "a": "We accept AED (UAE Dirham), USD, and EUR. Payments can be made securely via Stripe with any major international credit or debit card."
+          },
+          "deposit": {
+            "q": "How does the 20% deposit work?",
+            "a": "If you choose delegated bidding, we hold a 20% deposit (of your maximum bid) via Stripe. If the auction is won, the deposit is applied to your purchase. If lost or cancelled, it's fully refunded within 5 business days."
+          },
+          "refund": {
+            "q": "What is your refund policy?",
+            "a": "Service fees are non-refundable once assessment begins. Deposits for bidding services are refundable per outcome rules. Full refund if we cannot complete the assessment for technical reasons."
+          }
+        }
+      },
+      "process": {
+        "title": "The Assessment Process",
+        "questions": {
+          "remote": {
+            "q": "What's included in a remote assessment?",
+            "a": "We scrape the complete listing, extract all vehicle data, analyze market comparables, calculate fair value range, provide a safe maximum bid recommendation, assess risks, and deliver a comprehensive PDF report."
+          },
+          "onsite": {
+            "q": "What happens during an on-site inspection?",
+            "a": "Our certified inspector physically examines the vehicle, conducts a test drive, checks mechanical systems, measures paint thickness, inspects the undercarriage, documents everything with photos and video, and provides expert observations."
+          },
+          "accuracy": {
+            "q": "How accurate are your estimates?",
+            "a": "Our estimates combine AI-powered market analysis with real comparable sales data and expert human review. While no estimate is perfect, our methodology has proven highly accurate across thousands of assessments."
+          }
+        }
+      }
+    }
+  },
+
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Our concierge team is here to assist you",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Your Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! We'll respond within 24 hours.",
+      "error": "Failed to send. Please try again or email us directly."
+    },
+    "info": {
+      "address": "Dubai, United Arab Emirates",
+      "email": "concierge@majaz.ae",
+      "phone": "+971 XX XXX XXXX",
+      "hours": "Sunday - Thursday: 9:00 AM - 6:00 PM"
+    }
+  },
+
+  "team": {
+    "title": "Our Expert Team",
+    "subtitle": "Certified inspectors and automotive specialists",
+    "role": {
+      "inspector": "Senior Inspector",
+      "operator": "Assessment Specialist",
+      "admin": "Operations Manager"
+    },
+    "stats": {
+      "inspections": "Inspections Completed",
+      "rating": "Client Rating",
+      "experience": "Years Experience"
+    },
+    "viewProfile": "View Profile",
+    "bookInspection": "Book Inspection"
+  },
+
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back, {name}",
+    "stats": {
+      "activeRequests": "Active Requests",
+      "completedRequests": "Completed",
+      "totalSpent": "Total Spent",
+      "savedVehicles": "Saved Vehicles"
+    },
+    "recentRequests": "Recent Assessments",
+    "quickActions": {
+      "title": "Quick Actions",
+      "newAssessment": "New Assessment",
+      "viewAll": "View All Requests",
+      "contactSupport": "Contact Support"
+    }
+  },
+
+  "requests": {
+    "title": "My Assessments",
+    "new": "New Assessment",
+    "status": {
+      "pending_payment": "Pending Payment",
+      "payment_received": "Payment Received",
+      "scraping": "Analyzing Listing",
+      "parsing": "Extracting Data",
+      "analyzing": "Generating Estimate",
+      "generating_report": "Creating Report",
+      "completed": "Completed",
+      "failed": "Failed",
+      "refunded": "Refunded"
+    },
+    "mode": {
+      "remote_assessment": "Remote Assessment",
+      "onsite_inspection": "On-Site Inspection",
+      "sourcing": "Vehicle Sourcing",
+      "delegated_bidding": "Delegated Bidding"
+    },
+    "details": {
+      "requestId": "Request ID",
+      "createdAt": "Created",
+      "status": "Status",
+      "vehicle": "Vehicle",
+      "estimate": "Estimate",
+      "report": "Report",
+      "payment": "Payment",
+      "timeline": "Timeline"
+    },
+    "actions": {
+      "viewReport": "View Report",
+      "downloadPDF": "Download PDF",
+      "contactOperator": "Contact Operator",
+      "requestRefund": "Request Refund"
+    }
+  },
+
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your MAJAZ account",
+      "email": "Email Address",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign In",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Join MAJAZ for premium vehicle services",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "language": "Preferred Language",
+      "terms": "I agree to the Terms of Service",
+      "submit": "Create Account",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in"
+    }
+  },
+
+  "forms": {
+    "validation": {
+      "required": "This field is required",
+      "email": "Please enter a valid email address",
+      "phone": "Please enter a valid phone number",
+      "url": "Please enter a valid URL",
+      "min": "Minimum {min} characters",
+      "max": "Maximum {max} characters",
+      "passwordMatch": "Passwords do not match",
+      "termsRequired": "You must accept the terms of service"
+    },
+    "newRequest": {
+      "title": "New Assessment Request",
+      "mode": {
+        "label": "Service Type",
+        "remote": "Remote Assessment",
+        "onsite": "On-Site Inspection",
+        "sourcing": "Vehicle Sourcing"
+      },
+      "tier": {
+        "label": "Service Tier",
+        "48h": "48 Hours",
+        "24h": "24 Hours (Express)",
+        "sameDay": "Same Day (Priority)"
+      },
+      "url": {
+        "label": "Auction/Listing URL",
+        "placeholder": "https://emiratesauction.com/..."
+      },
+      "brief": {
+        "label": "Sourcing Brief",
+        "placeholder": "Describe the vehicle you're looking for: make, model, year, budget, must-have features..."
+      },
+      "quote": "Get Quote",
+      "proceed": "Proceed to Payment"
+    }
+  },
+
+  "about": {
+    "hero": {
+      "title": "Your Trusted Automotive Advisor",
+      "subtitle": "Protecting automotive investments across the UAE with expertise, integrity, and personalized service"
+    },
+    "story": {
+      "title": "Our Story",
+      "content": "Founded in Dubai, MAJAZ was born from a simple vision: to bring transparency and trust to the pre-owned vehicle market. We've assembled a team of certified inspectors, automotive experts, and technology specialists to create the most comprehensive vehicle assessment service in the UAE."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "To empower buyers with the knowledge and confidence they need to make informed automotive investment decisions. Every assessment we conduct, every report we deliver, is built on a foundation of expertise, honesty, and unwavering commitment to our clients' best interests."
+    },
+    "values": {
+      "title": "Our Values",
+      "list": {
+        "integrity": {
+          "title": "Integrity First",
+          "description": "Honest assessments, transparent pricing, no conflicts of interest"
+        },
+        "expertise": {
+          "title": "Deep Expertise",
+          "description": "Certified professionals with genuine automotive knowledge"
+        },
+        "service": {
+          "title": "Exceptional Service",
+          "description": "White-glove concierge experience from start to finish"
+        },
+        "technology": {
+          "title": "Smart Technology",
+          "description": "AI-enhanced analysis combined with human expertise"
+        }
+      }
+    }
+  },
+
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated: November 2024",
+    "sections": {
+      "agreement": {
+        "title": "1. Agreement to Terms",
+        "content": "By accessing and using MAJAZ services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services."
+      },
+      "services": {
+        "title": "2. Services Provided",
+        "content": "MAJAZ provides vehicle assessment, inspection, market analysis, and optional bidding concierge services. All assessments are provided for informational purposes and should not be considered as legal, financial, or investment advice."
+      },
+      "fees": {
+        "title": "3. Fees and Payments",
+        "content": "Service fees are charged upfront and are non-refundable once assessment work begins. Optional deposits for bidding services are held via Stripe and refunded or applied according to auction outcomes. All fees are clearly disclosed before payment."
+      },
+      "accuracy": {
+        "title": "4. Assessment Accuracy",
+        "content": "While we strive for accuracy in all assessments, MAJAZ makes no warranties about the completeness or accuracy of valuations, estimates, or recommendations. Market conditions change rapidly and final purchase decisions are the buyer's responsibility."
+      },
+      "liability": {
+        "title": "5. Limitation of Liability",
+        "content": "MAJAZ's liability is limited to the amount of fees paid for the specific service. We are not responsible for auction outcomes, vehicle condition discrepancies discovered post-purchase, or market value fluctuations."
+      },
+      "refunds": {
+        "title": "6. Refund Policy",
+        "content": "Service fees are non-refundable once work has commenced. Bidding deposits are refundable per auction outcome rules. If we cannot complete an assessment for technical reasons, a full refund will be issued within 5-7 business days."
+      },
+      "privacy": {
+        "title": "7. Privacy and Data",
+        "content": "We collect and process personal information as described in our Privacy Policy. All payment information is processed securely through Stripe and never stored on our servers."
+      },
+      "termination": {
+        "title": "8. Termination",
+        "content": "MAJAZ reserves the right to refuse service or terminate accounts for violation of these terms, fraudulent activity, or any reason at our discretion."
+      },
+      "changes": {
+        "title": "9. Changes to Terms",
+        "content": "We may update these terms at any time. Continued use of MAJAZ services after changes constitutes acceptance of the updated terms."
+      },
+      "governing": {
+        "title": "10. Governing Law",
+        "content": "These terms are governed by the laws of the United Arab Emirates. Any disputes shall be resolved in Dubai courts."
+      },
+      "contact": {
+        "title": "11. Contact",
+        "content": "For questions about these terms, contact us at legal@majaz.ae"
+      }
+    }
+  },
+
+  "footer": {
+    "description": "Premium vehicle assessment and concierge services in Dubai and the UAE. Trust MAJAZ to protect your automotive investment.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "legal": "Legal",
+    "social": "Follow Us",
+    "newsletter": {
+      "title": "Stay Updated",
+      "subtitle": "Get automotive insights and exclusive offers",
+      "placeholder": "Your email address",
+      "subscribe": "Subscribe"
+    },
+    "copyright": "© {year} MAJAZ. All rights reserved.",
+    "madeIn": "Made with care in Dubai, UAE"
+  },
+
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "Network error. Please check your connection.",
+    "notFound": "Page not found",
+    "unauthorized": "Please log in to continue",
+    "forbidden": "You don't have permission to access this",
+    "serverError": "Server error. Please try again later.",
+    "validation": "Please check your input and try again"
+  }
+}
