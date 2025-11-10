@@ -5,7 +5,6 @@ import React from "react";
 export default function Facts() {
   return (
     <section className="boxcar-fun-fact-section" style={{
-      background: '#FFFFFF',
       padding: '5rem 0'
     }}>
       <div className="large-container">

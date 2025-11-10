@@ -22,7 +22,7 @@ export default function Features() {
                       src="/images/brand/inspection-scene.jpg"
                       width={836}
                       height={700}
-                      style={{ objectFit: 'cover', borderRadius: '8px' }}
+                      style={{ objectFit: 'cover', borderRadius: '24px' }}
                     />
                   </figure>
                 </div>
