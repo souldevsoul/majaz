@@ -9,73 +9,109 @@
 Browserslist: caniuse-lite is outdated. Please run:
   npx update-browserslist-db@latest
   Why you should do it regularly: https://github.com/browserslist/update-db#readme
- ⚠ Compiled with warnings
-
-./app/api/messages/route.ts
-Attempted import error: 'authOptions' is not exported from '../auth/[...nextauth]/route' (imported as 'authOptions').
-
-Import trace for requested module:
-./app/api/messages/route.ts
-
-./app/api/messages/route.ts
-Attempted import error: 'authOptions' is not exported from '../auth/[...nextauth]/route' (imported as 'authOptions').
-
-Import trace for requested module:
-./app/api/messages/route.ts
-
-./app/api/requests/[id]/report/route.ts
-Attempted import error: 'authOptions' is not exported from '../../../auth/[...nextauth]/route' (imported as 'authOptions').
-
-Import trace for requested module:
-./app/api/requests/[id]/report/route.ts
-
-./app/api/requests/[id]/route.ts
-Attempted import error: 'authOptions' is not exported from '../../auth/[...nextauth]/route' (imported as 'authOptions').
-
-Import trace for requested module:
-./app/api/requests/[id]/route.ts
-
-./app/api/requests/[id]/route.ts
-Attempted import error: 'authOptions' is not exported from '../../auth/[...nextauth]/route' (imported as 'authOptions').
-
-Import trace for requested module:
-./app/api/requests/[id]/route.ts
-
-./app/api/requests/[id]/route.ts
-Attempted import error: 'authOptions' is not exported from '../../auth/[...nextauth]/route' (imported as 'authOptions').
-
-Import trace for requested module:
-./app/api/requests/[id]/route.ts
-
-./app/api/requests/route.ts
-Attempted import error: 'authOptions' is not exported from '../auth/[...nextauth]/route' (imported as 'authOptions').
-
-Import trace for requested module:
-./app/api/requests/route.ts
-
-./app/api/requests/route.ts
-Attempted import error: 'authOptions' is not exported from '../auth/[...nextauth]/route' (imported as 'authOptions').
-
-Import trace for requested module:
-./app/api/requests/route.ts
-
-./app/api/scrape/route.ts
-Attempted import error: 'authOptions' is not exported from '../auth/[...nextauth]/route' (imported as 'authOptions').
-
-Import trace for requested module:
-./app/api/scrape/route.ts
-
+ ✓ Compiled successfully
    Linting and checking validity of types ...
-Failed to compile.
+   Collecting page data ...
+   Generating static pages (0/55) ...
+   Generating static pages (13/55) 
+   Generating static pages (27/55) 
+   Generating static pages (41/55) 
+ ✓ Generating static pages (55/55)
+   Finalizing page optimization ...
+   Collecting build traces ...
 
-./app/[locale]/(dashboard)/dashboard/page.tsx:256:18
-Type error: Type '{ children: Element[]; style: { marginBottom: string; }; }' is not assignable to type 'IntrinsicAttributes & GlassCardProps'.
-  Property 'style' does not exist on type 'IntrinsicAttributes & GlassCardProps'.
+Route (app)                              Size     First Load JS
+┌ ○ /                                    161 B          87.6 kB
+├ ○ /_not-found                          161 B          87.6 kB
+├ ● /[locale]                            161 B          87.6 kB
+├   ├ /en
+├   └ /ar
+├ ● /[locale]/404                        305 B           106 kB
+├   ├ /en/404
+├   └ /ar/404
+├ ● /[locale]/about                      3.31 kB         122 kB
+├   ├ /en/about
+├   └ /ar/about
+├ ● /[locale]/add-listings               3.34 kB         109 kB
+├   ├ /en/add-listings
+├   └ /ar/add-listings
+├ ● /[locale]/compare                    305 B           106 kB
+├   ├ /en/compare
+├   └ /ar/compare
+├ ● /[locale]/contact                    4.7 kB          140 kB
+├   ├ /en/contact
+├   └ /ar/contact
+├ ● /[locale]/dashboard                  71.5 kB         185 kB
+├   ├ /en/dashboard
+├   └ /ar/dashboard
+├ ● /[locale]/dealer                     1.25 kB         107 kB
+├   ├ /en/dealer
+├   └ /ar/dealer
+├ ƒ /[locale]/dealer-single/[id]         2.6 kB          124 kB
+├ ● /[locale]/faq                        3.08 kB         117 kB
+├   ├ /en/faq
+├   └ /ar/faq
+├ ● /[locale]/home-1                     21.1 kB         141 kB
+├   ├ /en/home-1
+├   └ /ar/home-1
+├ ● /[locale]/invoice                    2.25 kB        89.7 kB
+├   ├ /en/invoice
+├   └ /ar/invoice
+├ ● /[locale]/login                      3.61 kB         139 kB
+├   ├ /en/login
+├   └ /ar/login
+├ ● /[locale]/messages                   4.15 kB         118 kB
+├   ├ /en/messages
+├   └ /ar/messages
+├ ● /[locale]/my-listings                1.19 kB         107 kB
+├   ├ /en/my-listings
+├   └ /ar/my-listings
+├ ● /[locale]/pricing                    3.1 kB          117 kB
+├   ├ /en/pricing
+├   └ /ar/pricing
+├ ● /[locale]/profile                    3.81 kB         139 kB
+├   ├ /en/profile
+├   └ /ar/profile
+├ ● /[locale]/register                   4.13 kB         139 kB
+├   ├ /en/register
+├   └ /ar/register
+├ ● /[locale]/requests                   3.98 kB         117 kB
+├   ├ /en/requests
+├   └ /ar/requests
+├ ƒ /[locale]/requests/[id]              4.78 kB         118 kB
+├ ● /[locale]/requests/new               3.96 kB         139 kB
+├   ├ /en/requests/new
+├   └ /ar/requests/new
+├ ● /[locale]/team-list                  3.41 kB         117 kB
+├   ├ /en/team-list
+├   └ /ar/team-list
+├ ƒ /[locale]/team-single/[id]           4.88 kB         118 kB
+├ ● /[locale]/terms                      3.17 kB         117 kB
+├   ├ /en/terms
+├   └ /ar/terms
+├ ● /[locale]/ui-elements                15.4 kB         121 kB
+├   ├ /en/ui-elements
+├   └ /ar/ui-elements
+├ ƒ /api/auth/[...nextauth]              0 B                0 B
+├ ƒ /api/auth/register                   0 B                0 B
+├ ƒ /api/messages                        0 B                0 B
+├ ƒ /api/requests                        0 B                0 B
+├ ƒ /api/requests/[id]                   0 B                0 B
+├ ƒ /api/requests/[id]/report            0 B                0 B
+├ ƒ /api/requests/quote                  0 B                0 B
+├ ƒ /api/scrape                          0 B                0 B
+├ ƒ /api/team                            0 B                0 B
+├ ƒ /api/team/[id]                       0 B                0 B
+└ ƒ /api/webhooks/stripe                 0 B                0 B
++ First Load JS shared by all            87.4 kB
+  ├ chunks/7023-c9c140837ac3a41d.js      31.7 kB
+  ├ chunks/fd9d1056-843dd1f0bb98919d.js  53.6 kB
+  └ other shared chunks (total)          2.05 kB
 
-[0m [90m 254 |[39m[0m
-[0m [90m 255 |[39m       {[90m/* Chart */[39m}[0m
-[0m[31m[1m>[22m[39m[90m 256 |[39m       [33m<[39m[33mGlassCard[39m style[33m=[39m{{ marginBottom[33m:[39m [32m'var(--spacing-2xl)'[39m }}[33m>[39m[0m
-[0m [90m     |[39m                  [31m[1m^[22m[39m[0m
-[0m [90m 257 |[39m         [33m<[39m[33mh2[39m style[33m=[39m{{[0m
-[0m [90m 258 |[39m           fontSize[33m:[39m [32m'1.5rem'[39m[33m,[39m[0m
-[0m [90m 259 |[39m           color[33m:[39m [32m'var(--majaz-gold)'[39m[33m,[39m[0m
+
+ƒ Middleware                             38.8 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+
