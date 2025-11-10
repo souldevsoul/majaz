@@ -211,26 +211,35 @@ export default function Header({ isAuthenticated = false }: HeaderProps) {
         .nav-link {
           padding: 0.625rem 1rem;
           color: #ffffff !important;
-          text-decoration: none;
+          text-decoration: none !important;
           font-size: 0.9375rem;
-          font-weight: 500;
+          font-weight: 600;
           border-radius: var(--radius-md);
           transition: all var(--transition-fast);
           position: relative;
           white-space: nowrap;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                       0 0 20px rgba(255, 255, 255, 0.3);
         }
 
         .nav-link:hover {
           color: var(--majaz-gold) !important;
           background: rgba(212, 175, 55, 0.1);
+          text-shadow: 0 0 15px rgba(212, 175, 55, 0.8),
+                       0 0 30px rgba(212, 175, 55, 0.5);
         }
 
         .nav-link.active {
           color: var(--majaz-gold) !important;
+          text-shadow: 0 0 15px rgba(212, 175, 55, 0.8),
+                       0 0 30px rgba(212, 175, 55, 0.5);
         }
 
         .header.scrolled .nav-link {
           color: var(--majaz-text-primary) !important;
+          text-shadow: none;
         }
 
         .nav-link.active::after {
