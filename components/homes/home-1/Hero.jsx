@@ -19,17 +19,16 @@ export default function Hero() {
           <div className="banner-content">
             <div
               className="logo-section wow fadeInUp"
-              style={{ marginBottom: "2rem" }}
+              style={{ marginBottom: "3rem" }}
             >
               <h1
                 style={{
-                  fontFamily: "Noto Sans, sans-serif",
-                  fontSize: "4rem",
-                  fontWeight: "700",
+                  fontFamily: "Raleway, sans-serif",
+                  fontSize: "6rem",
+                  fontWeight: "800",
                   color: "#D4AF37",
-                  textShadow: "2px 2px 8px rgba(0,0,0,0.8)",
-                  marginBottom: "0.5rem",
-                  letterSpacing: "0.1em",
+                  marginBottom: "1rem",
+                  letterSpacing: "0.05em",
                 }}
               >
                 MAJAZ
@@ -37,11 +36,10 @@ export default function Hero() {
               <div
                 style={{
                   fontFamily: "Noto Sans Arabic, sans-serif",
-                  fontSize: "3rem",
-                  fontWeight: "600",
+                  fontSize: "4rem",
+                  fontWeight: "700",
                   color: "#D4AF37",
-                  textShadow: "2px 2px 8px rgba(0,0,0,0.8)",
-                  marginBottom: "1rem",
+                  marginBottom: "2rem",
                 }}
               >
                 مجاز
@@ -51,10 +49,12 @@ export default function Hero() {
             <span
               className="wow fadeInUp"
               style={{
-                fontSize: "1.2rem",
+                fontSize: "1.5rem",
                 color: "#FFFFFF",
-                textShadow: "1px 1px 4px rgba(0,0,0,0.8)",
-                fontWeight: "500",
+                fontWeight: "400",
+                fontFamily: "Raleway, sans-serif",
+                display: "block",
+                marginBottom: "1.5rem",
               }}
             >
               Premium Vehicle Concierge for UAE
@@ -64,12 +64,12 @@ export default function Hero() {
               className="wow fadeInUp"
               data-wow-delay="100ms"
               style={{
-                fontSize: "3rem",
+                fontSize: "4rem",
                 color: "#FFFFFF",
-                textShadow: "2px 2px 6px rgba(0,0,0,0.8)",
-                fontFamily: "Noto Sans, sans-serif",
-                marginTop: "1rem",
+                fontFamily: "Raleway, sans-serif",
+                fontWeight: "300",
                 marginBottom: "2rem",
+                lineHeight: "1.2",
               }}
             >
               Bespoke Vehicle Intelligence
@@ -79,12 +79,13 @@ export default function Hero() {
               className="wow fadeInUp"
               data-wow-delay="200ms"
               style={{
-                fontSize: "1.3rem",
+                fontSize: "1.5rem",
                 color: "#FFFFFF",
-                textShadow: "1px 1px 4px rgba(0,0,0,0.8)",
-                maxWidth: "800px",
-                margin: "0 auto 2rem",
-                lineHeight: "1.6",
+                maxWidth: "900px",
+                marginBottom: "3rem",
+                lineHeight: "1.8",
+                fontFamily: "Raleway, sans-serif",
+                fontWeight: "400",
               }}
             >
               Expert pre-purchase assessment, market analysis, and white-glove
@@ -97,7 +98,7 @@ export default function Hero() {
               style={{
                 display: "flex",
                 gap: "1.5rem",
-                justifyContent: "center",
+                justifyContent: "flex-start",
                 flexWrap: "wrap",
               }}
             >
@@ -149,7 +150,7 @@ export default function Hero() {
                 marginTop: "3rem",
                 display: "flex",
                 gap: "2rem",
-                justifyContent: "center",
+                justifyContent: "flex-start",
                 flexWrap: "wrap",
               }}
             >
@@ -225,9 +226,9 @@ export default function Hero() {
           color: #d4af37 !important;
         }
 
-        /* Use Noto Sans fonts */
+        /* Use Raleway fonts */
         body {
-          font-family: 'Noto Sans', sans-serif !important;
+          font-family: 'Raleway', sans-serif !important;
         }
 
         body[dir="rtl"] {
@@ -239,7 +240,7 @@ export default function Hero() {
           min-height: 100vh;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-start;
           overflow: hidden;
           width: 100%;
           margin: 0;
@@ -266,20 +267,21 @@ export default function Hero() {
           bottom: 0;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-start;
           background: linear-gradient(
-            180deg,
-            rgba(10, 10, 10, 0.3) 0%,
-            rgba(10, 10, 10, 0.7) 100%
+            90deg,
+            rgba(10, 10, 10, 0.8) 0%,
+            rgba(10, 10, 10, 0.4) 50%,
+            rgba(10, 10, 10, 0.1) 100%
           );
           z-index: 1;
+          padding-left: 5rem;
         }
 
         .banner-content {
-          text-align: center;
+          text-align: left;
           padding: 2rem;
-          max-width: 1200px;
-          margin: 0 auto;
+          max-width: 1000px;
         }
 
         .theme-btn button:hover {

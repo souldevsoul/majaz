@@ -112,9 +112,9 @@
   --font-size-6xl: 3.75rem;   /* 60px */
 
   /* Font Families */
-  --font-display: 'Playfair Display', serif;
-  --font-body: 'Inter', sans-serif;
-  --font-arabic: 'IBM Plex Sans Arabic', sans-serif;
+  --font-display: 'Raleway', sans-serif;
+  --font-body: 'Raleway', sans-serif;
+  --font-arabic: 'Noto Sans Arabic', sans-serif;
 }
 
 /* ============================================ */
