@@ -1,9 +1,14 @@
 "use client";
 import FilterSidebar from "@/components/common/FilterSidebar";
 import "./globals.css";
-import "../public/main.scss";
 import "photoswipe/dist/photoswipe.css";
 import "rc-slider/assets/index.css";
+import "../public/css/bootstrap.min.css";
+import "../public/css/slick-theme.css";
+import "../public/css/slick.css";
+import "../public/css/mmenu.css";
+import "../public/css/style.css";
+import "../public/custom.scss";
 import { useEffect } from "react";
 import MobileMenu from "@/components/headers/MobileMenu";
 import Context from "@/context/Context";

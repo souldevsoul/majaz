@@ -54,6 +54,8 @@
     "description": "Trust MAJAZ to protect your automotive investment with expert inspection, detailed reports, and personalized concierge service.",
     "ctaPrimary": "Begin Assessment",
     "ctaSecondary": "Learn More",
+    "cta_primary": "Begin Assessment",
+    "cta_secondary": "Learn More",
     "stats": {
       "vehicles": "Vehicles Assessed",
       "clients": "Satisfied Clients",
@@ -62,9 +64,44 @@
     }
   },
 
+  "stats": {
+    "vehicles": {
+      "value": "5,000+",
+      "label": "Vehicles Assessed"
+    },
+    "customers": {
+      "value": "3,500+",
+      "label": "Satisfied Clients"
+    },
+    "accuracy": {
+      "value": "98%",
+      "label": "Accuracy Rate"
+    },
+    "satisfaction": {
+      "value": "4.9/5",
+      "label": "Client Rating"
+    }
+  },
+
   "features": {
     "title": "Why Choose MAJAZ",
     "subtitle": "Your Trusted Automotive Advisor",
+    "comprehensive": {
+      "title": "Comprehensive Assessment",
+      "description": "Complete vehicle evaluation with AI-powered analysis and expert human review"
+    },
+    "experts": {
+      "title": "Expert Inspectors",
+      "description": "Certified professionals with decades of automotive expertise"
+    },
+    "fast": {
+      "title": "Rapid Turnaround",
+      "description": "Get your detailed report in as little as 24 hours"
+    },
+    "transparent": {
+      "title": "Complete Transparency",
+      "description": "Detailed reports with photos, comparables, and fair market analysis"
+    },
     "list": {
       "expertise": {
         "title": "Expert Analysis",
@@ -81,6 +118,34 @@
       "concierge": {
         "title": "White-Glove Service",
         "description": "Personal concierge to handle inspection, bidding, and delivery"
+      }
+    }
+  },
+
+  "process": {
+    "title": "How It Works",
+    "subtitle": "Simple, Fast, Trustworthy",
+    "step": "Step",
+    "steps": {
+      "booking": {
+        "title": "Book Your Service",
+        "description": "Choose your service tier and provide the vehicle listing or sourcing requirements"
+      },
+      "inspection": {
+        "title": "Expert Inspection",
+        "description": "Our certified inspectors conduct thorough assessment and documentation"
+      },
+      "analysis": {
+        "title": "Market Analysis",
+        "description": "AI-powered market research combined with expert human analysis"
+      },
+      "report": {
+        "title": "Detailed Report",
+        "description": "Receive comprehensive PDF with fair value, risks, and recommendations"
+      },
+      "delivery": {
+        "title": "Concierge Support",
+        "description": "Optional white-glove concierge for bidding, purchase, and delivery"
       }
     }
   },
@@ -503,6 +568,33 @@
         "content": "For questions about these terms, contact us at legal@majaz.ae"
       }
     }
+  },
+
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Trusted by thousands of car buyers across the UAE",
+    "testimonial1": {
+      "text": "MAJAZ saved me from making a costly mistake. Their detailed report revealed hidden issues the seller didn't disclose. Absolutely worth every dirham!",
+      "author": "Ahmed Al-Maktoum",
+      "role": "Dubai Business Owner"
+    },
+    "testimonial2": {
+      "text": "As an expat new to Dubai, I needed expert guidance. MAJAZ's concierge service handled everything - inspection, bidding, and delivery. Flawless experience!",
+      "author": "Sarah Johnson",
+      "role": "Expat Professional"
+    },
+    "testimonial3": {
+      "text": "I've used MAJAZ for my entire collection. Their market analysis is incredibly accurate, and their inspectors know luxury vehicles inside out. The only service I trust.",
+      "author": "Mohammed bin Rashid",
+      "role": "Car Collector"
+    }
+  },
+
+  "cta": {
+    "title": "Ready to Make a Confident Purchase?",
+    "subtitle": "Join thousands of satisfied clients who trust MAJAZ for expert vehicle assessment",
+    "button_primary": "Begin Assessment",
+    "button_secondary": "Contact Us"
   },
 
   "footer": {

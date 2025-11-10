@@ -9,15 +9,14 @@ export default function Cta() {
           <div className="blog-blockt-two col-lg-6 col-md-6 col-sm-12">
             <div className="inner-box wow fadeInUp">
               <h3 className="title">
-                Are You Looking <br />
-                For a Car ?
+                Need Vehicle <br />
+                Assessment?
               </h3>
               <div className="text">
-                We are committed to providing our customers with exceptional
-                service.
+                Get expert pre-purchase inspection and market analysis before you buy.
               </div>
-              <Link href={`/pricing`} className="read-more">
-                Get Started
+              <Link href={`/en/requests/new`} className="read-more">
+                Start Assessment
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={14}
@@ -98,15 +97,14 @@ export default function Cta() {
           <div className="blog-blockt-two col-lg-6 col-md-6 col-sm-12">
             <div className="inner-box two wow fadeInUp" data-wow-delay="100ms">
               <h3 className="title">
-                Do You Want to <br />
-                Sell a Car ?
+                Looking to <br />
+                Source a Vehicle?
               </h3>
               <div className="text">
-                We are committed to providing our customers with exceptional
-                service.
+                Let our experts find and assess the perfect vehicle for you in the UAE market.
               </div>
-              <Link href={`/pricing`} className="read-more">
-                Get Started
+              <Link href={`/en/pricing`} className="read-more">
+                View Services
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={14}

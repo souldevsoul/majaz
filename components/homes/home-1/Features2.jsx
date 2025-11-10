@@ -5,7 +5,7 @@ export default function Features2() {
     <section className="why-choose-us-section">
       <div className="boxcar-container">
         <div className="boxcar-title wow fadeInUp">
-          <h2 className="title">Why Choose Us?</h2>
+          <h2 className="title">Why Choose MAJAZ?</h2>
         </div>
         <div className="row">
           {/* choose-us-block */}
@@ -65,10 +65,9 @@ export default function Features2() {
                 </svg>
               </div>
               <div className="content-box">
-                <h6 className="title">Special Financing Offers</h6>
+                <h6 className="title">Comprehensive Assessment</h6>
                 <div className="text">
-                  Our stress-free finance department that can find financial
-                  solutions to save you money.
+                  200+ point inspection covering mechanical, electrical, and structural integrity with certified technicians.
                 </div>
               </div>
             </div>
@@ -147,10 +146,9 @@ export default function Features2() {
                 </svg>
               </div>
               <div className="content-box">
-                <h6 className="title">Trusted Car Dealership</h6>
+                <h6 className="title">UAE Market Experts</h6>
                 <div className="text">
-                  Our stress-free finance department that can find financial
-                  solutions to save you money.
+                  Deep knowledge of GCC automotive market with real-time pricing analysis and fair value assessment.
                 </div>
               </div>
             </div>
@@ -220,10 +218,9 @@ export default function Features2() {
                 </svg>
               </div>
               <div className="content-box">
-                <h6 className="title">Transparent Pricing</h6>
+                <h6 className="title">Fast Turnaround</h6>
                 <div className="text">
-                  Our stress-free finance department that can find financial
-                  solutions to save you money.
+                  Same-day to 48-hour service options available. Premium PDF reports delivered in English and Arabic.
                 </div>
               </div>
             </div>
@@ -262,10 +259,9 @@ export default function Features2() {
                 </svg>
               </div>
               <div className="content-box">
-                <h6 className="title">Expert Car Service</h6>
+                <h6 className="title">Transparent Process</h6>
                 <div className="text">
-                  Our stress-free finance department that can find financial
-                  solutions to save you money.
+                  Clear pricing from 49 AED with no hidden fees. Full disclosure of findings and market analysis.
                 </div>
               </div>
             </div>

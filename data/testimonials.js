@@ -1,20 +1,29 @@
 export const testimonials = [
   {
     imgSrc: "/images/resource/test-1.jpg",
-    rating: 4.8,
-    name: "Ali TUFAN",
-    position: "Designer",
+    rating: 4.9,
+    name: "Ahmed Al-Maktoum",
+    position: "Dubai Business Owner",
     review:
-      "I'd suggest Macklin Motors Nissan Glasgow South to a friend because I had great service from my salesman Patrick and all of the team.",
+      "MAJAZ saved me from making a costly mistake. Their comprehensive inspection revealed hidden issues the seller didn't disclose. The detailed report helped me negotiate a fair price. Highly recommend for anyone buying a used car in Dubai!",
+    wowDelay: "100ms",
+  },
+  {
+    imgSrc: "/images/resource/test-1.jpg",
+    rating: 5.0,
+    name: "Fatima Al-Rashid",
+    position: "Abu Dhabi Entrepreneur",
+    review:
+      "Professional service from start to finish. The team was punctual, thorough, and the bilingual report made it easy to share with my family. They found mechanical issues that would have cost me thousands. Worth every dirham!",
     wowDelay: "100ms",
   },
   {
     imgSrc: "/images/resource/test-1.jpg",
     rating: 4.8,
-    name: "Ali TUFAN",
-    position: "Designer",
+    name: "Mohammed Al-Suwaidi",
+    position: "Investment Manager",
     review:
-      "I'd suggest Macklin Motors Nissan Glasgow South to a friend because I had great service from my salesman Patrick and all of the team.",
+      "I've used MAJAZ three times now for different vehicle purchases. Their market analysis is spot-on and helped me avoid overpaying. The inspection process is transparent and detailed. They're my go-to before any car purchase in the UAE.",
     wowDelay: "100ms",
   },
 ];

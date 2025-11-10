@@ -253,19 +253,21 @@ export default function DashboardPage() {
       </div>
 
       {/* Chart */}
-      <GlassCard style={{ marginBottom: 'var(--spacing-2xl)' }}>
-        <h2 style={{
-          fontSize: '1.5rem',
-          color: 'var(--majaz-gold)',
-          marginBottom: 'var(--spacing-lg)',
-          fontFamily: 'var(--font-display)'
-        }}>
-          Requests Over Time
-        </h2>
-        <div style={{ height: '300px' }}>
-          <Line data={chartData} options={chartOptions} />
-        </div>
-      </GlassCard>
+      <div style={{ marginBottom: 'var(--spacing-2xl)' }}>
+        <GlassCard>
+          <h2 style={{
+            fontSize: '1.5rem',
+            color: 'var(--majaz-gold)',
+            marginBottom: 'var(--spacing-lg)',
+            fontFamily: 'var(--font-display)'
+          }}>
+            Requests Over Time
+          </h2>
+          <div style={{ height: '300px' }}>
+            <Line data={chartData} options={chartOptions} />
+          </div>
+        </GlassCard>
+      </div>
 
       <div style={{
         display: 'grid',

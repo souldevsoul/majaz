@@ -38,10 +38,9 @@ export default function Features() {
             <div className="content-column col-lg-6 col-md-12 col-sm-12">
               <div className="inner-column">
                 <div className="boxcar-title wow fadeInUp">
-                  <h2>Get A Fair Price For Your Car Sell To Us Today</h2>
+                  <h2>Expert Pre-Purchase Vehicle Assessment in Dubai</h2>
                   <div className="text">
-                    We are committed to providing our customers with exceptional
-                    service, competitive pricing, and a wide range of.
+                    MAJAZ provides comprehensive vehicle intelligence and expert assessment services to protect your investment in the UAE automotive market.
                   </div>
                 </div>
                 <ul
@@ -50,24 +49,23 @@ export default function Features() {
                 >
                   <li>
                     <i className="fa-solid fa-check" />
-                    We are the UK’s largest provider, with more patrols in more
-                    places
+                    Comprehensive 200+ point inspection by certified technicians
                   </li>
                   <li>
                     <i className="fa-solid fa-check" />
-                    You get 24/7 roadside assistance
+                    Real-time UAE and GCC market analysis with fair value assessment
                   </li>
                   <li>
                     <i className="fa-solid fa-check" />
-                    We fix 4 out of 5 cars at the roadside
+                    Premium PDF reports with detailed insights in English and Arabic
                   </li>
                 </ul>
                 <Link
-                  href={`/about`}
+                  href={`/en/requests/new`}
                   className="read-more wow fadeInUp"
                   data-wow-delay="200ms"
                 >
-                  get started
+                  Begin Assessment
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={14}

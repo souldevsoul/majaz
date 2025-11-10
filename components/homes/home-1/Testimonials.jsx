@@ -41,10 +41,9 @@ export default function Testimonials() {
     <section className="boxcar-testimonial-section home1">
       <div className="boxcar-container">
         <div className="boxcar-title wow fadeInUp">
-          <h2>What our customers say</h2>
+          <h2>What Our Clients Say</h2>
           <div className="text">
-            Rated 4.7 / 5 based on 28,370 reviews Showing our 4 &amp; 5 star
-            reviews
+            Rated 4.9 / 5 based on 3,500+ satisfied clients across Dubai and the UAE
           </div>
         </div>
         <Slider {...slickOptions} className="testimonial-slider-two">
