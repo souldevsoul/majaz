@@ -1,4 +1,3 @@
-import Footer1 from "@/components/footers/Footer1";
 import Hero from "@/components/homes/home-1/Hero";
 import Facts from "@/components/homes/home-1/Facts";
 import Features from "@/components/homes/home-1/Features";
@@ -28,7 +27,6 @@ export default function LocaleHomePage({
       <TrendingVehicles />
       <Testimonials />
       <Cta />
-      <Footer1 />
     </>
   );
 }

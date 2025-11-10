@@ -8,7 +8,6 @@ export default function Features() {
   return (
     <>
       <section className="boxcar-pricing-section pb-0 pt-0" style={{
-        background: '#FFFFFF',
         padding: '6rem 0'
       }}>
         <div className="large-container">
@@ -18,27 +17,14 @@ export default function Features() {
               <div className="inner-column">
                 <div className="image-box">
                   <figure className="image">
-                    <a href="#">
-                      <Image
-                        alt=""
-                        src="/images/resource/pricing1-1.jpg"
-                        width={836}
-                        height={700}
-                      />
-                    </a>
+                    <Image
+                      alt="Professional vehicle inspection in Dubai"
+                      src="/images/brand/inspection-scene.jpg"
+                      width={836}
+                      height={700}
+                      style={{ objectFit: 'cover', borderRadius: '8px' }}
+                    />
                   </figure>
-                  <a
-                    onClick={() => setOpen(true)}
-                    className="play-now"
-                    data-caption=""
-                    style={{
-                      background: 'linear-gradient(135deg, #D4AF37 0%, #B8941E 100%)',
-                      boxShadow: '0 8px 24px rgba(212, 175, 55, 0.4)'
-                    }}
-                  >
-                    <i className="fa fa-play" aria-hidden="true" style={{ color: '#111111' }} />
-                    <span className="ripple" />
-                  </a>
                 </div>
               </div>
             </div>
@@ -52,26 +38,16 @@ export default function Features() {
                     color: '#111111',
                     textTransform: 'uppercase',
                     letterSpacing: '0.15em',
-                    marginBottom: '1.5rem',
+                    marginBottom: '2rem',
                     lineHeight: '1.3'
                   }}>
-                    Expert <span style={{ color: '#D4AF37' }}>Pre-Purchase</span> Vehicle Assessment in Dubai
+                    Expert <span style={{ color: '#D4AF37' }}>Assessment</span>
                   </h2>
-                  <div className="text" style={{
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '1.1rem',
-                    fontWeight: '300',
-                    color: '#666666',
-                    lineHeight: '1.8',
-                    marginBottom: '2rem'
-                  }}>
-                    MAJAZ provides comprehensive vehicle intelligence and expert assessment services to protect your investment in the UAE automotive market.
-                  </div>
                 </div>
                 <ul
                   className="list-style-one wow fadeInUp"
                   data-wow-delay="100ms"
-                  style={{ marginBottom: '2.5rem' }}
+                  style={{ marginBottom: '2.5rem', listStyle: 'none', padding: 0 }}
                 >
                   <li style={{
                     fontFamily: 'var(--font-body)',
@@ -80,10 +56,12 @@ export default function Features() {
                     color: '#111111',
                     textTransform: 'uppercase',
                     letterSpacing: '0.05em',
-                    marginBottom: '1rem'
+                    marginBottom: '1rem',
+                    display: 'flex',
+                    alignItems: 'center'
                   }}>
                     <i className="fa-solid fa-check" style={{ color: '#D4AF37', marginRight: '1rem' }} />
-                    Comprehensive 200+ Point Inspection by Certified Technicians
+                    200+ Point Inspection
                   </li>
                   <li style={{
                     fontFamily: 'var(--font-body)',
@@ -92,10 +70,12 @@ export default function Features() {
                     color: '#111111',
                     textTransform: 'uppercase',
                     letterSpacing: '0.05em',
-                    marginBottom: '1rem'
+                    marginBottom: '1rem',
+                    display: 'flex',
+                    alignItems: 'center'
                   }}>
                     <i className="fa-solid fa-check" style={{ color: '#D4AF37', marginRight: '1rem' }} />
-                    Real-Time UAE and GCC Market Analysis with Fair Value Assessment
+                    UAE Market Analysis
                   </li>
                   <li style={{
                     fontFamily: 'var(--font-body)',
@@ -103,10 +83,12 @@ export default function Features() {
                     fontWeight: '400',
                     color: '#111111',
                     textTransform: 'uppercase',
-                    letterSpacing: '0.05em'
+                    letterSpacing: '0.05em',
+                    display: 'flex',
+                    alignItems: 'center'
                   }}>
                     <i className="fa-solid fa-check" style={{ color: '#D4AF37', marginRight: '1rem' }} />
-                    Premium PDF Reports with Detailed Insights in English and Arabic
+                    Premium PDF Reports
                   </li>
                 </ul>
                 <Link
