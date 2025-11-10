@@ -210,7 +210,7 @@ export default function Header({ isAuthenticated = false }: HeaderProps) {
 
         .nav-link {
           padding: 0.625rem 1rem;
-          color: #ffffff;
+          color: #ffffff !important;
           text-decoration: none;
           font-size: 0.9375rem;
           font-weight: 500;
@@ -221,16 +221,16 @@ export default function Header({ isAuthenticated = false }: HeaderProps) {
         }
 
         .nav-link:hover {
-          color: var(--majaz-gold);
+          color: var(--majaz-gold) !important;
           background: rgba(212, 175, 55, 0.1);
         }
 
         .nav-link.active {
-          color: var(--majaz-gold);
+          color: var(--majaz-gold) !important;
         }
 
         .header.scrolled .nav-link {
-          color: var(--majaz-text-primary);
+          color: var(--majaz-text-primary) !important;
         }
 
         .nav-link.active::after {
