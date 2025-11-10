@@ -2,10 +2,23 @@ import React from "react";
 
 export default function Features2() {
   return (
-    <section className="why-choose-us-section">
+    <section className="why-choose-us-section" style={{
+      background: '#FFFFFF',
+      padding: '6rem 0'
+    }}>
       <div className="boxcar-container">
-        <div className="boxcar-title wow fadeInUp">
-          <h2 className="title">Why Choose MAJAZ?</h2>
+        <div className="boxcar-title wow fadeInUp" style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <h2 className="title" style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: '3rem',
+            fontWeight: '200',
+            color: '#111111',
+            textTransform: 'uppercase',
+            letterSpacing: '0.15em',
+            marginBottom: '1rem'
+          }}>
+            Why Choose <span style={{ color: '#D4AF37' }}>MAJAZ</span>?
+          </h2>
         </div>
         <div className="row">
           {/* choose-us-block */}
@@ -65,9 +78,26 @@ export default function Features2() {
                 </svg>
               </div>
               <div className="content-box">
-                <h6 className="title">Comprehensive Assessment</h6>
-                <div className="text">
-                  200+ point inspection covering mechanical, electrical, and structural integrity with certified technicians.
+                <h6 className="title" style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: '1.25rem',
+                  fontWeight: '400',
+                  color: '#111111',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                  marginBottom: '1rem'
+                }}>
+                  Comprehensive Assessment
+                </h6>
+                <div className="text" style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '0.95rem',
+                  fontWeight: '300',
+                  color: '#666666',
+                  lineHeight: '1.7',
+                  letterSpacing: '0.02em'
+                }}>
+                  200+ POINT INSPECTION COVERING MECHANICAL, ELECTRICAL, AND STRUCTURAL INTEGRITY WITH CERTIFIED TECHNICIANS.
                 </div>
               </div>
             </div>
@@ -146,9 +176,26 @@ export default function Features2() {
                 </svg>
               </div>
               <div className="content-box">
-                <h6 className="title">UAE Market Experts</h6>
-                <div className="text">
-                  Deep knowledge of GCC automotive market with real-time pricing analysis and fair value assessment.
+                <h6 className="title" style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: '1.25rem',
+                  fontWeight: '400',
+                  color: '#111111',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                  marginBottom: '1rem'
+                }}>
+                  UAE Market Experts
+                </h6>
+                <div className="text" style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '0.95rem',
+                  fontWeight: '300',
+                  color: '#666666',
+                  lineHeight: '1.7',
+                  letterSpacing: '0.02em'
+                }}>
+                  DEEP KNOWLEDGE OF GCC AUTOMOTIVE MARKET WITH REAL-TIME PRICING ANALYSIS AND FAIR VALUE ASSESSMENT.
                 </div>
               </div>
             </div>
@@ -218,9 +265,26 @@ export default function Features2() {
                 </svg>
               </div>
               <div className="content-box">
-                <h6 className="title">Fast Turnaround</h6>
-                <div className="text">
-                  Same-day to 48-hour service options available. Premium PDF reports delivered in English and Arabic.
+                <h6 className="title" style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: '1.25rem',
+                  fontWeight: '400',
+                  color: '#111111',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                  marginBottom: '1rem'
+                }}>
+                  Fast Turnaround
+                </h6>
+                <div className="text" style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '0.95rem',
+                  fontWeight: '300',
+                  color: '#666666',
+                  lineHeight: '1.7',
+                  letterSpacing: '0.02em'
+                }}>
+                  SAME-DAY TO 48-HOUR SERVICE OPTIONS AVAILABLE. PREMIUM PDF REPORTS DELIVERED IN ENGLISH AND ARABIC.
                 </div>
               </div>
             </div>
@@ -259,9 +323,26 @@ export default function Features2() {
                 </svg>
               </div>
               <div className="content-box">
-                <h6 className="title">Transparent Process</h6>
-                <div className="text">
-                  Clear pricing from 49 AED with no hidden fees. Full disclosure of findings and market analysis.
+                <h6 className="title" style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: '1.25rem',
+                  fontWeight: '400',
+                  color: '#111111',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                  marginBottom: '1rem'
+                }}>
+                  Transparent Process
+                </h6>
+                <div className="text" style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '0.95rem',
+                  fontWeight: '300',
+                  color: '#666666',
+                  lineHeight: '1.7',
+                  letterSpacing: '0.02em'
+                }}>
+                  CLEAR PRICING FROM 49 AED WITH NO HIDDEN FEES. FULL DISCLOSURE OF FINDINGS AND MARKET ANALYSIS.
                 </div>
               </div>
             </div>

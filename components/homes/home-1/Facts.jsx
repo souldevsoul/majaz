@@ -20,13 +20,33 @@ export default function Facts() {
                   data-wow-delay={counter.wowDelay}
                 >
                   <div className="content">
-                    <div className="widget-counter">
+                    <div
+                      className="widget-counter"
+                      style={{
+                        fontFamily: 'var(--font-display)',
+                        fontWeight: '300',
+                        fontSize: '3.5rem',
+                        color: 'var(--majaz-gold)',
+                        letterSpacing: '0.05em'
+                      }}
+                    >
                       <span className="count-text">
                         <Counter max={counter.stop} />
                       </span>
-                      M
+                      {index === 0 ? '+' : index === 1 ? '+' : index === 2 ? '%' : '%'}
                     </div>
-                    <h6 className="counter-title">{counter.title}</h6>
+                    <h6
+                      className="counter-title"
+                      style={{
+                        fontFamily: 'var(--font-body)',
+                        fontWeight: '400',
+                        fontSize: '0.9rem',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.15em',
+                        color: 'var(--majaz-text-primary)',
+                        marginTop: '1rem'
+                      }}
+                    >{counter.title}</h6>
                   </div>
                 </div>
               </div>

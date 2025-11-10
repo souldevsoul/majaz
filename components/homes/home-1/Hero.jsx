@@ -51,10 +51,12 @@ export default function Hero() {
               style={{
                 fontSize: "1.5rem",
                 color: "#FFFFFF",
-                fontWeight: "400",
+                fontWeight: "300",
                 fontFamily: "Raleway, sans-serif",
                 display: "block",
                 marginBottom: "1.5rem",
+                textTransform: "uppercase",
+                letterSpacing: "0.15em",
               }}
             >
               Premium Vehicle Concierge for UAE
@@ -67,9 +69,11 @@ export default function Hero() {
                 fontSize: "4rem",
                 color: "#FFFFFF",
                 fontFamily: "Raleway, sans-serif",
-                fontWeight: "300",
+                fontWeight: "200",
                 marginBottom: "2rem",
                 lineHeight: "1.2",
+                textTransform: "uppercase",
+                letterSpacing: "0.1em",
               }}
             >
               Bespoke Vehicle Intelligence
@@ -111,12 +115,14 @@ export default function Hero() {
                     color: "#111111",
                     border: "none",
                     padding: "1rem 2.5rem",
-                    fontSize: "1.1rem",
+                    fontSize: "1rem",
                     fontWeight: "600",
                     borderRadius: "8px",
                     cursor: "pointer",
                     boxShadow: "0 4px 16px rgba(212, 175, 55, 0.4)",
                     transition: "all 0.3s ease",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.1em",
                   }}
                 >
                   Begin Assessment
@@ -130,12 +136,14 @@ export default function Hero() {
                     color: "#FFFFFF",
                     border: "2px solid #D4AF37",
                     padding: "1rem 2.5rem",
-                    fontSize: "1.1rem",
+                    fontSize: "1rem",
                     fontWeight: "600",
                     borderRadius: "8px",
                     cursor: "pointer",
                     backdropFilter: "blur(10px)",
                     transition: "all 0.3s ease",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.1em",
                   }}
                 >
                   Learn More
@@ -159,11 +167,13 @@ export default function Hero() {
                 style={{
                   color: "#D4AF37",
                   textDecoration: "none",
-                  fontSize: "1rem",
-                  fontWeight: "500",
+                  fontSize: "0.9rem",
+                  fontWeight: "400",
                   textShadow: "1px 1px 3px rgba(0,0,0,0.8)",
                   transition: "all 0.3s ease",
                   borderBottom: "1px solid transparent",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.1em",
                 }}
               >
                 View Pricing
@@ -173,10 +183,12 @@ export default function Hero() {
                 style={{
                   color: "#D4AF37",
                   textDecoration: "none",
-                  fontSize: "1rem",
-                  fontWeight: "500",
+                  fontSize: "0.9rem",
+                  fontWeight: "400",
                   textShadow: "1px 1px 3px rgba(0,0,0,0.8)",
                   transition: "all 0.3s ease",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.1em",
                 }}
               >
                 How It Works
@@ -186,10 +198,12 @@ export default function Hero() {
                 style={{
                   color: "#D4AF37",
                   textDecoration: "none",
-                  fontSize: "1rem",
-                  fontWeight: "500",
+                  fontSize: "0.9rem",
+                  fontWeight: "400",
                   textShadow: "1px 1px 3px rgba(0,0,0,0.8)",
                   transition: "all 0.3s ease",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.1em",
                 }}
               >
                 Contact Us

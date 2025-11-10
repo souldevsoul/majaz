@@ -3,6 +3,7 @@ import Hero from "@/components/homes/home-1/Hero";
 import Facts from "@/components/homes/home-1/Facts";
 import Features from "@/components/homes/home-1/Features";
 import Features2 from "@/components/homes/home-1/Features2";
+import TrendingVehicles from "@/components/homes/home-1/TrendingVehicles";
 import Testimonials from "@/components/homes/home-1/Testimonials";
 import Cta from "@/components/common/Cta";
 
@@ -24,6 +25,7 @@ export default function LocaleHomePage({
       <Facts />
       <Features />
       <Features2 />
+      <TrendingVehicles />
       <Testimonials />
       <Cta />
       <Footer1 />
