@@ -23,7 +23,7 @@ export default function Hero() {
             >
               <h1
                 style={{
-                  fontFamily: "Playfair Display, serif",
+                  fontFamily: "Noto Sans, sans-serif",
                   fontSize: "4rem",
                   fontWeight: "700",
                   color: "#D4AF37",
@@ -36,7 +36,7 @@ export default function Hero() {
               </h1>
               <div
                 style={{
-                  fontFamily: "IBM Plex Sans Arabic, sans-serif",
+                  fontFamily: "Noto Sans Arabic, sans-serif",
                   fontSize: "3rem",
                   fontWeight: "600",
                   color: "#D4AF37",
@@ -52,7 +52,7 @@ export default function Hero() {
               className="wow fadeInUp"
               style={{
                 fontSize: "1.2rem",
-                color: "#FFFFF0",
+                color: "#FFFFFF",
                 textShadow: "1px 1px 4px rgba(0,0,0,0.8)",
                 fontWeight: "500",
               }}
@@ -65,9 +65,9 @@ export default function Hero() {
               data-wow-delay="100ms"
               style={{
                 fontSize: "3rem",
-                color: "#FFFFF0",
+                color: "#FFFFFF",
                 textShadow: "2px 2px 6px rgba(0,0,0,0.8)",
-                fontFamily: "Playfair Display, serif",
+                fontFamily: "Noto Sans, sans-serif",
                 marginTop: "1rem",
                 marginBottom: "2rem",
               }}
@@ -80,7 +80,7 @@ export default function Hero() {
               data-wow-delay="200ms"
               style={{
                 fontSize: "1.3rem",
-                color: "#FFFFF0",
+                color: "#FFFFFF",
                 textShadow: "1px 1px 4px rgba(0,0,0,0.8)",
                 maxWidth: "800px",
                 margin: "0 auto 2rem",
@@ -125,8 +125,8 @@ export default function Hero() {
                 <button
                   type="button"
                   style={{
-                    background: "rgba(255, 255, 240, 0.1)",
-                    color: "#FFFFF0",
+                    background: "rgba(255, 255, 255, 0.1)",
+                    color: "#FFFFFF",
                     border: "2px solid #D4AF37",
                     padding: "1rem 2.5rem",
                     fontSize: "1.1rem",
@@ -198,21 +198,40 @@ export default function Hero() {
         </div>
       </div>
       <style jsx global>{`
+        /* Remove header background and make it transparent */
+        .boxcar-header {
+          background: transparent !important;
+          position: absolute !important;
+          top: 0 !important;
+          left: 0 !important;
+          right: 0 !important;
+          z-index: 999 !important;
+        }
+
+        /* White text for all header elements */
         .boxcar-header .navigation a,
         .boxcar-header .navigation button,
         .boxcar-header .right-box a,
         .boxcar-header .right-box button,
-        .boxcar-header .logo-box a {
-          color: #fffff0 !important;
+        .boxcar-header .logo-box a,
+        .boxcar-header .logo-box span,
+        .boxcar-header a,
+        .boxcar-header button {
+          color: #ffffff !important;
         }
 
-        .boxcar-header .navigation a:hover {
+        .boxcar-header .navigation a:hover,
+        .boxcar-header .right-box a:hover {
           color: #d4af37 !important;
         }
 
-        .boxcar-header {
-          background: rgba(10, 10, 10, 0.8) !important;
-          backdrop-filter: blur(10px);
+        /* Use Noto Sans fonts */
+        body {
+          font-family: 'Noto Sans', sans-serif !important;
+        }
+
+        body[dir="rtl"] {
+          font-family: 'Noto Sans Arabic', sans-serif !important;
         }
 
         .boxcar-banner-section-v1 {
