@@ -51,7 +51,8 @@ export const packages: Package[] = [
       'تقرير PDF (عربي/إنجليزي)',
       'التسليم خلال 48 ساعة'
     ],
-    imagePrompt: 'Professional businessman analyzing vehicle data on laptop in modern Dubai office, golden hour lighting through floor-to-ceiling windows, luxury marble desk, digital screens showing car analytics, ultra detailed, cinematic photography, Phase One IQ4 camera'
+    imagePrompt: 'Professional businessman analyzing vehicle data on laptop in modern Dubai office, golden hour lighting through floor-to-ceiling windows, luxury marble desk, digital screens showing car analytics, ultra detailed, cinematic photography, Phase One IQ4 camera',
+    imagePath: '/images/packages/remote-assessment.jpg'
   },
   {
     id: 'remote-24h',
@@ -84,7 +85,8 @@ export const packages: Package[] = [
       'استشارة هاتفية',
       'دعم الدردشة المباشرة'
     ],
-    imagePrompt: 'Luxury car inspector in white coat with iPad examining exotic vehicle in pristine Dubai showroom, morning golden light, professional automotive photography, medium format Hasselblad, ultra detailed, premium aesthetic'
+    imagePrompt: 'Luxury car inspector in white coat with iPad examining exotic vehicle in pristine Dubai showroom, morning golden light, professional automotive photography, medium format Hasselblad, ultra detailed, premium aesthetic',
+    imagePath: '/images/packages/remote-express.jpg'
   },
   {
     id: 'remote-sameday',
@@ -114,7 +116,8 @@ export const packages: Package[] = [
       'نصائح استراتيجية المزايدة',
       'نصائح التفاوض'
     ],
-    imagePrompt: 'Close-up of hands holding luxury iPad showing vehicle inspection report, luxury Dubai office background blurred, golden hour warm lighting, professional editorial photography, shallow depth of field, Phase One IQ4'
+    imagePrompt: 'Close-up of hands holding luxury iPad showing vehicle inspection report, luxury Dubai office background blurred, golden hour warm lighting, professional editorial photography, shallow depth of field, Phase One IQ4',
+    imagePath: '/images/packages/remote-same-day.jpg'
   },
 
   // On-Site Inspection Packages
@@ -148,7 +151,8 @@ export const packages: Package[] = [
       'تقرير الحالة التفصيلي',
       'التسليم خلال 48 ساعة'
     ],
-    imagePrompt: 'Professional vehicle inspector in MAJAZ uniform examining luxury car engine bay with diagnostic tools, Dubai garage setting, dramatic lighting, ultra detailed photography, cinematic composition, Phase One IQ4'
+    imagePrompt: 'Professional vehicle inspector in MAJAZ uniform examining luxury car engine bay with diagnostic tools, Dubai garage setting, dramatic lighting, ultra detailed photography, cinematic composition, Phase One IQ4',
+    imagePath: '/images/packages/onsite-inspection.jpg'
   },
   {
     id: 'onsite-24h',
@@ -180,7 +184,8 @@ export const packages: Package[] = [
       'مفتش أول',
       'دعم التفاوض'
     ],
-    imagePrompt: 'Senior inspector in premium MAJAZ attire using professional diagnostic scanner on luxury sports car, high-end Dubai dealership, cinematic lighting, ultra detailed, professional automotive photography'
+    imagePrompt: 'Senior inspector in premium MAJAZ attire using professional diagnostic scanner on luxury sports car, high-end Dubai dealership, cinematic lighting, ultra detailed, professional automotive photography',
+    imagePath: '/images/packages/onsite-express.jpg'
   },
 
   // Concierge Memberships
@@ -223,7 +228,8 @@ export const packages: Package[] = [
       'الوصول إلى فعاليات الأعضاء',
       'دعم 24/7'
     ],
-    imagePrompt: 'Elegant gold membership card on black marble surface with luxury car keys (Ferrari, Lamborghini), Dubai skyline at golden hour in background, ultra premium product photography, Phase One IQ4, perfect lighting, shallow depth of field'
+    imagePrompt: 'Elegant gold membership card on black marble surface with luxury car keys (Ferrari, Lamborghini), Dubai skyline at golden hour in background, ultra premium product photography, Phase One IQ4, perfect lighting, shallow depth of field',
+    imagePath: '/images/packages/gold-concierge.jpg'
   },
   {
     id: 'platinum-monthly',
@@ -261,7 +267,8 @@ export const packages: Package[] = [
       'خط جوال مباشر',
       'ضمان الاستجابة في ساعتين'
     ],
-    imagePrompt: 'Platinum membership card on white marble with exotic car collection in background (Bugatti, McLaren, Rolls-Royce), private Dubai garage, cinematic lighting, ultra luxury product photography, Phase One IQ4, museum quality'
+    imagePrompt: 'Platinum membership card on white marble with exotic car collection in background (Bugatti, McLaren, Rolls-Royce), private Dubai garage, cinematic lighting, ultra luxury product photography, Phase One IQ4, museum quality',
+    imagePath: '/images/packages/platinum-concierge.jpg'
   },
   {
     id: 'diamond-annual',
@@ -301,7 +308,8 @@ export const packages: Package[] = [
       'مراجعة محفظة الرئيس التنفيذي السنوية',
       'خدمات مخصصة عند الطلب'
     ],
-    imagePrompt: 'Black diamond-encrusted membership card on obsidian stone, ultra-rare hypercar collection (Koenigsegg, Pagani, one-off custom) in private vault, dramatic spotlighting, ultra luxury product photography, Phase One IQ4, museum lighting'
+    imagePrompt: 'Black diamond-encrusted membership card on obsidian stone, ultra-rare hypercar collection (Koenigsegg, Pagani, one-off custom) in private vault, dramatic spotlighting, ultra luxury product photography, Phase One IQ4, museum lighting',
+    imagePath: '/images/packages/diamond-concierge.jpg'
   }
 ]
 
