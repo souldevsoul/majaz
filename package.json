@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint . --max-warnings 50",
+    "lint:fix": "eslint . --fix",
+    "lint:strict": "eslint . --max-warnings 0",
     "postinstall": "prisma generate"
   },
   "dependencies": {
@@ -44,10 +46,17 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@eslint/js": "^8.57.0",
+    "@next/eslint-plugin-next": "^14.2.8",
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20.11.5",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "prisma": "^5.8.0",
     "typescript": "^5.3.3"
   }
