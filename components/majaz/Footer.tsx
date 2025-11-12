@@ -264,7 +264,7 @@ export default function Footer() {
         }
 
         .footer-description {
-          color: var(--majaz-text-muted);
+          color: rgba(255, 255, 255, 0.7);
           font-size: 0.9375rem;
           line-height: 1.6;
           margin: 0;
@@ -328,7 +328,7 @@ export default function Footer() {
         }
 
         .footer-link {
-          color: var(--majaz-text-muted);
+          color: rgba(255, 255, 255, 0.65);
           text-decoration: none;
           font-size: 0.9375rem;
           transition: all var(--transition-fast);
@@ -341,7 +341,7 @@ export default function Footer() {
         }
 
         .newsletter-subtitle {
-          color: var(--majaz-text-muted);
+          color: rgba(255, 255, 255, 0.6);
           font-size: 0.875rem;
           margin: 0;
         }
@@ -414,9 +414,10 @@ export default function Footer() {
         }
 
         .footer-copyright {
-          color: var(--majaz-text-muted);
+          color: var(--majaz-gold);
           font-size: 0.875rem;
           margin: 0;
+          font-weight: 500;
         }
 
         .footer-badge {
@@ -446,7 +447,7 @@ export default function Footer() {
         }
 
         .legal-link {
-          color: var(--majaz-text-muted);
+          color: rgba(255, 255, 255, 0.65);
           text-decoration: none;
           font-size: 0.875rem;
           transition: color var(--transition-fast);

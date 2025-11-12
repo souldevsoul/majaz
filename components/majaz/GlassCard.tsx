@@ -24,20 +24,25 @@ export default function GlassCard({ children, className = '', hover = true, onCl
 
       <style jsx>{`
         .glass-card {
-          background: var(--majaz-glass-bg);
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
-          border: 1px solid var(--majaz-glass-border);
-          border-radius: var(--radius-lg);
-          padding: var(--spacing-xl);
-          box-shadow: 0 8px 32px var(--majaz-glass-shadow);
-          transition: all var(--transition-base);
+          background: rgba(26, 26, 26, 0.75);
+          backdrop-filter: blur(24px) saturate(180%);
+          -webkit-backdrop-filter: blur(24px) saturate(180%);
+          border: 1px solid rgba(212, 175, 55, 0.25);
+          border-radius: var(--radius-xl);
+          padding: var(--spacing-2xl);
+          box-shadow:
+            0 12px 48px rgba(0, 0, 0, 0.5),
+            0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .glass-card-hover:hover {
-          border-color: var(--majaz-border-strong);
-          box-shadow: var(--majaz-shadow-gold);
-          transform: translateY(-4px);
+          background: rgba(26, 26, 26, 0.85);
+          border-color: rgba(212, 175, 55, 0.5);
+          box-shadow:
+            0 20px 60px rgba(212, 175, 55, 0.3),
+            0 0 0 1px rgba(212, 175, 55, 0.2) inset;
+          transform: translateY(-8px) scale(1.02);
         }
       `}</style>
     </div>
