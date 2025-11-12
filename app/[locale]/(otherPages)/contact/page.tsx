@@ -92,7 +92,7 @@ export default function ContactPage() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="font-playfair text-5xl md:text-6xl font-bold text-ivory mb-6">
+          <h1 className="font-playfair text-5xl md:text-6xl font-thin uppercase tracking-wider text-ivory mb-6">
             {t('title')}
           </h1>
           <p className="text-xl text-ivory/70 max-w-2xl mx-auto">
@@ -104,7 +104,7 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <GlassCard className="p-8">
-              <h2 className="font-playfair text-3xl font-bold text-ivory mb-6">
+              <h2 className="font-playfair text-3xl font-thin uppercase tracking-wider text-ivory mb-6">
                 {t('form.title')}
               </h2>
 
@@ -239,7 +239,7 @@ export default function ContactPage() {
           <div className="space-y-6">
             {/* Contact Details */}
             <GlassCard className="p-6">
-              <h3 className="font-playfair text-2xl font-bold text-ivory mb-6">
+              <h3 className="font-playfair text-2xl font-thin uppercase tracking-wider text-ivory mb-6">
                 {t('info.title')}
               </h3>
               <div className="space-y-4">
@@ -267,7 +267,7 @@ export default function ContactPage() {
 
             {/* Working Hours */}
             <GlassCard className="p-6">
-              <h3 className="font-playfair text-2xl font-bold text-ivory mb-6">
+              <h3 className="font-playfair text-2xl font-thin uppercase tracking-wider text-ivory mb-6">
                 {t('hours.title')}
               </h3>
               <div className="space-y-3">
@@ -282,7 +282,7 @@ export default function ContactPage() {
 
             {/* Social Media */}
             <GlassCard className="p-6">
-              <h3 className="font-playfair text-2xl font-bold text-ivory mb-6">
+              <h3 className="font-playfair text-2xl font-thin uppercase tracking-wider text-ivory mb-6">
                 {t('social.title')}
               </h3>
               <div className="flex gap-3">

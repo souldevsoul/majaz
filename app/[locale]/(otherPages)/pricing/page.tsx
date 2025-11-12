@@ -51,7 +51,7 @@ export default function PricingPage() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="font-playfair text-5xl md:text-6xl font-bold text-ivory mb-6">
+          <h1 className="font-playfair text-5xl md:text-6xl font-thin uppercase tracking-wider text-ivory mb-6">
             {t('title')}
           </h1>
           <p className="text-xl text-ivory/70 max-w-2xl mx-auto mb-8">
@@ -101,7 +101,7 @@ export default function PricingPage() {
 
               {/* Tier Name */}
               <div className="text-center mb-6">
-                <h3 className="font-playfair text-2xl font-bold text-ivory mb-2">
+                <h3 className="font-playfair text-2xl font-thin uppercase tracking-wider text-ivory mb-2">
                   {t(`tiers.${tier.key}.name`)}
                 </h3>
                 <p className="text-ivory/60 text-sm">
@@ -156,7 +156,7 @@ export default function PricingPage() {
         {/* Comparison Note */}
         <div className="max-w-4xl mx-auto mt-16">
           <GlassCard className="p-8 text-center">
-            <h3 className="font-playfair text-2xl font-bold text-ivory mb-4">
+            <h3 className="font-playfair text-2xl font-thin uppercase tracking-wider text-ivory mb-4">
               {t('comparison.title')}
             </h3>
             <p className="text-ivory/70 mb-6">

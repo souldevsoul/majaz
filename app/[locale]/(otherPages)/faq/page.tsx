@@ -58,7 +58,7 @@ export default function FAQPage() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="font-playfair text-5xl md:text-6xl font-bold text-ivory mb-6">
+          <h1 className="font-playfair text-5xl md:text-6xl font-thin uppercase tracking-wider text-ivory mb-6">
             {t('title')}
           </h1>
           <p className="text-xl text-ivory/70 max-w-2xl mx-auto">
@@ -99,7 +99,7 @@ export default function FAQPage() {
                   onClick={() => toggleQuestion(faq.key)}
                   className="w-full flex items-center justify-between p-6 text-left"
                 >
-                  <span className="font-playfair text-xl font-bold text-ivory pr-4">
+                  <span className="font-playfair text-xl font-semibold text-ivory pr-4">
                     {t(`questions.${faq.key}.question`)}
                   </span>
                   <svg
@@ -136,7 +136,7 @@ export default function FAQPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h2 className="font-playfair text-3xl font-bold text-ivory mb-4">
+            <h2 className="font-playfair text-3xl font-thin uppercase tracking-wider text-ivory mb-4">
               {t('contact_section.title')}
             </h2>
             <p className="text-ivory/70 mb-6 max-w-xl mx-auto">

@@ -53,7 +53,7 @@ export default function AboutPage() {
         <div className="relative z-10 flex h-full items-center">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
-              <h1 className="font-playfair text-5xl md:text-6xl font-bold text-ivory mb-6">
+              <h1 className="font-playfair text-5xl md:text-6xl font-thin uppercase tracking-wider text-ivory mb-6">
                 {t('hero.title')}
               </h1>
               <p className="text-xl md:text-2xl text-ivory/90">
@@ -69,7 +69,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <GlassCard className="p-10">
-              <h2 className="font-playfair text-4xl font-bold text-ivory mb-6">
+              <h2 className="font-playfair text-4xl font-thin uppercase tracking-wider text-ivory mb-6">
                 {t('story.title')}
               </h2>
               <div className="space-y-4 text-ivory/80 text-lg leading-relaxed">
@@ -92,7 +92,7 @@ export default function AboutPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h2 className="font-playfair text-3xl font-bold text-ivory mb-4">
+              <h2 className="font-playfair text-3xl font-thin uppercase tracking-wider text-ivory mb-4">
                 {t('mission.title')}
               </h2>
               <p className="text-ivory/80 text-lg leading-relaxed">
@@ -106,7 +106,7 @@ export default function AboutPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
               </div>
-              <h2 className="font-playfair text-3xl font-bold text-ivory mb-4">
+              <h2 className="font-playfair text-3xl font-thin uppercase tracking-wider text-ivory mb-4">
                 {t('vision.title')}
               </h2>
               <p className="text-ivory/80 text-lg leading-relaxed">
@@ -121,7 +121,7 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-ivory mb-4">
+            <h2 className="font-playfair text-4xl md:text-5xl font-thin uppercase tracking-wider text-ivory mb-4">
               {t('values.title')}
             </h2>
             <p className="text-xl text-ivory/70 max-w-2xl mx-auto">
@@ -137,7 +137,7 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={value.icon} />
                   </svg>
                 </div>
-                <h3 className="font-playfair text-2xl font-bold text-ivory mb-3">
+                <h3 className="font-playfair text-2xl font-thin uppercase tracking-wider text-ivory mb-3">
                   {t(`values.items.${value.key}.title`)}
                 </h3>
                 <p className="text-ivory/70">
@@ -153,7 +153,7 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-900/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-ivory mb-4">
+            <h2 className="font-playfair text-4xl md:text-5xl font-thin uppercase tracking-wider text-ivory mb-4">
               {t('timeline.title')}
             </h2>
             <p className="text-xl text-ivory/70 max-w-2xl mx-auto">
@@ -171,7 +171,7 @@ export default function AboutPage() {
                     <div className={`flex-1 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
                       <GlassCard className="p-6 inline-block">
                         <div className="text-gold font-bold text-xl mb-2">{milestone.year}</div>
-                        <h3 className="font-playfair text-2xl font-bold text-ivory mb-2">
+                        <h3 className="font-playfair text-2xl font-thin uppercase tracking-wider text-ivory mb-2">
                           {t(`timeline.milestones.${milestone.key}.title`)}
                         </h3>
                         <p className="text-ivory/70">
@@ -197,7 +197,7 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-ivory mb-4">
+            <h2 className="font-playfair text-4xl md:text-5xl font-thin uppercase tracking-wider text-ivory mb-4">
               {t('team.title')}
             </h2>
             <p className="text-xl text-ivory/70 max-w-2xl mx-auto mb-8">
@@ -216,7 +216,7 @@ export default function AboutPage() {
       <section className="py-20 bg-gradient-to-t from-black to-gray-900">
         <div className="container mx-auto px-4">
           <GlassCard className="max-w-4xl mx-auto p-12 text-center">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-ivory mb-6">
+            <h2 className="font-playfair text-4xl md:text-5xl font-thin uppercase tracking-wider text-ivory mb-6">
               {t('cta.title')}
             </h2>
             <p className="text-xl text-ivory/70 mb-8 max-w-2xl mx-auto">
