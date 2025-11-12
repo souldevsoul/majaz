@@ -49,51 +49,68 @@ export default function Hero() {
             <span
               className="wow fadeInUp"
               style={{
-                fontSize: "1.5rem",
+                fontSize: "1.25rem",
                 color: "#FFFFFF",
-                fontWeight: "300",
+                fontWeight: "400",
                 fontFamily: "Raleway, sans-serif",
                 display: "block",
                 marginBottom: "1.5rem",
                 textTransform: "uppercase",
-                letterSpacing: "0.15em",
+                letterSpacing: "0.2em",
               }}
             >
-              Premium Vehicle Concierge for UAE
+              Exclusive Vehicle Concierge
             </span>
 
             <h2
               className="wow fadeInUp"
               data-wow-delay="100ms"
               style={{
-                fontSize: "4rem",
+                fontSize: "3.5rem",
                 color: "#FFFFFF",
                 fontFamily: "Raleway, sans-serif",
                 fontWeight: "200",
                 marginBottom: "2rem",
-                lineHeight: "1.2",
+                lineHeight: "1.3",
                 textTransform: "uppercase",
-                letterSpacing: "0.1em",
+                letterSpacing: "0.08em",
               }}
             >
-              Bespoke Vehicle Intelligence
+              Never Buy or Sell <br />
+              <span style={{ color: "#D4AF37" }}>a Car Alone Again</span>
             </h2>
 
             <p
               className="wow fadeInUp"
               data-wow-delay="200ms"
               style={{
-                fontSize: "1.5rem",
-                color: "#FFFFFF",
-                maxWidth: "900px",
-                marginBottom: "3rem",
-                lineHeight: "1.8",
+                fontSize: "1.25rem",
+                color: "rgba(255, 255, 255, 0.9)",
+                maxWidth: "750px",
+                marginBottom: "1.5rem",
+                lineHeight: "1.7",
                 fontFamily: "Raleway, sans-serif",
                 fontWeight: "400",
               }}
             >
-              Expert pre-purchase assessment, market analysis, and white-glove
-              concierge service for discerning buyers in Dubai and the UAE
+              Expert pre-purchase inspections • Market intelligence • Auction representation • Global vehicle sourcing • White-glove concierge service
+            </p>
+
+            <p
+              className="wow fadeInUp"
+              data-wow-delay="250ms"
+              style={{
+                fontSize: "1rem",
+                color: "rgba(255, 255, 255, 0.7)",
+                maxWidth: "700px",
+                marginBottom: "3rem",
+                lineHeight: "1.6",
+                fontFamily: "Raleway, sans-serif",
+                fontWeight: "300",
+                fontStyle: "italic",
+              }}
+            >
+              From 49 AED inspections to $10,000/year concierge memberships. Dubai's premier automotive advisory for discerning collectors.
             </p>
 
             <div
@@ -106,7 +123,7 @@ export default function Hero() {
                 flexWrap: "wrap",
               }}
             >
-              <Link href="/en/requests/new" className="theme-btn">
+              <Link href="/en/interview" className="theme-btn">
                 <button
                   type="button"
                   style={{
@@ -114,31 +131,38 @@ export default function Hero() {
                       "linear-gradient(135deg, #D4AF37 0%, #B8941E 100%)",
                     color: "#111111",
                     border: "none",
-                    padding: "1rem 2.5rem",
-                    fontSize: "1rem",
+                    padding: "1.25rem 3rem",
+                    fontSize: "1.125rem",
                     fontWeight: "600",
-                    borderRadius: "8px",
+                    borderRadius: "12px",
                     cursor: "pointer",
-                    boxShadow: "0 4px 16px rgba(212, 175, 55, 0.4)",
+                    boxShadow: "0 4px 20px rgba(212, 175, 55, 0.5)",
                     transition: "all 0.3s ease",
                     textTransform: "uppercase",
                     letterSpacing: "0.1em",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.75rem",
                   }}
                 >
-                  Begin Assessment
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <rect x="9" y="2" width="6" height="11" rx="3" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M5 10v1a7 7 0 0014 0v-1M12 18v4m-4 0h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  </svg>
+                  Speak with AI Advisor
                 </button>
               </Link>
-              <Link href="/en/about" className="theme-btn-secondary">
+              <Link href="/en/what-we-offer" className="theme-btn-secondary">
                 <button
                   type="button"
                   style={{
-                    background: "rgba(255, 255, 255, 0.1)",
+                    background: "rgba(255, 255, 255, 0.05)",
                     color: "#FFFFFF",
-                    border: "2px solid #D4AF37",
-                    padding: "1rem 2.5rem",
-                    fontSize: "1rem",
+                    border: "2px solid rgba(212, 175, 55, 0.6)",
+                    padding: "1.25rem 3rem",
+                    fontSize: "1.125rem",
                     fontWeight: "600",
-                    borderRadius: "8px",
+                    borderRadius: "12px",
                     cursor: "pointer",
                     backdropFilter: "blur(10px)",
                     transition: "all 0.3s ease",
@@ -146,7 +170,7 @@ export default function Hero() {
                     letterSpacing: "0.1em",
                   }}
                 >
-                  Learn More
+                  Explore Services
                 </button>
               </Link>
             </div>
@@ -157,57 +181,54 @@ export default function Hero() {
               style={{
                 marginTop: "3rem",
                 display: "flex",
-                gap: "2rem",
+                gap: "2.5rem",
                 justifyContent: "flex-start",
                 flexWrap: "wrap",
+                alignItems: "center",
               }}
             >
-              <Link
-                href="/en/pricing"
-                style={{
-                  color: "#D4AF37",
-                  textDecoration: "none",
-                  fontSize: "0.9rem",
-                  fontWeight: "400",
-                  textShadow: "1px 1px 3px rgba(0,0,0,0.8)",
-                  transition: "all 0.3s ease",
-                  borderBottom: "1px solid transparent",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.1em",
-                }}
-              >
-                View Pricing
-              </Link>
-              <Link
-                href="/en/how-it-works"
-                style={{
-                  color: "#D4AF37",
-                  textDecoration: "none",
-                  fontSize: "0.9rem",
-                  fontWeight: "400",
-                  textShadow: "1px 1px 3px rgba(0,0,0,0.8)",
-                  transition: "all 0.3s ease",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.1em",
-                }}
-              >
-                How It Works
-              </Link>
-              <Link
-                href="/en/contact"
-                style={{
-                  color: "#D4AF37",
-                  textDecoration: "none",
-                  fontSize: "0.9rem",
-                  fontWeight: "400",
-                  textShadow: "1px 1px 3px rgba(0,0,0,0.8)",
-                  transition: "all 0.3s ease",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.1em",
-                }}
-              >
-                Contact Us
-              </Link>
+              <div style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                color: "rgba(255, 255, 255, 0.8)",
+                fontSize: "0.875rem",
+                fontWeight: "400",
+                letterSpacing: "0.05em",
+              }}>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M8 1l2 6 6 0-5 4 2 6-5-4-5 4 2-6-5-4 6 0z" fill="#D4AF37"/>
+                </svg>
+                5000+ Vehicles Assessed
+              </div>
+              <div style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                color: "rgba(255, 255, 255, 0.8)",
+                fontSize: "0.875rem",
+                fontWeight: "400",
+                letterSpacing: "0.05em",
+              }}>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M8 1l2 6 6 0-5 4 2 6-5-4-5 4 2-6-5-4 6 0z" fill="#D4AF37"/>
+                </svg>
+                98% Accuracy Rate
+              </div>
+              <div style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                color: "rgba(255, 255, 255, 0.8)",
+                fontSize: "0.875rem",
+                fontWeight: "400",
+                letterSpacing: "0.05em",
+              }}>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M8 1l2 6 6 0-5 4 2 6-5-4-5 4 2-6-5-4 6 0z" fill="#D4AF37"/>
+                </svg>
+                UAE's First AI Concierge
+              </div>
             </div>
           </div>
         </div>
