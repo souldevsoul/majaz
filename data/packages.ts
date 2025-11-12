@@ -25,288 +25,240 @@ export const packages: Package[] = [
   // Individual Inspection Packages
   {
     id: 'remote-48h',
-    name: 'Remote Assessment',
-    nameAr: 'التقييم عن بعد',
-    slug: 'remote-assessment',
+    name: 'Essential Intelligence',
+    nameAr: 'الذكاء الأساسي',
+    slug: 'essential-intelligence',
     price: {
-      monthly: 49,
-      quarterly: 49,
-      annual: 49
+      monthly: 2999,
+      quarterly: 8497,
+      annual: 32388
     },
     currency: 'AED',
     tier: 'basic',
-    description: 'Perfect for quick online vehicle checks before viewing',
-    descriptionAr: 'مثالي للفحص السريع عبر الإنترنت قبل المعاينة',
+    description: 'Sophisticated analysis for the discerning buyer',
+    descriptionAr: 'تحليل متطور للمشتري الحصيف',
     features: [
-      'URL analysis & scraping',
-      'Market comparison (UAE)',
-      'Fair value calculation',
-      'PDF report (EN/AR)',
-      '48-hour delivery'
+      'Comprehensive digital vehicle dossier',
+      'UAE market intelligence & valuation',
+      'Investment risk assessment',
+      'Bilingual premium PDF report',
+      'Expert consultation session',
+      'Auction strategy guidance'
     ],
     featuresAr: [
-      'تحليل الرابط والاستخراج',
-      'مقارنة السوق (الإمارات)',
-      'حساب القيمة العادلة',
-      'تقرير PDF (عربي/إنجليزي)',
-      'التسليم خلال 48 ساعة'
+      'ملف رقمي شامل للمركبة',
+      'تقييم وذكاء السوق الإماراتي',
+      'تقييم مخاطر الاستثمار',
+      'تقرير PDF فاخر ثنائي اللغة',
+      'جلسة استشارة خبير',
+      'إرشاد استراتيجية المزاد'
     ],
     imagePrompt: 'Professional businessman analyzing vehicle data on laptop in modern Dubai office, golden hour lighting through floor-to-ceiling windows, luxury marble desk, digital screens showing car analytics, ultra detailed, cinematic photography, Phase One IQ4 camera',
     imagePath: '/images/packages/remote-assessment.jpg'
   },
   {
     id: 'remote-24h',
-    name: 'Remote Express',
-    nameAr: 'التقييم السريع',
-    slug: 'remote-express',
+    name: 'Sovereign Service',
+    nameAr: 'الخدمة السيادية',
+    slug: 'sovereign-service',
     price: {
-      monthly: 89,
-      quarterly: 89,
-      annual: 89
+      monthly: 5999,
+      quarterly: 16797,
+      annual: 64788
     },
     currency: 'AED',
     tier: 'standard',
     popular: true,
-    badge: 'MOST POPULAR',
-    badgeAr: 'الأكثر شعبية',
-    description: 'Fast-track assessment for time-sensitive decisions',
-    descriptionAr: 'تقييم سريع للقرارات الحساسة للوقت',
+    badge: 'MOST DISTINGUISHED',
+    badgeAr: 'الأكثر تميزاً',
+    description: 'Elite assessment with white-glove service',
+    descriptionAr: 'تقييم نخبوي مع خدمة راقية',
     features: [
-      'Everything in Remote Assessment',
-      'Priority queue',
-      '24-hour delivery',
-      'Phone consultation',
-      'Live chat support'
+      'All Essential Intelligence benefits',
+      'Priority concierge access',
+      'Private viewing arrangements',
+      'Video consultation with specialist',
+      'Negotiation masterclass session',
+      'VIP auction floor access',
+      'Dedicated support line'
     ],
     featuresAr: [
-      'كل ميزات التقييم عن بعد',
-      'قائمة الأولوية',
-      'التسليم خلال 24 ساعة',
-      'استشارة هاتفية',
-      'دعم الدردشة المباشرة'
+      'جميع مزايا الذكاء الأساسي',
+      'وصول كونسيرج ذو أولوية',
+      'ترتيبات المشاهدة الخاصة',
+      'استشارة فيديو مع متخصص',
+      'جلسة ماستركلاس التفاوض',
+      'وصول VIP لصالة المزاد',
+      'خط دعم مخصص'
     ],
     imagePrompt: 'Luxury car inspector in white coat with iPad examining exotic vehicle in pristine Dubai showroom, morning golden light, professional automotive photography, medium format Hasselblad, ultra detailed, premium aesthetic',
     imagePath: '/images/packages/remote-express.jpg'
   },
   {
     id: 'remote-sameday',
-    name: 'Remote Same-Day',
-    nameAr: 'التقييم في نفس اليوم',
-    slug: 'remote-same-day',
+    name: 'Heritage Collection',
+    nameAr: 'مجموعة التراث',
+    slug: 'heritage-collection',
     price: {
-      monthly: 129,
-      quarterly: 129,
-      annual: 129
+      monthly: 9999,
+      quarterly: 27997,
+      annual: 107988
     },
     currency: 'AED',
     tier: 'premium',
-    description: 'Urgent assessment for immediate decisions',
-    descriptionAr: 'تقييم عاجل للقرارات الفورية',
+    description: 'Bespoke service for exceptional automobiles',
+    descriptionAr: 'خدمة مخصصة للسيارات الاستثنائية',
     features: [
-      'Everything in Remote Express',
-      'Same-day delivery',
-      'Video call consultation',
-      'Bidding strategy advice',
-      'Deal negotiation tips'
+      'All Sovereign Service privileges',
+      'Immediate priority deployment',
+      'Multi-vehicle portfolio management',
+      'International auction representation',
+      'Personal curator for rare vehicles',
+      'Exclusive dealer network access',
+      'White-glove delivery coordination',
+      'Heritage vehicle certification'
     ],
     featuresAr: [
-      'كل ميزات التقييم السريع',
-      'التسليم في نفس اليوم',
-      'استشارة عبر مكالمة فيديو',
-      'نصائح استراتيجية المزايدة',
-      'نصائح التفاوض'
+      'جميع امتيازات الخدمة السيادية',
+      'نشر فوري ذو أولوية',
+      'إدارة محفظة متعددة المركبات',
+      'تمثيل المزادات الدولية',
+      'مشرف شخصي للمركبات النادرة',
+      'وصول حصري لشبكة الوكلاء',
+      'تنسيق التسليم الراقي',
+      'شهادة مركبات التراث'
     ],
     imagePrompt: 'Close-up of hands holding luxury iPad showing vehicle inspection report, luxury Dubai office background blurred, golden hour warm lighting, professional editorial photography, shallow depth of field, Phase One IQ4',
     imagePath: '/images/packages/remote-same-day.jpg'
   },
 
-  // On-Site Inspection Packages
+  // Concierge Membership Tiers
   {
     id: 'onsite-48h',
-    name: 'On-Site Inspection',
-    nameAr: 'الفحص الميداني',
-    slug: 'onsite-inspection',
+    name: 'Majesty Tier',
+    nameAr: 'مستوى الجلالة',
+    slug: 'majesty-tier',
     price: {
-      monthly: 169,
-      quarterly: 169,
-      annual: 169
+      monthly: 15999,
+      quarterly: 44797,
+      annual: 172788
     },
     currency: 'AED',
-    tier: 'standard',
-    description: 'Physical inspection at vehicle location anywhere in UAE',
-    descriptionAr: 'فحص فعلي في موقع المركبة في أي مكان بالإمارات',
+    tier: 'gold',
+    description: 'Unlimited concierge services for the automotive connoisseur',
+    descriptionAr: 'خدمات كونسيرج غير محدودة لخبير السيارات',
     features: [
-      '200+ point inspection',
-      'Professional inspector visit',
-      'Photo documentation',
-      'Test drive analysis',
-      'Detailed condition report',
-      '48-hour delivery'
+      'Unlimited vehicle assessments',
+      'Dedicated personal concierge',
+      'Global market intelligence',
+      'Private showroom appointments',
+      'Comprehensive 200+ point inspections',
+      'Post-purchase white-glove support',
+      'Annual portfolio strategy review',
+      'Members-only events & previews',
+      'Priority access to rare vehicles'
     ],
     featuresAr: [
-      'فحص أكثر من 200 نقطة',
-      'زيارة مفتش محترف',
-      'توثيق بالصور',
-      'تحليل قيادة الاختبار',
-      'تقرير الحالة التفصيلي',
-      'التسليم خلال 48 ساعة'
+      'تقييمات مركبات غير محدودة',
+      'كونسيرج شخصي مخصص',
+      'استخبارات السوق العالمية',
+      'مواعيد صالة عرض خاصة',
+      'فحوصات شاملة أكثر من 200 نقطة',
+      'دعم راقي بعد الشراء',
+      'مراجعة استراتيجية المحفظة السنوية',
+      'فعاليات ومعاينات حصرية للأعضاء',
+      'وصول ذو أولوية للمركبات النادرة'
     ],
     imagePrompt: 'Professional vehicle inspector in MAJAZ uniform examining luxury car engine bay with diagnostic tools, Dubai garage setting, dramatic lighting, ultra detailed photography, cinematic composition, Phase One IQ4',
     imagePath: '/images/packages/onsite-inspection.jpg'
   },
   {
     id: 'onsite-24h',
-    name: 'On-Site Express',
-    nameAr: 'الفحص السريع',
-    slug: 'onsite-express',
+    name: 'Regency Circle',
+    nameAr: 'دائرة الوصاية',
+    slug: 'regency-circle',
     price: {
-      monthly: 209,
-      quarterly: 209,
-      annual: 209
+      monthly: 29999,
+      quarterly: 83997,
+      annual: 323988
     },
     currency: 'AED',
-    tier: 'premium',
-    description: 'Priority on-site inspection with fast turnaround',
-    descriptionAr: 'فحص ميداني ذو أولوية مع تسليم سريع',
+    tier: 'platinum',
+    badge: 'ULTRA EXCLUSIVE',
+    badgeAr: 'حصري للغاية',
+    description: 'The pinnacle of automotive concierge excellence',
+    descriptionAr: 'قمة التميز في خدمة كونسيرج السيارات',
     features: [
-      'Everything in On-Site Inspection',
-      'Priority scheduling',
-      '24-hour delivery',
-      'Video report',
-      'Senior inspector',
-      'Negotiation support'
+      'All Majesty Tier privileges',
+      'International vehicle sourcing',
+      'Private jet coordination for viewings',
+      'Global auction house partnerships',
+      'Museum-grade documentation',
+      'Bespoke automotive experiences',
+      'Direct CEO hotline (24/7)',
+      'Investment-grade vehicle curation',
+      'Ultra-rare hypercar access',
+      'Quarterly executive briefings'
     ],
     featuresAr: [
-      'كل ميزات الفحص الميداني',
-      'جدولة الأولوية',
-      'التسليم خلال 24 ساعة',
-      'تقرير فيديو',
-      'مفتش أول',
-      'دعم التفاوض'
+      'جميع امتيازات مستوى الجلالة',
+      'توريد مركبات دولي',
+      'تنسيق طائرة خاصة للمشاهدة',
+      'شراكات دور المزادات العالمية',
+      'توثيق بمستوى المتاحف',
+      'تجارب سيارات مخصصة',
+      'خط ساخن مباشر للرئيس التنفيذي (24/7)',
+      'تنسيق مركبات بدرجة استثمارية',
+      'وصول للسيارات الخارقة النادرة',
+      'إحاطات تنفيذية ربع سنوية'
     ],
     imagePrompt: 'Senior inspector in premium MAJAZ attire using professional diagnostic scanner on luxury sports car, high-end Dubai dealership, cinematic lighting, ultra detailed, professional automotive photography',
     imagePath: '/images/packages/onsite-express.jpg'
   },
 
-  // Concierge Memberships
-  {
-    id: 'gold-monthly',
-    name: 'Gold Concierge',
-    nameAr: 'كونسيرج الذهبي',
-    slug: 'gold-concierge',
-    price: {
-      monthly: 3059, // $10k/year ÷ 12
-      quarterly: 9177, // $10k/year ÷ 4
-      annual: 36700 // $10k USD = 36,700 AED
-    },
-    currency: 'AED',
-    tier: 'gold',
-    popular: true,
-    badge: 'EXCLUSIVE',
-    badgeAr: 'حصري',
-    description: 'Unlimited inspections + personal concierge service',
-    descriptionAr: 'فحوصات غير محدودة + خدمة كونسيرج شخصية',
-    features: [
-      'Unlimited on-site inspections',
-      'Personal vehicle concierge',
-      'Same-day priority service',
-      'Portfolio management dashboard',
-      'Monthly market intelligence',
-      'Vehicle sourcing (3/year)',
-      'Professional seller services',
-      'Member events access',
-      '24/7 support'
-    ],
-    featuresAr: [
-      'فحوصات ميدانية غير محدودة',
-      'كونسيرج المركبات الشخصي',
-      'خدمة الأولوية في نفس اليوم',
-      'لوحة إدارة المحفظة',
-      'استخبارات السوق الشهرية',
-      'البحث عن مركبات (3 سنويًا)',
-      'خدمات البائع الاحترافية',
-      'الوصول إلى فعاليات الأعضاء',
-      'دعم 24/7'
-    ],
-    imagePrompt: 'Elegant gold membership card on black marble surface with luxury car keys (Ferrari, Lamborghini), Dubai skyline at golden hour in background, ultra premium product photography, Phase One IQ4, perfect lighting, shallow depth of field',
-    imagePath: '/images/packages/gold-concierge.jpg'
-  },
-  {
-    id: 'platinum-monthly',
-    name: 'Platinum Concierge',
-    nameAr: 'كونسيرج البلاتيني',
-    slug: 'platinum-concierge',
-    price: {
-      monthly: 7646, // $25k/year ÷ 12
-      quarterly: 22938, // $25k/year ÷ 4
-      annual: 91750 // $25k USD = 91,750 AED
-    },
-    currency: 'AED',
-    tier: 'platinum',
-    badge: 'ULTRA PREMIUM',
-    badgeAr: 'فائق التميز',
-    description: 'Everything in Gold + international services',
-    descriptionAr: 'كل ميزات الذهبي + خدمات دولية',
-    features: [
-      'Everything in Gold Concierge',
-      'Unlimited vehicle sourcing',
-      'International inspections',
-      'Global import service (1/year)',
-      'Unlimited auction representation',
-      'VIP event access',
-      'Direct mobile line',
-      '2-hour response guarantee'
-    ],
-    featuresAr: [
-      'كل ميزات كونسيرج الذهبي',
-      'البحث غير المحدود عن المركبات',
-      'فحوصات دولية',
-      'خدمة الاستيراد العالمية (سنويًا)',
-      'تمثيل المزاد غير المحدود',
-      'الوصول إلى الفعاليات VIP',
-      'خط جوال مباشر',
-      'ضمان الاستجابة في ساعتين'
-    ],
-    imagePrompt: 'Platinum membership card on white marble with exotic car collection in background (Bugatti, McLaren, Rolls-Royce), private Dubai garage, cinematic lighting, ultra luxury product photography, Phase One IQ4, museum quality',
-    imagePath: '/images/packages/platinum-concierge.jpg'
-  },
   {
     id: 'diamond-annual',
-    name: 'Diamond Concierge',
-    nameAr: 'كونسيرج الماسي',
-    slug: 'diamond-concierge',
+    name: 'Crown Privilege',
+    nameAr: 'امتياز التاج',
+    slug: 'crown-privilege',
     price: {
       monthly: 0, // Contact only
       quarterly: 0,
-      annual: 183500 // Starting at $50k USD = 183,500 AED
+      annual: 500000 // Starting at 500,000 AED
     },
     currency: 'AED',
     tier: 'diamond',
-    badge: 'INVITATION ONLY',
-    badgeAr: 'بالدعوة فقط',
-    description: 'Ultimate white-glove automotive concierge experience',
-    descriptionAr: 'التجربة النهائية لخدمة الكونسيرج السيارات',
+    badge: 'BY INVITATION',
+    badgeAr: 'بالدعوة',
+    description: 'The ultimate expression of automotive luxury',
+    descriptionAr: 'التعبير النهائي عن الفخامة السيارية',
     features: [
-      'Everything in Platinum',
-      'Dedicated full-time concierge',
-      'Unlimited international services',
-      'Private jet coordination',
-      'Bespoke automotive experiences',
-      'Global dealer relationships',
-      'Ultra-rare vehicle access',
-      'Annual CEO portfolio review',
-      'Custom services on demand'
+      'All Regency Circle benefits',
+      'Full-time dedicated concierge team',
+      'Unlimited global vehicle sourcing',
+      'Private jet & yacht viewings',
+      'Exclusive factory tours',
+      'One-of-one commission facilitation',
+      'Provenance research & certification',
+      'Blue-chip investment advisory',
+      'Founder\'s Circle membership',
+      'Lifetime legacy documentation',
+      'Invitation to Monaco & Pebble Beach',
+      'Custom-tailored automotive experiences'
     ],
     featuresAr: [
-      'كل ميزات البلاتيني',
-      'كونسيرج مخصص بدوام كامل',
-      'خدمات دولية غير محدودة',
-      'تنسيق الطائرات الخاصة',
-      'تجارب سيارات مخصصة',
-      'علاقات الوكلاء العالميين',
-      'الوصول إلى المركبات النادرة',
-      'مراجعة محفظة الرئيس التنفيذي السنوية',
-      'خدمات مخصصة عند الطلب'
+      'جميع مزايا دائرة الوصاية',
+      'فريق كونسيرج مخصص بدوام كامل',
+      'توريد مركبات عالمي غير محدود',
+      'مشاهدات الطائرات واليخوت الخاصة',
+      'جولات مصنع حصرية',
+      'تسهيل تكليف واحد من واحد',
+      'بحث وشهادة المصدر',
+      'استشارات استثمار الشريحة الزرقاء',
+      'عضوية دائرة المؤسسين',
+      'توثيق الإرث مدى الحياة',
+      'دعوة لموناكو وبيبل بيتش',
+      'تجارب سيارات مصممة خصيصًا'
     ],
     imagePrompt: 'Black diamond-encrusted membership card on obsidian stone, ultra-rare hypercar collection (Koenigsegg, Pagani, one-off custom) in private vault, dramatic spotlighting, ultra luxury product photography, Phase One IQ4, museum lighting',
     imagePath: '/images/packages/diamond-concierge.jpg'

@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { prisma } from "@/lib/db";
+import { sendEmail, generatePackagePurchaseEmail, getPackagePurchaseTextEmail } from "@/lib/email";
+import { getPackageBySlug } from "@/data/packages";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: "2023-10-16",
@@ -69,7 +71,52 @@ async function handlePaymentSuccess(paymentIntent: Stripe.PaymentIntent) {
     const paymentId = paymentIntent.id;
     const metadata = paymentIntent.metadata;
 
-    // Find request by payment ID
+    // Check if this is a package purchase
+    const packageId = metadata.packageId;
+    const duration = metadata.duration;
+    const customerEmail = paymentIntent.receipt_email || metadata.customerEmail;
+    const customerName = metadata.customerName || 'Valued Customer';
+
+    if (packageId && duration && customerEmail) {
+      // This is a package purchase, send confirmation email
+      try {
+        const pkg = await getPackageBySlug(metadata.packageSlug || packageId);
+
+        if (pkg) {
+          const packageName = metadata.locale === 'ar' ? pkg.nameAr : pkg.name;
+          const price = pkg.price[duration as 'monthly' | 'quarterly' | 'annual'];
+
+          await sendEmail({
+            to: customerEmail,
+            subject: metadata.locale === 'ar'
+              ? `تأكيد الاشتراك في ${packageName} - مجاز`
+              : `${packageName} Subscription Confirmed - MAJAZ`,
+            html: generatePackagePurchaseEmail(
+              customerName,
+              packageName,
+              price,
+              pkg.currency,
+              duration,
+              metadata.locale || 'en'
+            ),
+            text: getPackagePurchaseTextEmail(
+              customerName,
+              packageName,
+              price,
+              pkg.currency,
+              duration,
+              metadata.locale || 'en'
+            )
+          });
+
+          console.log(`Package purchase confirmation email sent to ${customerEmail}`);
+        }
+      } catch (emailError) {
+        console.error("Error sending package purchase email:", emailError);
+      }
+    }
+
+    // Handle regular request payments
     const request = await prisma.request.findFirst({
       where: {
         OR: [
@@ -79,40 +126,37 @@ async function handlePaymentSuccess(paymentIntent: Stripe.PaymentIntent) {
       }
     });
 
-    if (!request) {
-      console.error("Request not found for payment:", paymentId);
-      return;
-    }
+    if (request) {
+      const isDeposit = metadata.type === "deposit";
 
-    const isDeposit = metadata.type === "deposit";
-
-    // Update request
-    await prisma.request.update({
-      where: { id: request.id },
-      data: {
-        status: "PAYMENT_RECEIVED",
-        paidAt: new Date(),
-      }
-    });
-
-    // Create event log
-    await prisma.event.create({
-      data: {
-        requestId: request.id,
-        type: isDeposit ? "DEPOSIT_RECEIVED" : "PAYMENT_RECEIVED",
-        description: isDeposit
-          ? `Deposit payment received: AED ${(paymentIntent.amount / 100).toFixed(2)}`
-          : `Service fee payment received: AED ${(paymentIntent.amount / 100).toFixed(2)}`,
-        payload: {
-          paymentIntentId: paymentId,
-          amount: paymentIntent.amount / 100,
-          currency: paymentIntent.currency,
-          isDeposit,
+      // Update request
+      await prisma.request.update({
+        where: { id: request.id },
+        data: {
+          status: "PAYMENT_RECEIVED",
+          paidAt: new Date(),
         }
-      }
-    });
+      });
 
-    console.log(`Payment successful for request ${request.id}`);
+      // Create event log
+      await prisma.event.create({
+        data: {
+          requestId: request.id,
+          type: isDeposit ? "DEPOSIT_RECEIVED" : "PAYMENT_RECEIVED",
+          description: isDeposit
+            ? `Deposit payment received: AED ${(paymentIntent.amount / 100).toFixed(2)}`
+            : `Service fee payment received: AED ${(paymentIntent.amount / 100).toFixed(2)}`,
+          payload: {
+            paymentIntentId: paymentId,
+            amount: paymentIntent.amount / 100,
+            currency: paymentIntent.currency,
+            isDeposit,
+          }
+        }
+      });
+
+      console.log(`Payment successful for request ${request.id}`);
+    }
   } catch (error) {
     console.error("Error handling payment success:", error);
   }

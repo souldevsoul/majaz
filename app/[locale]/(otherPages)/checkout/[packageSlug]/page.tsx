@@ -1,16 +1,154 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useLocale } from 'next-intl'
-import { useParams, useSearchParams } from 'next/navigation'
+import { useParams, useSearchParams, useRouter } from 'next/navigation'
+import { loadStripe } from '@stripe/stripe-js'
+import { Elements, PaymentElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import { getPackageBySlug } from '@/data/packages'
 import GlassCard from '@/components/majaz/GlassCard'
 import Button from '@/components/majaz/Button'
+
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
+
+function CheckoutForm({
+  packagePrice,
+  packageCurrency,
+  packageId,
+  duration,
+  locale,
+  onSuccess
+}: {
+  packagePrice: number
+  packageCurrency: string
+  packageId: string
+  duration: string
+  locale: string
+  onSuccess: () => void
+}) {
+  const stripe = useStripe()
+  const elements = useElements()
+  const [errorMessage, setErrorMessage] = useState<string>()
+  const [isProcessing, setIsProcessing] = useState(false)
+  const isArabic = locale === 'ar'
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if (!stripe || !elements) {
+      return
+    }
+
+    setIsProcessing(true)
+    setErrorMessage(undefined)
+
+    const { error } = await stripe.confirmPayment({
+      elements,
+      confirmParams: {
+        return_url: `${window.location.origin}/${locale}/checkout/success?packageId=${packageId}&duration=${duration}`,
+      },
+    })
+
+    if (error) {
+      setErrorMessage(error.message)
+      setIsProcessing(false)
+    } else {
+      onSuccess()
+    }
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="stripe-form">
+      <PaymentElement />
+
+      {errorMessage && (
+        <div className="error-message">
+          {errorMessage}
+        </div>
+      )}
+
+      <button
+        type="submit"
+        className="submit-button"
+        disabled={!stripe || isProcessing}
+      >
+        {isProcessing
+          ? (isArabic ? 'جارٍ المعالجة...' : 'Processing...')
+          : (isArabic ? `ادفع ${packagePrice.toLocaleString()} ${packageCurrency}` : `Pay ${packagePrice.toLocaleString()} ${packageCurrency}`)}
+      </button>
+
+      <p className="security-note">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M8 1l6 2v4c0 3.5-2.5 6.5-6 8-3.5-1.5-6-4.5-6-8V3l6-2z" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        </svg>
+        {isArabic ? 'دفع آمن ومشفّر عبر Stripe' : 'Secure payment powered by Stripe'}
+      </p>
+
+      <style jsx>{`
+        .stripe-form {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+
+        .error-message {
+          padding: 1rem;
+          background: rgba(220, 38, 38, 0.1);
+          border: 1px solid rgba(220, 38, 38, 0.3);
+          border-radius: 8px;
+          color: #fca5a5;
+          font-size: 0.875rem;
+        }
+
+        .submit-button {
+          width: 100%;
+          padding: 1rem 2rem;
+          background: linear-gradient(135deg, #D4AF37 0%, #B8941E 100%);
+          color: #111111;
+          border: none;
+          border-radius: 12px;
+          font-weight: 600;
+          font-size: 1.125rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+        }
+
+        .submit-button:not(:disabled):hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
+        }
+
+        .submit-button:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+
+        .security-note {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          font-size: 0.875rem;
+          color: rgba(255, 255, 240, 0.6);
+          margin: 0;
+        }
+
+        .security-note svg {
+          color: #D4AF37;
+        }
+      `}</style>
+    </form>
+  )
+}
 
 export default function CheckoutPage() {
   const locale = useLocale()
   const params = useParams()
   const searchParams = useSearchParams()
+  const router = useRouter()
   const isArabic = locale === 'ar'
 
   const packageSlug = params.packageSlug as string
@@ -25,7 +163,8 @@ export default function CheckoutPage() {
     agreeTerms: false
   })
 
-  const [isProcessing, setIsProcessing] = useState(false)
+  const [clientSecret, setClientSecret] = useState<string>()
+  const [isLoadingPayment, setIsLoadingPayment] = useState(false)
 
   if (!pkg) {
     return (
@@ -60,16 +199,45 @@ export default function CheckoutPage() {
     return labels[isArabic ? 'ar' : 'en'][duration]
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsProcessing(true)
+  const handleInitiatePayment = async () => {
+    if (!formData.name || !formData.email || !formData.phone || !formData.agreeTerms) {
+      return
+    }
 
-    // TODO: Integrate with Stripe
-    // For now, just simulate processing
-    setTimeout(() => {
-      alert(isArabic ? 'الدفع قيد المعالجة...' : 'Payment processing...')
-      setIsProcessing(false)
-    }, 2000)
+    setIsLoadingPayment(true)
+
+    try {
+      const response = await fetch('/api/create-payment-intent', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          amount: price,
+          currency: pkg.currency,
+          packageId: pkg.id,
+          duration,
+          customerInfo: formData
+        }),
+      })
+
+      const data = await response.json()
+
+      if (data.clientSecret) {
+        setClientSecret(data.clientSecret)
+      } else {
+        throw new Error('Failed to create payment intent')
+      }
+    } catch (error) {
+      console.error('Error creating payment intent:', error)
+      alert(isArabic ? 'خطأ في إنشاء الدفع' : 'Error creating payment')
+    } finally {
+      setIsLoadingPayment(false)
+    }
+  }
+
+  const handlePaymentSuccess = () => {
+    // Payment success handled by redirect
   }
 
   return (
@@ -180,14 +348,52 @@ export default function CheckoutPage() {
                     {isArabic ? 'معلومات الدفع' : 'Payment Information'}
                   </h3>
 
-                  <div className="payment-placeholder">
-                    <div className="stripe-element-placeholder">
-                      {isArabic ? 'سيتم تحميل نموذج الدفع هنا' : 'Payment form will load here'}
+                  {!clientSecret ? (
+                    <div className="payment-initiate">
+                      <button
+                        type="button"
+                        onClick={handleInitiatePayment}
+                        disabled={isLoadingPayment || !formData.agreeTerms}
+                        className="initiate-button"
+                      >
+                        {isLoadingPayment
+                          ? (isArabic ? 'جارٍ التحميل...' : 'Loading...')
+                          : (isArabic ? 'متابعة إلى الدفع' : 'Continue to Payment')}
+                      </button>
                     </div>
-                    <p className="payment-note">
-                      {isArabic ? 'تكامل Stripe قريبًا' : 'Stripe integration coming soon'}
-                    </p>
-                  </div>
+                  ) : (
+                    <div className="stripe-elements-wrapper">
+                      {stripePromise && clientSecret && (
+                        <Elements
+                          stripe={stripePromise}
+                          options={{
+                            clientSecret,
+                            appearance: {
+                              theme: 'night',
+                              variables: {
+                                colorPrimary: '#D4AF37',
+                                colorBackground: '#0A0A0A',
+                                colorText: '#FFFFF0',
+                                colorDanger: '#df1b41',
+                                fontFamily: 'Inter, system-ui, sans-serif',
+                                spacingUnit: '4px',
+                                borderRadius: '8px',
+                              },
+                            },
+                          }}
+                        >
+                          <CheckoutForm
+                            packagePrice={price}
+                            packageCurrency={pkg.currency}
+                            packageId={pkg.id}
+                            duration={duration}
+                            locale={locale}
+                            onSuccess={handlePaymentSuccess}
+                          />
+                        </Elements>
+                      )}
+                    </div>
+                  )}
                 </div>
 
                 {/* Terms & Conditions */}
@@ -207,24 +413,6 @@ export default function CheckoutPage() {
                     </span>
                   </label>
                 </div>
-
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  className="submit-button"
-                  disabled={isProcessing || !formData.agreeTerms}
-                >
-                  {isProcessing
-                    ? (isArabic ? 'جارٍ المعالجة...' : 'Processing...')
-                    : (isArabic ? `ادفع ${formatPrice(price)}` : `Pay ${formatPrice(price)}`)}
-                </button>
-
-                <p className="security-note">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M8 1l6 2v4c0 3.5-2.5 6.5-6 8-3.5-1.5-6-4.5-6-8V3l6-2z" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                  </svg>
-                  {isArabic ? 'دفع آمن ومشفّر' : 'Secure and encrypted payment'}
-                </p>
               </form>
             </GlassCard>
           </div>
@@ -416,24 +604,42 @@ export default function CheckoutPage() {
           color: rgba(255, 255, 240, 0.4);
         }
 
-        .payment-placeholder {
-          padding: 3rem 2rem;
-          background: rgba(0, 0, 0, 0.3);
-          border: 2px dashed rgba(212, 175, 55, 0.3);
-          border-radius: 12px;
+        .payment-initiate {
+          padding: 2rem;
           text-align: center;
         }
 
-        .stripe-element-placeholder {
-          color: rgba(255, 255, 240, 0.5);
-          font-size: 1rem;
-          margin-bottom: 0.5rem;
+        .initiate-button {
+          width: 100%;
+          padding: 1rem 2rem;
+          background: linear-gradient(135deg, #D4AF37 0%, #B8941E 100%);
+          color: #111111;
+          border: none;
+          border-radius: 12px;
+          font-weight: 600;
+          font-size: 1.125rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
         }
 
-        .payment-note {
-          color: rgba(212, 175, 55, 0.7);
-          font-size: 0.875rem;
-          margin: 0;
+        .initiate-button:not(:disabled):hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
+        }
+
+        .initiate-button:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+
+        .stripe-elements-wrapper {
+          padding: 1.5rem;
+          background: rgba(0, 0, 0, 0.4);
+          border: 1px solid rgba(212, 175, 55, 0.2);
+          border-radius: 12px;
         }
 
         .checkbox-label {
@@ -455,46 +661,6 @@ export default function CheckoutPage() {
         .checkbox-label a {
           color: #D4AF37;
           text-decoration: underline;
-        }
-
-        .submit-button {
-          width: 100%;
-          padding: 1rem 2rem;
-          background: linear-gradient(135deg, #D4AF37 0%, #B8941E 100%);
-          color: #111111;
-          border: none;
-          border-radius: 12px;
-          font-weight: 600;
-          font-size: 1.125rem;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
-        }
-
-        .submit-button:not(:disabled):hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
-        }
-
-        .submit-button:disabled {
-          opacity: 0.5;
-          cursor: not-allowed;
-        }
-
-        .security-note {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0.5rem;
-          font-size: 0.875rem;
-          color: rgba(255, 255, 240, 0.6);
-          margin: 0;
-        }
-
-        .security-note svg {
-          color: #D4AF37;
         }
 
         /* Mobile Responsive */

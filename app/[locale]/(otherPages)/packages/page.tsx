@@ -12,11 +12,11 @@ export default function PackagesPage() {
   const isArabic = locale === 'ar'
 
   // Separate packages by category
-  const individualPackages = packages.filter(pkg =>
+  const assessmentPackages = packages.filter(pkg =>
     ['basic', 'standard', 'premium'].includes(pkg.tier)
   )
 
-  const membershipPackages = packages.filter(pkg =>
+  const conciergeMemberships = packages.filter(pkg =>
     ['gold', 'platinum', 'diamond'].includes(pkg.tier)
   )
 
@@ -41,22 +41,22 @@ export default function PackagesPage() {
         </div>
       </section>
 
-      {/* Individual Services */}
+      {/* Premium Assessment Services */}
       <section className="packages-section">
         <div className="packages-container">
           <div className="section-header">
             <h2 className="section-title">
-              {isArabic ? 'الخدمات الفردية' : 'Individual Services'}
+              {isArabic ? 'خدمات التقييم الفاخرة' : 'Premium Assessment Services'}
             </h2>
             <p className="section-description">
               {isArabic
-                ? 'خدمات الفحص بالطلب لاحتياجاتك الفورية'
-                : 'On-demand inspection services for your immediate needs'}
+                ? 'تقييم احترافي مصمم لقرارات الاستثمار الواعية'
+                : 'Professional assessment tailored for informed investment decisions'}
             </p>
           </div>
 
           <div className="packages-grid">
-            {individualPackages.map((pkg) => (
+            {assessmentPackages.map((pkg) => (
               <PackageCard
                 key={pkg.id}
                 package={pkg}
@@ -74,20 +74,20 @@ export default function PackagesPage() {
         <div className="packages-container">
           <div className="section-header">
             <div className="header-badge">
-              {isArabic ? 'حصري' : 'EXCLUSIVE'}
+              {isArabic ? 'حصري للغاية' : 'ULTRA EXCLUSIVE'}
             </div>
             <h2 className="section-title">
-              {isArabic ? 'عضويات الكونسيرج' : 'Concierge Memberships'}
+              {isArabic ? 'عضويات الكونسيرج الخاصة' : 'Private Concierge Memberships'}
             </h2>
             <p className="section-description">
               {isArabic
-                ? 'خدمة كونسيرج شخصية مع فحوصات غير محدودة ووصول VIP'
-                : 'Personal concierge service with unlimited inspections and VIP access'}
+                ? 'خدمة كونسيرج شاملة مع وصول غير محدود وامتيازات عالمية'
+                : 'Comprehensive concierge service with unlimited access and global privileges'}
             </p>
           </div>
 
           <div className="packages-grid memberships-grid">
-            {membershipPackages.map((pkg) => (
+            {conciergeMemberships.map((pkg) => (
               <PackageCard
                 key={pkg.id}
                 package={pkg}

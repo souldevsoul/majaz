@@ -8,7 +8,11 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 
 export async function POST(req: NextRequest) {
   try {
-    const { amount, currency, packageId, duration } = await req.json()
+    const { amount, currency, packageId, duration, customerInfo } = await req.json()
+
+    // Extract locale from headers or use default
+    const acceptLanguage = req.headers.get('accept-language') || ''
+    const locale = acceptLanguage.startsWith('ar') ? 'ar' : 'en'
 
     // Create payment intent
     const paymentIntent = await stripe.paymentIntents.create({
@@ -17,9 +21,15 @@ export async function POST(req: NextRequest) {
       automatic_payment_methods: {
         enabled: true,
       },
+      receipt_email: customerInfo?.email,
       metadata: {
         packageId,
+        packageSlug: packageId, // Store slug for email lookup
         duration,
+        customerName: customerInfo?.name || '',
+        customerEmail: customerInfo?.email || '',
+        customerPhone: customerInfo?.phone || '',
+        locale,
       },
     })
 
