@@ -336,14 +336,14 @@ export default function NewRequestPage() {
                     width: '100%',
                     padding: 'var(--spacing-md)',
                     background: 'rgba(212, 175, 55, 0.05)',
-                    border: `1px solid ${errors.url ? '#EF4444' : 'rgba(212, 175, 55, 0.3)'}`,
+                    border: `1px solid ${errors.url ? '#111111' : 'rgba(212, 175, 55, 0.3)'}`,
                     borderRadius: 'var(--radius-md)',
                     color: 'var(--majaz-ivory)',
                     fontSize: '0.875rem'
                   }}
                 />
                 {errors.url && (
-                  <p style={{ color: '#EF4444', fontSize: '0.875rem', marginTop: 'var(--spacing-xs)' }}>
+                  <p style={{ color: '#111111', fontSize: '0.875rem', marginTop: 'var(--spacing-xs)' }}>
                     {errors.url.message}
                   </p>
                 )}
@@ -370,7 +370,7 @@ export default function NewRequestPage() {
                     minHeight: '150px',
                     padding: 'var(--spacing-md)',
                     background: 'rgba(212, 175, 55, 0.05)',
-                    border: `1px solid ${errors.brief ? '#EF4444' : 'rgba(212, 175, 55, 0.3)'}`,
+                    border: `1px solid ${errors.brief ? '#111111' : 'rgba(212, 175, 55, 0.3)'}`,
                     borderRadius: 'var(--radius-md)',
                     color: 'var(--majaz-ivory)',
                     fontSize: '0.875rem',
@@ -378,7 +378,7 @@ export default function NewRequestPage() {
                   }}
                 />
                 {errors.brief && (
-                  <p style={{ color: '#EF4444', fontSize: '0.875rem', marginTop: 'var(--spacing-xs)' }}>
+                  <p style={{ color: '#111111', fontSize: '0.875rem', marginTop: 'var(--spacing-xs)' }}>
                     {errors.brief.message}
                   </p>
                 )}

@@ -133,17 +133,18 @@ export default function RequestDetailPage() {
   }, [requestId])
 
   const getStatusBadge = (status: string) => {
+    // Using MAJAZ brand colors only - Gold (#D4AF37) with varying opacity for different statuses
     const statusColors: Record<string, { bg: string; text: string }> = {
-      completed: { bg: '#10B98140', text: '#10B981' },
-      analyzing: { bg: '#3B82F640', text: '#3B82F6' },
-      scraping: { bg: '#8B5CF640', text: '#8B5CF6' },
-      pending_payment: { bg: '#F59E0B40', text: '#F59E0B' },
-      payment_received: { bg: '#06B6D440', text: '#06B6D4' },
-      generating_report: { bg: '#EC489940', text: '#EC4899' },
-      failed: { bg: '#EF444440', text: '#EF4444' }
+      completed: { bg: 'rgba(212, 175, 55, 0.2)', text: '#D4AF37' },
+      analyzing: { bg: 'rgba(212, 175, 55, 0.15)', text: '#D4AF37' },
+      scraping: { bg: 'rgba(212, 175, 55, 0.1)', text: '#D4AF37' },
+      pending_payment: { bg: 'rgba(255, 255, 240, 0.1)', text: '#FFFFF0' },
+      payment_received: { bg: 'rgba(212, 175, 55, 0.25)', text: '#D4AF37' },
+      generating_report: { bg: 'rgba(212, 175, 55, 0.18)', text: '#D4AF37' },
+      failed: { bg: 'rgba(17, 17, 17, 0.5)', text: '#111111' }
     }
 
-    const colors = statusColors[status] || { bg: '#6B728040', text: '#6B7280' }
+    const colors = statusColors[status] || { bg: 'rgba(26, 26, 26, 0.5)', text: '#1A1A1A' }
 
     return (
       <span style={{
@@ -391,11 +392,11 @@ export default function RequestDetailPage() {
 
                   <div style={{
                     padding: 'var(--spacing-md)',
-                    background: 'rgba(16, 185, 129, 0.1)',
+                    background: 'rgba(212, 175, 55, 0.1)',
                     borderRadius: 'var(--radius-md)',
-                    border: '1px solid rgba(16, 185, 129, 0.3)'
+                    border: '1px solid rgba(212, 175, 55, 0.3)'
                   }}>
-                    <p style={{ color: '#10B981', fontSize: '0.875rem', lineHeight: '1.6' }}>
+                    <p style={{ color: '#D4AF37', fontSize: '0.875rem', lineHeight: '1.6' }}>
                       <strong>Recommendation:</strong> Based on market analysis, we recommend not exceeding the safe maximum bid of AED {request.estimate.safeMaxBid.toLocaleString()}.
                     </p>
                   </div>
@@ -467,7 +468,7 @@ export default function RequestDetailPage() {
                   <InfoRow label="Amount" value={request.amount} />
                   <InfoRow label="Status" value={
                     <span style={{
-                      color: request.payment.status === 'completed' ? '#10B981' : '#F59E0B',
+                      color: request.payment.status === 'completed' ? '#D4AF37' : '#FFFFF0',
                       fontWeight: '600'
                     }}>
                       {request.payment.status === 'completed' ? 'Completed' : 'Pending'}
@@ -502,9 +503,9 @@ export default function RequestDetailPage() {
                     key={msg.id}
                     style={{
                       padding: 'var(--spacing-md)',
-                      background: msg.from === 'operator' ? 'rgba(212, 175, 55, 0.1)' : 'rgba(59, 130, 246, 0.1)',
+                      background: msg.from === 'operator' ? 'rgba(212, 175, 55, 0.1)' : 'rgba(26, 26, 26, 0.8)',
                       borderRadius: 'var(--radius-md)',
-                      border: `1px solid ${msg.from === 'operator' ? 'rgba(212, 175, 55, 0.3)' : 'rgba(59, 130, 246, 0.3)'}`,
+                      border: `1px solid ${msg.from === 'operator' ? 'rgba(212, 175, 55, 0.3)' : 'rgba(255, 255, 240, 0.2)'}`,
                       marginLeft: msg.from === 'user' ? 'var(--spacing-2xl)' : '0',
                       marginRight: msg.from === 'operator' ? 'var(--spacing-2xl)' : '0'
                     }}

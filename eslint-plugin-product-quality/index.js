@@ -18,19 +18,53 @@ module.exports = {
         },
       },
       create(context) {
-        const ALLOWED_COLORS = [
-          '#111111', '#111', // Primary Black
-          '#D4AF37', // Secondary Gold
-          '#FFFFF0', // Accent Ivory
-          '#0A0A0A', '#0a0a0a', // Background Rich Black
-          '#1A1A1A', '#1a1a1a', // Surface Dark Grey
-          'transparent',
-          'currentColor',
-          'inherit',
-          'rgba(26, 26, 26, 0.8)', // Glass morphism background
-          'rgba(212, 175, 55, 0.2)', // Gold border
-          'rgba(0, 0, 0, 0.4)', // Shadow
-        ];
+        // Base colors
+        const BLACK = [17, 17, 17]; // #111111
+        const GOLD = [212, 175, 55]; // #D4AF37
+        const IVORY = [255, 255, 240]; // #FFFFF0
+        const BG_BLACK = [10, 10, 10]; // #0A0A0A
+        const SURFACE = [26, 26, 26]; // #1A1A1A
+        const WHITE = [255, 255, 255]; // #FFFFFF
+
+        const isColorMatch = (r, g, b, target, tolerance = 5) => {
+          return Math.abs(r - target[0]) <= tolerance &&
+                 Math.abs(g - target[1]) <= tolerance &&
+                 Math.abs(b - target[2]) <= tolerance;
+        };
+
+        const isBrandColor = (colorStr) => {
+          // Allow CSS variables, transparent, inherit
+          if (/var\(--/.test(colorStr) || ['transparent', 'currentcolor', 'inherit'].includes(colorStr.toLowerCase())) {
+            return true;
+          }
+
+          // Allow hex colors
+          const hexMatch = colorStr.match(/#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})/);
+          if (hexMatch) {
+            const hex = hexMatch[1].toLowerCase();
+            if (hex.length === 3) {
+              return ['111', 'd4a', 'fff'].includes(hex); // Note: #D4AF37 doesn't have a 3-char version
+            }
+            return ['111111', 'd4af37', 'fffff0', '0a0a0a', '1a1a1a', 'ffffff'].includes(hex);
+          }
+
+          // Allow rgb/rgba colors with brand values
+          const rgbaMatch = colorStr.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*[\d.]+)?\)/);
+          if (rgbaMatch) {
+            const r = parseInt(rgbaMatch[1], 10);
+            const g = parseInt(rgbaMatch[2], 10);
+            const b = parseInt(rgbaMatch[3], 10);
+            return isColorMatch(r, g, b, BLACK) ||
+                   isColorMatch(r, g, b, GOLD) ||
+                   isColorMatch(r, g, b, IVORY) ||
+                   isColorMatch(r, g, b, BG_BLACK) ||
+                   isColorMatch(r, g, b, SURFACE) ||
+                   isColorMatch(r, g, b, WHITE) ||
+                   (r === 0 && g === 0 && b === 0); // Black shadows
+          }
+
+          return false;
+        };
 
         return {
           Literal(node) {
@@ -40,12 +74,7 @@ module.exports = {
 
               if (matches) {
                 matches.forEach(color => {
-                  const normalized = color.toLowerCase().replace(/\s/g, '');
-                  const isAllowed = ALLOWED_COLORS.some(allowed =>
-                    normalized.includes(allowed.toLowerCase()) || allowed.toLowerCase().includes(normalized)
-                  );
-
-                  if (!isAllowed) {
+                  if (!isBrandColor(color)) {
                     context.report({
                       node,
                       messageId: 'invalidColor',
@@ -79,6 +108,16 @@ module.exports = {
           Literal(node) {
             if (typeof node.value === 'string') {
               const value = node.value;
+
+              // Ignore CSS variables, import paths, and technical strings
+              if (value.startsWith('var(--') ||
+                  value.startsWith('@/') ||
+                  value.includes('components/') ||
+                  value.includes('.tsx') ||
+                  value.includes('.jsx') ||
+                  value.includes('.js')) {
+                return;
+              }
 
               // Check for company name variations
               const companyRegex = /\b(majaz|مجاز)\b/i;

@@ -156,18 +156,19 @@ export default function RequestsPage() {
   }, [statusFilter, modeFilter, searchQuery, dateRange, requests])
 
   const getStatusBadge = (status: string) => {
+    // Using MAJAZ brand colors only - Gold (#D4AF37) with varying opacity for different statuses
     const statusColors: Record<string, { bg: string; text: string }> = {
-      completed: { bg: '#10B98140', text: '#10B981' },
-      analyzing: { bg: '#3B82F640', text: '#3B82F6' },
-      scraping: { bg: '#8B5CF640', text: '#8B5CF6' },
-      pending_payment: { bg: '#F59E0B40', text: '#F59E0B' },
-      payment_received: { bg: '#06B6D440', text: '#06B6D4' },
-      generating_report: { bg: '#EC489940', text: '#EC4899' },
-      failed: { bg: '#EF444440', text: '#EF4444' },
-      refunded: { bg: '#6B728040', text: '#6B7280' }
+      completed: { bg: 'rgba(212, 175, 55, 0.2)', text: '#D4AF37' },
+      analyzing: { bg: 'rgba(212, 175, 55, 0.15)', text: '#D4AF37' },
+      scraping: { bg: 'rgba(212, 175, 55, 0.1)', text: '#D4AF37' },
+      pending_payment: { bg: 'rgba(255, 255, 240, 0.1)', text: '#FFFFF0' },
+      payment_received: { bg: 'rgba(212, 175, 55, 0.25)', text: '#D4AF37' },
+      generating_report: { bg: 'rgba(212, 175, 55, 0.18)', text: '#D4AF37' },
+      failed: { bg: 'rgba(17, 17, 17, 0.5)', text: '#111111' },
+      refunded: { bg: 'rgba(26, 26, 26, 0.8)', text: '#1A1A1A' }
     }
 
-    const colors = statusColors[status] || { bg: '#6B728040', text: '#6B7280' }
+    const colors = statusColors[status] || { bg: 'rgba(26, 26, 26, 0.5)', text: '#1A1A1A' }
 
     return (
       <span style={{

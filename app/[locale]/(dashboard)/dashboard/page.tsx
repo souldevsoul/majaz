@@ -154,12 +154,39 @@ export default function DashboardPage() {
   }
 
   const getStatusBadge = (status: string) => {
-    const statusColors: Record<string, string> = {
-      completed: '#10B981',
-      analyzing: '#3B82F6',
-      scraping: '#8B5CF6',
-      pending_payment: '#F59E0B',
-      failed: '#EF4444'
+    // Using MAJAZ brand colors only - Gold (#D4AF37) with varying opacity for status
+    const statusConfig: Record<string, { bg: string; color: string; border: string }> = {
+      completed: {
+        bg: 'rgba(212, 175, 55, 0.2)',
+        color: '#D4AF37',
+        border: 'rgba(212, 175, 55, 0.4)'
+      },
+      analyzing: {
+        bg: 'rgba(212, 175, 55, 0.15)',
+        color: '#D4AF37',
+        border: 'rgba(212, 175, 55, 0.3)'
+      },
+      scraping: {
+        bg: 'rgba(212, 175, 55, 0.1)',
+        color: '#D4AF37',
+        border: 'rgba(212, 175, 55, 0.25)'
+      },
+      pending_payment: {
+        bg: 'rgba(255, 255, 240, 0.1)',
+        color: '#FFFFF0',
+        border: 'rgba(255, 255, 240, 0.2)'
+      },
+      failed: {
+        bg: 'rgba(17, 17, 17, 0.3)',
+        color: '#FFFFF0',
+        border: 'rgba(17, 17, 17, 0.5)'
+      }
+    }
+
+    const config = statusConfig[status] || {
+      bg: 'rgba(26, 26, 26, 0.3)',
+      color: '#FFFFF0',
+      border: 'rgba(26, 26, 26, 0.5)'
     }
 
     return (
@@ -169,9 +196,9 @@ export default function DashboardPage() {
           borderRadius: '12px',
           fontSize: '12px',
           fontWeight: '600',
-          backgroundColor: `${statusColors[status] || '#6B7280'}20`,
-          color: statusColors[status] || '#6B7280',
-          border: `1px solid ${statusColors[status] || '#6B7280'}40`
+          backgroundColor: config.bg,
+          color: config.color,
+          border: `1px solid ${config.border}`
         }}
       >
         {tRequests(`status.${status}`)}
