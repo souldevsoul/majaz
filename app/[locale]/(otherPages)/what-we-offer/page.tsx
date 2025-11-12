@@ -313,7 +313,7 @@ export default function WhatWeOfferPage() {
         }
 
         .service-card {
-          padding: 0;
+          padding: 2rem;
           overflow: hidden;
           transition: all 0.3s ease;
         }
@@ -325,8 +325,10 @@ export default function WhatWeOfferPage() {
 
         .service-image {
           position: relative;
-          width: 100%;
-          height: 220px;
+          width: calc(100% + 4rem);
+          height: 500px;
+          margin: -2rem -2rem 2rem -2rem;
+          border-radius: 16px 16px 0 0;
           overflow: hidden;
         }
 
@@ -417,7 +419,7 @@ export default function WhatWeOfferPage() {
         }
 
         .membership-card {
-          padding: 0;
+          padding: 2rem;
           overflow: hidden;
           transition: all 0.4s ease;
         }
@@ -433,8 +435,10 @@ export default function WhatWeOfferPage() {
 
         .membership-image {
           position: relative;
-          width: 100%;
-          height: 280px;
+          width: calc(100% + 4rem);
+          height: 600px;
+          margin: -2rem -2rem 2rem -2rem;
+          border-radius: 16px 16px 0 0;
           overflow: hidden;
         }
 
@@ -610,6 +614,18 @@ export default function WhatWeOfferPage() {
           .services-grid,
           .memberships-grid {
             grid-template-columns: 1fr;
+          }
+
+          .service-image,
+          .membership-image {
+            width: calc(100% + 2rem);
+            height: 300px;
+            margin: -1rem -1rem 1.5rem -1rem;
+          }
+
+          .service-card,
+          .membership-card {
+            padding: 1rem;
           }
 
           .cta-card {

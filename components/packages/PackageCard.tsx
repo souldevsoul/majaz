@@ -130,6 +130,7 @@ export default function PackageCard({
           -webkit-backdrop-filter: blur(20px);
           border: 1px solid rgba(212, 175, 55, 0.15);
           border-radius: 24px;
+          padding: 2rem;
           overflow: hidden;
           transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -186,8 +187,10 @@ export default function PackageCard({
 
         .package-image {
           position: relative;
-          width: 100%;
-          height: 240px;
+          width: calc(100% + 4rem);
+          height: 550px;
+          margin: -2rem -2rem 2rem -2rem;
+          border-radius: 16px 16px 0 0;
           overflow: hidden;
         }
 
@@ -342,6 +345,16 @@ export default function PackageCard({
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
+          .package-card {
+            padding: 1rem;
+          }
+
+          .package-image {
+            width: calc(100% + 2rem);
+            height: 320px;
+            margin: -1rem -1rem 1.5rem -1rem;
+          }
+
           .package-content {
             padding: 24px 20px;
             gap: 20px;
