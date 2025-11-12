@@ -54,7 +54,7 @@ export const packages: Package[] = [
       'إرشاد استراتيجية المزاد'
     ],
     imagePrompt: 'Professional businessman analyzing vehicle data on laptop in modern Dubai office, golden hour lighting through floor-to-ceiling windows, luxury marble desk, digital screens showing car analytics, ultra detailed, cinematic photography, Phase One IQ4 camera',
-    imagePath: '/images/packages/remote-assessment.jpg'
+    imagePath: '/images/packages/majaz/remote-assessment.webp'
   },
   {
     id: 'remote-24h',
@@ -92,7 +92,7 @@ export const packages: Package[] = [
       'خط دعم مخصص'
     ],
     imagePrompt: 'Luxury car inspector in white coat with iPad examining exotic vehicle in pristine Dubai showroom, morning golden light, professional automotive photography, medium format Hasselblad, ultra detailed, premium aesthetic',
-    imagePath: '/images/packages/remote-express.jpg'
+    imagePath: '/images/packages/majaz/onsite-inspection.webp'
   },
   {
     id: 'remote-sameday',
@@ -129,7 +129,7 @@ export const packages: Package[] = [
       'شهادة مركبات التراث'
     ],
     imagePrompt: 'Close-up of hands holding luxury iPad showing vehicle inspection report, luxury Dubai office background blurred, golden hour warm lighting, professional editorial photography, shallow depth of field, Phase One IQ4',
-    imagePath: '/images/packages/remote-same-day.jpg'
+    imagePath: '/images/packages/majaz/gold-concierge.webp'
   },
 
   // Concierge Membership Tiers
@@ -170,7 +170,7 @@ export const packages: Package[] = [
       'وصول ذو أولوية للمركبات النادرة'
     ],
     imagePrompt: 'Professional vehicle inspector in MAJAZ uniform examining luxury car engine bay with diagnostic tools, Dubai garage setting, dramatic lighting, ultra detailed photography, cinematic composition, Phase One IQ4',
-    imagePath: '/images/packages/onsite-inspection.jpg'
+    imagePath: '/images/packages/majaz/platinum-concierge.webp'
   },
   {
     id: 'onsite-24h',
@@ -213,7 +213,7 @@ export const packages: Package[] = [
       'إحاطات تنفيذية ربع سنوية'
     ],
     imagePrompt: 'Senior inspector in premium MAJAZ attire using professional diagnostic scanner on luxury sports car, high-end Dubai dealership, cinematic lighting, ultra detailed, professional automotive photography',
-    imagePath: '/images/packages/onsite-express.jpg'
+    imagePath: '/images/packages/majaz/sovereign-collection.webp'
   },
 
   {
@@ -261,7 +261,7 @@ export const packages: Package[] = [
       'تجارب سيارات مصممة خصيصًا'
     ],
     imagePrompt: 'Black diamond-encrusted membership card on obsidian stone, ultra-rare hypercar collection (Koenigsegg, Pagani, one-off custom) in private vault, dramatic spotlighting, ultra luxury product photography, Phase One IQ4, museum lighting',
-    imagePath: '/images/packages/diamond-concierge.jpg'
+    imagePath: '/images/packages/majaz/diamond-concierge.webp'
   }
 ]
 
