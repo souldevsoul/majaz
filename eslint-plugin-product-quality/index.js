@@ -583,7 +583,76 @@ module.exports = {
       },
     },
 
-    // RULE 13: Consistent payment provider (Stripe only)
+    // RULE 13: No cross-project mentions
+    'no-cross-project-mentions': {
+      meta: {
+        type: 'problem',
+        docs: {
+          description: 'Prevent mentions of other projects (AVTOCERT, BAKU DRIVE LAB, EUROGRADE, SANDVAULT, Boxcar)',
+          category: 'Brand Integrity',
+        },
+        messages: {
+          crossProjectMention: 'Cross-project mention detected: "{{mention}}". Each brand must maintain unique identity. Remove reference to {{project}}.',
+        },
+      },
+      create(context) {
+        const FORBIDDEN_MENTIONS = [
+          { pattern: /\bavtocert\b/i, name: 'AVTOCERT' },
+          { pattern: /\bbaku[\s-]?drive[\s-]?lab\b/i, name: 'BAKU DRIVE LAB' },
+          { pattern: /\beurograde\b/i, name: 'EUROGRADE' },
+          { pattern: /\bsandvault\b/i, name: 'SANDVAULT' },
+          { pattern: /\bboxcar\b/i, name: 'Boxcar (generic template)' },
+          { pattern: /turbo\.az/i, name: 'Turbo.az (Azerbaijan platform)' },
+          { pattern: /tap\.az/i, name: 'Tap.az (Azerbaijan platform)' },
+        ];
+
+        return {
+          Literal(node) {
+            if (typeof node.value === 'string' && node.value.length > 2) {
+              // Skip technical paths and imports
+              if (node.value.startsWith('/') ||
+                  node.value.startsWith('@/') ||
+                  node.value.includes('node_modules') ||
+                  node.value.includes('.tsx') ||
+                  node.value.includes('.jsx')) {
+                return;
+              }
+
+              FORBIDDEN_MENTIONS.forEach(({ pattern, name }) => {
+                if (pattern.test(node.value)) {
+                  context.report({
+                    node,
+                    messageId: 'crossProjectMention',
+                    data: {
+                      mention: node.value.slice(0, 100),
+                      project: name,
+                    },
+                  });
+                }
+              });
+            }
+          },
+          TemplateElement(node) {
+            if (node.value && node.value.raw) {
+              FORBIDDEN_MENTIONS.forEach(({ pattern, name }) => {
+                if (pattern.test(node.value.raw)) {
+                  context.report({
+                    node,
+                    messageId: 'crossProjectMention',
+                    data: {
+                      mention: node.value.raw.slice(0, 100),
+                      project: name,
+                    },
+                  });
+                }
+              });
+            }
+          },
+        };
+      },
+    },
+
+    // RULE 14: Consistent payment provider (Stripe only)
     'consistent-payment-providers': {
       meta: {
         type: 'problem',

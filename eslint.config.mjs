@@ -92,6 +92,7 @@ export default [
       // MAJAZ Product Quality Rules - CRITICAL
       'product-quality/use-styleguide-colors-only': 'error',
       'product-quality/consistent-company-info': 'error',
+      'product-quality/no-cross-project-mentions': 'error', // NEW: Prevent cross-contamination
       'product-quality/no-broken-internal-links': 'warn',
       'product-quality/no-missing-alt-text': 'error',
       'product-quality/require-aria-label-on-icon-buttons': 'error',
@@ -215,6 +216,7 @@ export default [
       // MAJAZ Product Quality Rules - CRITICAL
       'product-quality/use-styleguide-colors-only': 'error',
       'product-quality/consistent-company-info': 'error',
+      'product-quality/no-cross-project-mentions': 'error', // NEW: Prevent cross-contamination
       'product-quality/no-broken-internal-links': 'warn',
       'product-quality/no-missing-alt-text': 'error',
       'product-quality/require-aria-label-on-icon-buttons': 'error',
