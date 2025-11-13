@@ -185,7 +185,7 @@ export default function RequestDetailPage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: 'var(--majaz-gold)'
+        color: 'var(--gold)'
       }}>
         <div>{tCommon('loading')}</div>
       </div>
@@ -237,13 +237,13 @@ export default function RequestDetailPage() {
             <h1 style={{
               fontSize: '2.5rem',
               fontFamily: 'var(--font-display)',
-              color: 'var(--majaz-gold)',
+              color: 'var(--gold)',
               marginBottom: 'var(--spacing-xs)'
             }}>
               {request.vehicle.year} {request.vehicle.make} {request.vehicle.model}
             </h1>
             <p style={{ color: 'var(--majaz-text-muted)' }}>
-              {t('details.requestId')}: <span style={{ color: 'var(--majaz-gold)' }}>{request.id}</span>
+              {t('details.requestId')}: <span style={{ color: 'var(--gold)' }}>{request.id}</span>
             </p>
           </div>
           <div style={{ textAlign: 'right' }}>
@@ -274,8 +274,8 @@ export default function RequestDetailPage() {
             style={{
               padding: 'var(--spacing-md) var(--spacing-lg)',
               background: activeTab === tab.id ? 'var(--majaz-gradient-gold)' : 'rgba(212, 175, 55, 0.1)',
-              color: activeTab === tab.id ? 'var(--majaz-black)' : 'var(--majaz-gold)',
-              border: `1px solid ${activeTab === tab.id ? 'var(--majaz-gold)' : 'rgba(212, 175, 55, 0.3)'}`,
+              color: activeTab === tab.id ? 'var(--majaz-black)' : 'var(--gold)',
+              border: `1px solid ${activeTab === tab.id ? 'var(--gold)' : 'rgba(212, 175, 55, 0.3)'}`,
               borderRadius: 'var(--radius-md)',
               fontWeight: '600',
               cursor: 'pointer',
@@ -300,7 +300,7 @@ export default function RequestDetailPage() {
             <GlassCard>
               <h2 style={{
                 fontSize: '1.5rem',
-                color: 'var(--majaz-gold)',
+                color: 'var(--gold)',
                 marginBottom: 'var(--spacing-lg)',
                 fontFamily: 'var(--font-display)'
               }}>
@@ -313,7 +313,7 @@ export default function RequestDetailPage() {
                 <InfoRow label="Created" value={formatDate(request.createdAt)} />
                 <InfoRow label="Amount Paid" value={request.amount} />
                 {request.url && <InfoRow label="Listing URL" value={
-                  <a href={request.url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--majaz-gold)' }}>
+                  <a href={request.url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold)' }}>
                     View Listing →
                   </a>
                 } />}
@@ -325,7 +325,7 @@ export default function RequestDetailPage() {
             <GlassCard>
               <h2 style={{
                 fontSize: '1.5rem',
-                color: 'var(--majaz-gold)',
+                color: 'var(--gold)',
                 marginBottom: 'var(--spacing-lg)',
                 fontFamily: 'var(--font-display)'
               }}>
@@ -349,7 +349,7 @@ export default function RequestDetailPage() {
             <GlassCard>
               <h2 style={{
                 fontSize: '1.5rem',
-                color: 'var(--majaz-gold)',
+                color: 'var(--gold)',
                 marginBottom: 'var(--spacing-lg)',
                 fontFamily: 'var(--font-display)'
               }}>
@@ -362,7 +362,7 @@ export default function RequestDetailPage() {
                     padding: 'var(--spacing-lg)',
                     background: 'rgba(212, 175, 55, 0.1)',
                     borderRadius: 'var(--radius-lg)',
-                    border: '2px solid var(--majaz-gold)'
+                    border: '2px solid var(--gold)'
                   }}>
                     <p style={{
                       color: 'var(--majaz-text-muted)',
@@ -374,7 +374,7 @@ export default function RequestDetailPage() {
                     <p style={{
                       fontSize: '2.5rem',
                       fontWeight: '700',
-                      color: 'var(--majaz-gold)',
+                      color: 'var(--gold)',
                       fontFamily: 'var(--font-display)'
                     }}>
                       AED {request.estimate.safeMaxBid.toLocaleString()}
@@ -413,7 +413,7 @@ export default function RequestDetailPage() {
             <GlassCard>
               <h2 style={{
                 fontSize: '1.5rem',
-                color: 'var(--majaz-gold)',
+                color: 'var(--gold)',
                 marginBottom: 'var(--spacing-lg)',
                 fontFamily: 'var(--font-display)'
               }}>
@@ -433,7 +433,7 @@ export default function RequestDetailPage() {
                   }}>
                     <div style={{ fontSize: '3rem', marginBottom: 'var(--spacing-md)' }}>📄</div>
                     <h3 style={{
-                      color: 'var(--majaz-gold)',
+                      color: 'var(--gold)',
                       fontSize: '1.125rem',
                       marginBottom: 'var(--spacing-md)'
                     }}>
@@ -456,7 +456,7 @@ export default function RequestDetailPage() {
             <GlassCard>
               <h2 style={{
                 fontSize: '1.5rem',
-                color: 'var(--majaz-gold)',
+                color: 'var(--gold)',
                 marginBottom: 'var(--spacing-lg)',
                 fontFamily: 'var(--font-display)'
               }}>
@@ -485,7 +485,7 @@ export default function RequestDetailPage() {
             <GlassCard>
               <h2 style={{
                 fontSize: '1.5rem',
-                color: 'var(--majaz-gold)',
+                color: 'var(--gold)',
                 marginBottom: 'var(--spacing-lg)',
                 fontFamily: 'var(--font-display)'
               }}>
@@ -516,11 +516,11 @@ export default function RequestDetailPage() {
                       marginBottom: 'var(--spacing-xs)'
                     }}>
                       <span style={{
-                        color: 'var(--majaz-gold)',
+                        color: 'var(--gold)',
                         fontSize: '0.875rem',
                         fontWeight: '600'
                       }}>
-                        {msg.from === 'operator' ? 'MAJAZ Team' : 'You'}
+                        {msg.from === 'operator' ? 'MAJAZ' : 'You'}
                       </span>
                       <span style={{
                         color: 'var(--majaz-text-muted)',
@@ -539,7 +539,7 @@ export default function RequestDetailPage() {
                             key={i}
                             href="#"
                             style={{
-                              color: 'var(--majaz-gold)',
+                              color: 'var(--gold)',
                               fontSize: '0.875rem',
                               textDecoration: 'underline'
                             }}
@@ -590,7 +590,7 @@ export default function RequestDetailPage() {
           <GlassCard>
             <h2 style={{
               fontSize: '1.5rem',
-              color: 'var(--majaz-gold)',
+              color: 'var(--gold)',
               marginBottom: 'var(--spacing-lg)',
               fontFamily: 'var(--font-display)'
             }}>
@@ -615,8 +615,8 @@ export default function RequestDetailPage() {
                     width: '14px',
                     height: '14px',
                     borderRadius: '50%',
-                    background: index === 0 ? 'var(--majaz-gold)' : 'rgba(212, 175, 55, 0.5)',
-                    border: '2px solid var(--majaz-background)'
+                    background: index === 0 ? 'var(--gold)' : 'rgba(212, 175, 55, 0.5)',
+                    border: '2px solid var(--background)'
                   }} />
 
                   <div>

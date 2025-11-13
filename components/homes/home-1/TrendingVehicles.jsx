@@ -99,7 +99,7 @@ export default function TrendingVehicles() {
             letterSpacing: '0.1em',
             marginBottom: '1rem'
           }}>
-            Top 10 Trending <span style={{color: 'var(--majaz-gold)'}}>Luxury Vehicles</span>
+            Top 10 Trending <span style={{color: 'var(--gold)'}}>Luxury Vehicles</span>
           </h2>
           <p className="subtitle" style={{
             fontFamily: 'var(--font-body)',
@@ -247,7 +247,7 @@ export default function TrendingVehicles() {
 
         .vehicle-price {
           font-size: 1.125rem;
-          color: var(--majaz-gold);
+          color: var(--gold);
           font-weight: 600;
           margin-bottom: 1.25rem;
           letter-spacing: 0.05em;
@@ -259,8 +259,8 @@ export default function TrendingVehicles() {
           text-align: center;
           padding: 0.75rem 1.5rem;
           background: transparent;
-          border: 2px solid var(--majaz-gold);
-          color: var(--majaz-gold);
+          border: 2px solid var(--gold);
+          color: var(--gold);
           text-decoration: none;
           border-radius: var(--radius-md);
           font-weight: 600;
@@ -271,7 +271,7 @@ export default function TrendingVehicles() {
         }
 
         .btn-assess:hover {
-          background: var(--majaz-gold);
+          background: var(--gold);
           color: var(--majaz-black);
           box-shadow: var(--majaz-shadow-gold);
         }

@@ -32,16 +32,16 @@ export default function LanguageToggle() {
           background: transparent;
           border: 1px solid var(--majaz-border);
           border-radius: var(--radius-md);
-          color: var(--majaz-gold);
+          color: var(--gold);
           font-weight: 500;
           cursor: pointer;
           transition: all var(--transition-base);
         }
 
         .language-toggle:hover {
-          background: var(--majaz-gold);
+          background: var(--gold);
           color: var(--majaz-black);
-          border-color: var(--majaz-gold);
+          border-color: var(--gold);
         }
 
         .language-flag {

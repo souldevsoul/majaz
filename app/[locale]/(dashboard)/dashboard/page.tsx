@@ -213,7 +213,7 @@ export default function DashboardPage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: 'var(--majaz-gold)'
+        color: 'var(--gold)'
       }}>
         <div>{tCommon('loading')}</div>
       </div>
@@ -227,7 +227,7 @@ export default function DashboardPage() {
         <h1 style={{
           fontSize: '2.5rem',
           fontFamily: 'var(--font-display)',
-          color: 'var(--majaz-gold)',
+          color: 'var(--gold)',
           marginBottom: 'var(--spacing-sm)'
         }}>
           {t('welcome', { name: userName })}
@@ -258,14 +258,14 @@ export default function DashboardPage() {
                 <h3 style={{
                   fontSize: '2rem',
                   fontWeight: '700',
-                  color: 'var(--majaz-gold)',
+                  color: 'var(--gold)',
                   marginBottom: 'var(--spacing-xs)'
                 }}>
                   {stat.value}
                 </h3>
                 {stat.change && (
                   <span style={{
-                    color: '#10B981',
+                    color: '#D4AF37',
                     fontSize: '0.875rem',
                     fontWeight: '600'
                   }}>
@@ -284,7 +284,7 @@ export default function DashboardPage() {
         <GlassCard>
           <h2 style={{
             fontSize: '1.5rem',
-            color: 'var(--majaz-gold)',
+            color: 'var(--gold)',
             marginBottom: 'var(--spacing-lg)',
             fontFamily: 'var(--font-display)'
           }}>
@@ -311,7 +311,7 @@ export default function DashboardPage() {
           }}>
             <h2 style={{
               fontSize: '1.5rem',
-              color: 'var(--majaz-gold)',
+              color: 'var(--gold)',
               fontFamily: 'var(--font-display)'
             }}>
               {t('recentRequests')}
@@ -335,7 +335,7 @@ export default function DashboardPage() {
                 }}
                 onClick={() => window.location.href = `/dashboard/requests/${request.id}`}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = 'var(--majaz-gold)'
+                  e.currentTarget.style.borderColor = 'var(--gold)'
                   e.currentTarget.style.transform = 'translateX(4px)'
                 }}
                 onMouseLeave={(e) => {
@@ -363,7 +363,7 @@ export default function DashboardPage() {
                   <div style={{ textAlign: 'right' }}>
                     {getStatusBadge(request.status)}
                     <p style={{
-                      color: 'var(--majaz-gold)',
+                      color: 'var(--gold)',
                       fontSize: '0.875rem',
                       marginTop: 'var(--spacing-xs)',
                       fontWeight: '600'
@@ -381,7 +381,7 @@ export default function DashboardPage() {
         <GlassCard>
           <h2 style={{
             fontSize: '1.5rem',
-            color: 'var(--majaz-gold)',
+            color: 'var(--gold)',
             marginBottom: 'var(--spacing-lg)',
             fontFamily: 'var(--font-display)'
           }}>
@@ -408,7 +408,7 @@ export default function DashboardPage() {
             border: '1px solid rgba(212, 175, 55, 0.3)'
           }}>
             <h3 style={{
-              color: 'var(--majaz-gold)',
+              color: 'var(--gold)',
               fontSize: '1rem',
               marginBottom: 'var(--spacing-sm)'
             }}>

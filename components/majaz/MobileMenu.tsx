@@ -177,7 +177,7 @@ export default function MobileMenu({ isOpen, onClose, isAuthenticated = false }:
           font-family: var(--font-display);
           font-size: 1.5rem;
           font-weight: 700;
-          color: var(--majaz-gold);
+          color: var(--gold);
           letter-spacing: 0.05em;
         }
 
@@ -190,7 +190,7 @@ export default function MobileMenu({ isOpen, onClose, isAuthenticated = false }:
         .mobile-menu-close {
           background: transparent;
           border: none;
-          color: var(--majaz-gold);
+          color: var(--gold);
           cursor: pointer;
           padding: 0.5rem;
           transition: all var(--transition-fast);
@@ -231,7 +231,7 @@ export default function MobileMenu({ isOpen, onClose, isAuthenticated = false }:
         .mobile-menu-link.active {
           background: rgba(212, 175, 55, 0.15);
           border-color: var(--majaz-border);
-          color: var(--majaz-gold);
+          color: var(--gold);
         }
 
         .mobile-menu-actions {

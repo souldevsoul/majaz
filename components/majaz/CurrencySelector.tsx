@@ -135,7 +135,7 @@ export default function CurrencySelector() {
           background: transparent;
           border: 1px solid var(--majaz-border);
           border-radius: var(--radius-md);
-          color: var(--majaz-gold);
+          color: var(--gold);
           font-weight: 500;
           cursor: pointer;
           transition: all var(--transition-base);
@@ -158,7 +158,7 @@ export default function CurrencySelector() {
         }
 
         .currency-chevron {
-          color: var(--majaz-gold);
+          color: var(--gold);
           transition: transform var(--transition-base);
           margin-left: auto;
         }
@@ -203,7 +203,7 @@ export default function CurrencySelector() {
 
         .currency-option.active {
           background: rgba(212, 175, 55, 0.15);
-          color: var(--majaz-gold);
+          color: var(--gold);
         }
 
         .currency-info {
@@ -224,7 +224,7 @@ export default function CurrencySelector() {
         }
 
         .currency-check {
-          color: var(--majaz-gold);
+          color: var(--gold);
         }
 
         @keyframes slideDown {

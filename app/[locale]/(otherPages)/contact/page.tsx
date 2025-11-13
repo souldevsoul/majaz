@@ -64,8 +64,8 @@ export default function ContactPage() {
     {
       key: 'email',
       icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
-      value: 'info@majaz.ae',
-      href: 'mailto:info@majaz.ae',
+      value: 'support@majaz.ae',
+      href: 'mailto:support@majaz.ae',
     },
     {
       key: 'whatsapp',
@@ -287,7 +287,7 @@ export default function ContactPage() {
               </h3>
               <div className="flex gap-3">
                 <a
-                  href="https://facebook.com/majaz"
+                  href="https://facebook.com/MAJAZuae"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center p-3 rounded-lg bg-gold/20 hover:bg-gold/30 transition-colors"
@@ -298,7 +298,7 @@ export default function ContactPage() {
                   </svg>
                 </a>
                 <a
-                  href="https://instagram.com/majaz"
+                  href="https://instagram.com/MAJAZuae"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center p-3 rounded-lg bg-gold/20 hover:bg-gold/30 transition-colors"
@@ -309,7 +309,7 @@ export default function ContactPage() {
                   </svg>
                 </a>
                 <a
-                  href="https://linkedin.com/company/majaz"
+                  href="https://linkedin.com/company/MAJAZ-uae"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center p-3 rounded-lg bg-gold/20 hover:bg-gold/30 transition-colors"

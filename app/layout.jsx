@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
       <body>
         <Context>
           <MobileMenu />
-          <div className="boxcar-wrapper">
+          <div className="majaz-wrapper">
             {children}
           </div>
           <FilterSidebar />

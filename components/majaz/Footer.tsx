@@ -60,7 +60,7 @@ export default function Footer() {
   const socialLinks = [
     {
       name: 'Instagram',
-      href: 'https://instagram.com/majaz',
+      href: 'https://instagram.com/MAJAZuae',
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -80,7 +80,7 @@ export default function Footer() {
     },
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com/company/majaz',
+      href: 'https://linkedin.com/company/MAJAZ-uae',
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736 21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858 17.0391 12.2107 16.5304 12 16 12 15.4696 12 14.9609 12.2107 14.5858 12.5858 14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736 12.8826 8.63214 14.4087 8 16 8V8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -252,7 +252,7 @@ export default function Footer() {
           font-family: var(--font-display);
           font-size: 2rem;
           font-weight: 700;
-          color: var(--majaz-gold);
+          color: var(--gold);
           letter-spacing: 0.05em;
         }
 
@@ -279,7 +279,7 @@ export default function Footer() {
         .social-title {
           font-size: 0.875rem;
           font-weight: 600;
-          color: var(--majaz-gold);
+          color: var(--gold);
           text-transform: uppercase;
           letter-spacing: 0.05em;
         }
@@ -298,14 +298,14 @@ export default function Footer() {
           background: rgba(212, 175, 55, 0.1);
           border: 1px solid var(--majaz-border);
           border-radius: var(--radius-md);
-          color: var(--majaz-gold);
+          color: var(--gold);
           transition: all var(--transition-base);
         }
 
         .social-link:hover {
-          background: var(--majaz-gold);
+          background: var(--gold);
           color: var(--majaz-black);
-          border-color: var(--majaz-gold);
+          border-color: var(--gold);
           transform: translateY(-4px);
           box-shadow: var(--majaz-shadow-gold);
         }
@@ -314,7 +314,7 @@ export default function Footer() {
           font-family: var(--font-display);
           font-size: 1.125rem;
           font-weight: 600;
-          color: var(--majaz-gold);
+          color: var(--gold);
           margin: 0;
         }
 
@@ -336,7 +336,7 @@ export default function Footer() {
         }
 
         .footer-link:hover {
-          color: var(--majaz-gold);
+          color: var(--gold);
           transform: translateX(4px);
         }
 
@@ -364,7 +364,7 @@ export default function Footer() {
 
         .newsletter-input:focus {
           outline: none;
-          border-color: var(--majaz-gold);
+          border-color: var(--gold);
           background: rgba(26, 26, 26, 0.8);
         }
 
@@ -396,7 +396,7 @@ export default function Footer() {
 
         .newsletter-message {
           font-size: 0.875rem;
-          color: var(--majaz-gold);
+          color: var(--gold);
           margin: 0;
         }
 
@@ -414,7 +414,7 @@ export default function Footer() {
         }
 
         .footer-copyright {
-          color: var(--majaz-gold);
+          color: var(--gold);
           font-size: 0.875rem;
           margin: 0;
           font-weight: 500;
@@ -435,7 +435,7 @@ export default function Footer() {
         }
 
         .badge-text {
-          color: var(--majaz-gold);
+          color: var(--gold);
           font-size: 0.875rem;
           font-weight: 600;
         }
@@ -454,7 +454,7 @@ export default function Footer() {
         }
 
         .legal-link:hover {
-          color: var(--majaz-gold);
+          color: var(--gold);
         }
 
         .legal-divider {

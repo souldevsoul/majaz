@@ -176,7 +176,7 @@ export default function Header({ isAuthenticated = false }: HeaderProps) {
           font-family: var(--font-display);
           font-size: 1.75rem;
           font-weight: 700;
-          color: var(--majaz-gold);
+          color: var(--gold);
           letter-spacing: 0.05em;
         }
 
@@ -225,14 +225,14 @@ export default function Header({ isAuthenticated = false }: HeaderProps) {
         }
 
         .nav-link:hover {
-          color: var(--majaz-gold) !important;
+          color: var(--gold) !important;
           background: rgba(212, 175, 55, 0.1);
           text-shadow: 0 0 15px rgba(212, 175, 55, 0.8),
                        0 0 30px rgba(212, 175, 55, 0.5);
         }
 
         .nav-link.active {
-          color: var(--majaz-gold) !important;
+          color: var(--gold) !important;
           text-shadow: 0 0 15px rgba(212, 175, 55, 0.8),
                        0 0 30px rgba(212, 175, 55, 0.5);
         }
@@ -284,7 +284,7 @@ export default function Header({ isAuthenticated = false }: HeaderProps) {
           background: transparent;
           border: 1px solid var(--majaz-border);
           border-radius: var(--radius-md);
-          color: var(--majaz-gold);
+          color: var(--gold);
           cursor: pointer;
           padding: 0.5rem;
           transition: all var(--transition-fast);

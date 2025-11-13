@@ -80,9 +80,9 @@ async function generateImage(prompt, filename, width = 1920, height = 1080) {
       console.log(`✅ Saved: ${filepath}`);
 
       return filepath;
-    } else {
+    } 
       throw new Error('No output from Replicate');
-    }
+    
   } catch (error) {
     console.error(`❌ Error generating ${filename}:`, error.message);
     throw error;

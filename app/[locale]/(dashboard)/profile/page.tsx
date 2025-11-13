@@ -124,7 +124,7 @@ export default function ProfilePage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: 'var(--majaz-gold)'
+        color: 'var(--gold)'
       }}>
         <div>{tCommon('loading')}</div>
       </div>
@@ -138,7 +138,7 @@ export default function ProfilePage() {
         <h1 style={{
           fontSize: '2.5rem',
           fontFamily: 'var(--font-display)',
-          color: 'var(--majaz-gold)',
+          color: 'var(--gold)',
           marginBottom: 'var(--spacing-xs)'
         }}>
           {t('profile')}
@@ -157,7 +157,7 @@ export default function ProfilePage() {
         <GlassCard>
           <h2 style={{
             fontSize: '1.5rem',
-            color: 'var(--majaz-gold)',
+            color: 'var(--gold)',
             marginBottom: 'var(--spacing-lg)',
             fontFamily: 'var(--font-display)'
           }}>
@@ -170,7 +170,7 @@ export default function ProfilePage() {
               <div>
                 <label style={{
                   display: 'block',
-                  color: 'var(--majaz-gold)',
+                  color: 'var(--gold)',
                   fontSize: '0.875rem',
                   marginBottom: 'var(--spacing-xs)',
                   fontWeight: '600'
@@ -184,14 +184,14 @@ export default function ProfilePage() {
                     width: '100%',
                     padding: 'var(--spacing-md)',
                     background: 'rgba(212, 175, 55, 0.05)',
-                    border: `1px solid ${profileErrors.name ? '#EF4444' : 'rgba(212, 175, 55, 0.3)'}`,
+                    border: `1px solid ${profileErrors.name ? '#D4AF37' : 'rgba(212, 175, 55, 0.3)'}`,
                     borderRadius: 'var(--radius-md)',
                     color: 'var(--majaz-ivory)',
                     fontSize: '0.875rem'
                   }}
                 />
                 {profileErrors.name && (
-                  <p style={{ color: '#EF4444', fontSize: '0.75rem', marginTop: 'var(--spacing-xs)' }}>
+                  <p style={{ color: '#D4AF37', fontSize: '0.75rem', marginTop: 'var(--spacing-xs)' }}>
                     {profileErrors.name.message}
                   </p>
                 )}
@@ -201,7 +201,7 @@ export default function ProfilePage() {
               <div>
                 <label style={{
                   display: 'block',
-                  color: 'var(--majaz-gold)',
+                  color: 'var(--gold)',
                   fontSize: '0.875rem',
                   marginBottom: 'var(--spacing-xs)',
                   fontWeight: '600'
@@ -215,14 +215,14 @@ export default function ProfilePage() {
                     width: '100%',
                     padding: 'var(--spacing-md)',
                     background: 'rgba(212, 175, 55, 0.05)',
-                    border: `1px solid ${profileErrors.email ? '#EF4444' : 'rgba(212, 175, 55, 0.3)'}`,
+                    border: `1px solid ${profileErrors.email ? '#D4AF37' : 'rgba(212, 175, 55, 0.3)'}`,
                     borderRadius: 'var(--radius-md)',
                     color: 'var(--majaz-ivory)',
                     fontSize: '0.875rem'
                   }}
                 />
                 {profileErrors.email && (
-                  <p style={{ color: '#EF4444', fontSize: '0.75rem', marginTop: 'var(--spacing-xs)' }}>
+                  <p style={{ color: '#D4AF37', fontSize: '0.75rem', marginTop: 'var(--spacing-xs)' }}>
                     {profileErrors.email.message}
                   </p>
                 )}
@@ -232,7 +232,7 @@ export default function ProfilePage() {
               <div>
                 <label style={{
                   display: 'block',
-                  color: 'var(--majaz-gold)',
+                  color: 'var(--gold)',
                   fontSize: '0.875rem',
                   marginBottom: 'var(--spacing-xs)',
                   fontWeight: '600'
@@ -246,14 +246,14 @@ export default function ProfilePage() {
                     width: '100%',
                     padding: 'var(--spacing-md)',
                     background: 'rgba(212, 175, 55, 0.05)',
-                    border: `1px solid ${profileErrors.phone ? '#EF4444' : 'rgba(212, 175, 55, 0.3)'}`,
+                    border: `1px solid ${profileErrors.phone ? '#D4AF37' : 'rgba(212, 175, 55, 0.3)'}`,
                     borderRadius: 'var(--radius-md)',
                     color: 'var(--majaz-ivory)',
                     fontSize: '0.875rem'
                   }}
                 />
                 {profileErrors.phone && (
-                  <p style={{ color: '#EF4444', fontSize: '0.75rem', marginTop: 'var(--spacing-xs)' }}>
+                  <p style={{ color: '#D4AF37', fontSize: '0.75rem', marginTop: 'var(--spacing-xs)' }}>
                     {profileErrors.phone.message}
                   </p>
                 )}
@@ -263,7 +263,7 @@ export default function ProfilePage() {
               <div>
                 <label style={{
                   display: 'block',
-                  color: 'var(--majaz-gold)',
+                  color: 'var(--gold)',
                   fontSize: '0.875rem',
                   marginBottom: 'var(--spacing-xs)',
                   fontWeight: '600'
@@ -291,7 +291,7 @@ export default function ProfilePage() {
               <div>
                 <label style={{
                   display: 'block',
-                  color: 'var(--majaz-gold)',
+                  color: 'var(--gold)',
                   fontSize: '0.875rem',
                   marginBottom: 'var(--spacing-xs)',
                   fontWeight: '600'
@@ -333,7 +333,7 @@ export default function ProfilePage() {
         <GlassCard>
           <h2 style={{
             fontSize: '1.5rem',
-            color: 'var(--majaz-gold)',
+            color: 'var(--gold)',
             marginBottom: 'var(--spacing-lg)',
             fontFamily: 'var(--font-display)'
           }}>
@@ -346,7 +346,7 @@ export default function ProfilePage() {
               <div>
                 <label style={{
                   display: 'block',
-                  color: 'var(--majaz-gold)',
+                  color: 'var(--gold)',
                   fontSize: '0.875rem',
                   marginBottom: 'var(--spacing-xs)',
                   fontWeight: '600'
@@ -360,14 +360,14 @@ export default function ProfilePage() {
                     width: '100%',
                     padding: 'var(--spacing-md)',
                     background: 'rgba(212, 175, 55, 0.05)',
-                    border: `1px solid ${passwordErrors.currentPassword ? '#EF4444' : 'rgba(212, 175, 55, 0.3)'}`,
+                    border: `1px solid ${passwordErrors.currentPassword ? '#D4AF37' : 'rgba(212, 175, 55, 0.3)'}`,
                     borderRadius: 'var(--radius-md)',
                     color: 'var(--majaz-ivory)',
                     fontSize: '0.875rem'
                   }}
                 />
                 {passwordErrors.currentPassword && (
-                  <p style={{ color: '#EF4444', fontSize: '0.75rem', marginTop: 'var(--spacing-xs)' }}>
+                  <p style={{ color: '#D4AF37', fontSize: '0.75rem', marginTop: 'var(--spacing-xs)' }}>
                     {passwordErrors.currentPassword.message}
                   </p>
                 )}
@@ -377,7 +377,7 @@ export default function ProfilePage() {
               <div>
                 <label style={{
                   display: 'block',
-                  color: 'var(--majaz-gold)',
+                  color: 'var(--gold)',
                   fontSize: '0.875rem',
                   marginBottom: 'var(--spacing-xs)',
                   fontWeight: '600'
@@ -391,14 +391,14 @@ export default function ProfilePage() {
                     width: '100%',
                     padding: 'var(--spacing-md)',
                     background: 'rgba(212, 175, 55, 0.05)',
-                    border: `1px solid ${passwordErrors.newPassword ? '#EF4444' : 'rgba(212, 175, 55, 0.3)'}`,
+                    border: `1px solid ${passwordErrors.newPassword ? '#D4AF37' : 'rgba(212, 175, 55, 0.3)'}`,
                     borderRadius: 'var(--radius-md)',
                     color: 'var(--majaz-ivory)',
                     fontSize: '0.875rem'
                   }}
                 />
                 {passwordErrors.newPassword && (
-                  <p style={{ color: '#EF4444', fontSize: '0.75rem', marginTop: 'var(--spacing-xs)' }}>
+                  <p style={{ color: '#D4AF37', fontSize: '0.75rem', marginTop: 'var(--spacing-xs)' }}>
                     {passwordErrors.newPassword.message}
                   </p>
                 )}
@@ -408,7 +408,7 @@ export default function ProfilePage() {
               <div>
                 <label style={{
                   display: 'block',
-                  color: 'var(--majaz-gold)',
+                  color: 'var(--gold)',
                   fontSize: '0.875rem',
                   marginBottom: 'var(--spacing-xs)',
                   fontWeight: '600'
@@ -422,14 +422,14 @@ export default function ProfilePage() {
                     width: '100%',
                     padding: 'var(--spacing-md)',
                     background: 'rgba(212, 175, 55, 0.05)',
-                    border: `1px solid ${passwordErrors.confirmPassword ? '#EF4444' : 'rgba(212, 175, 55, 0.3)'}`,
+                    border: `1px solid ${passwordErrors.confirmPassword ? '#D4AF37' : 'rgba(212, 175, 55, 0.3)'}`,
                     borderRadius: 'var(--radius-md)',
                     color: 'var(--majaz-ivory)',
                     fontSize: '0.875rem'
                   }}
                 />
                 {passwordErrors.confirmPassword && (
-                  <p style={{ color: '#EF4444', fontSize: '0.75rem', marginTop: 'var(--spacing-xs)' }}>
+                  <p style={{ color: '#D4AF37', fontSize: '0.75rem', marginTop: 'var(--spacing-xs)' }}>
                     {passwordErrors.confirmPassword.message}
                   </p>
                 )}
@@ -452,7 +452,7 @@ export default function ProfilePage() {
         <GlassCard>
           <h2 style={{
             fontSize: '1.5rem',
-            color: '#EF4444',
+            color: '#D4AF37',
             marginBottom: 'var(--spacing-lg)',
             fontFamily: 'var(--font-display)'
           }}>
@@ -461,13 +461,13 @@ export default function ProfilePage() {
 
           <div style={{
             padding: 'var(--spacing-lg)',
-            background: 'rgba(239, 68, 68, 0.1)',
+            background: 'rgba(212, 175, 55, 0.1)',
             borderRadius: 'var(--radius-md)',
-            border: '1px solid rgba(239, 68, 68, 0.3)',
+            border: '1px solid rgba(212, 175, 55, 0.3)',
             marginBottom: 'var(--spacing-md)'
           }}>
             <h3 style={{
-              color: '#EF4444',
+              color: '#D4AF37',
               fontSize: '1rem',
               marginBottom: 'var(--spacing-sm)',
               fontWeight: '600'
@@ -486,12 +486,12 @@ export default function ProfilePage() {
             {showDeleteConfirm && (
               <div style={{
                 padding: 'var(--spacing-md)',
-                background: 'rgba(239, 68, 68, 0.2)',
+                background: 'rgba(212, 175, 55, 0.2)',
                 borderRadius: 'var(--radius-md)',
                 marginBottom: 'var(--spacing-md)'
               }}>
                 <p style={{
-                  color: '#EF4444',
+                  color: '#D4AF37',
                   fontSize: '0.875rem',
                   fontWeight: '600',
                   marginBottom: 'var(--spacing-sm)'
@@ -515,7 +515,7 @@ export default function ProfilePage() {
                     onClick={handleDeleteAccount}
                     style={{
                       padding: 'var(--spacing-md) var(--spacing-lg)',
-                      background: '#EF4444',
+                      background: '#D4AF37',
                       color: 'white',
                       border: 'none',
                       borderRadius: 'var(--radius-md)',
@@ -548,8 +548,8 @@ export default function ProfilePage() {
                   style={{
                     padding: 'var(--spacing-md) var(--spacing-lg)',
                     background: 'transparent',
-                    color: '#EF4444',
-                    border: '2px solid #EF4444',
+                    color: '#D4AF37',
+                    border: '2px solid #D4AF37',
                     borderRadius: 'var(--radius-md)',
                     fontWeight: '600',
                     cursor: 'pointer',
@@ -567,7 +567,7 @@ export default function ProfilePage() {
         <GlassCard>
           <h2 style={{
             fontSize: '1.5rem',
-            color: 'var(--majaz-gold)',
+            color: 'var(--gold)',
             marginBottom: 'var(--spacing-lg)',
             fontFamily: 'var(--font-display)'
           }}>
@@ -633,7 +633,7 @@ export default function ProfilePage() {
                 Total Spent
               </p>
               <p style={{
-                color: 'var(--majaz-gold)',
+                color: 'var(--gold)',
                 fontSize: '1.25rem',
                 fontWeight: '700'
               }}>
@@ -643,12 +643,12 @@ export default function ProfilePage() {
 
             <div style={{
               padding: 'var(--spacing-md)',
-              background: 'rgba(16, 185, 129, 0.1)',
+              background: 'rgba(212, 175, 55, 0.1)',
               borderRadius: 'var(--radius-md)',
-              border: '1px solid rgba(16, 185, 129, 0.3)'
+              border: '1px solid rgba(212, 175, 55, 0.3)'
             }}>
               <p style={{
-                color: '#10B981',
+                color: '#D4AF37',
                 fontSize: '0.875rem',
                 lineHeight: '1.6'
               }}>

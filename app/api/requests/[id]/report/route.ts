@@ -105,7 +105,7 @@ export async function GET(
           reportId: report.id,
         }
       });
-    } else {
+    } 
       // Return HTML content
       return new NextResponse(report.htmlContent, {
         headers: {
@@ -113,7 +113,7 @@ export async function GET(
           "Content-Disposition": `inline; filename="majaz-report-${params.id}.html"`,
         }
       });
-    }
+    
 
   } catch (error) {
     console.error("Get report error:", error);

@@ -28,7 +28,7 @@ export default function Facts() {
                         fontFamily: 'var(--font-display)',
                         fontWeight: '300',
                         fontSize: '3.5rem',
-                        color: 'var(--majaz-gold)',
+                        color: 'var(--gold)',
                         letterSpacing: '0.05em'
                       }}
                     >

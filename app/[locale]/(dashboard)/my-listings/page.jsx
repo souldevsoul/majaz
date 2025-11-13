@@ -4,8 +4,8 @@ import HeaderDashboard from "@/components/headers/HeaderDashboard";
 import React from "react";
 
 export const metadata = {
-  title: "My Listings || Boxcar - React Nextjs Car Template",
-  description: "Boxcar - React Nextjs Car Template",
+  title: "My Listings || MAJAZ - Premium Vehicle Assessment",
+  description: "MAJAZ - Premium Vehicle Assessment",
 };
 export default function MyListingsPage() {
   return (
@@ -14,7 +14,7 @@ export default function MyListingsPage() {
         <HeaderDashboard />
 
         <MyListings />
-        <Footer1 parentClass="boxcar-footer footer-style-one v2" />
+        <Footer1 parentClass="footer-style-one v2" />
       </div>
     </>
   );

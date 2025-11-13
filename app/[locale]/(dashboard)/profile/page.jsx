@@ -5,8 +5,8 @@ import HeaderDashboard from "@/components/headers/HeaderDashboard";
 import React from "react";
 
 export const metadata = {
-  title: "Profile || Boxcar - React Nextjs Car Template",
-  description: "Boxcar - React Nextjs Car Template",
+  title: "Profile || MAJAZ - Premium Vehicle Assessment",
+  description: "MAJAZ - Premium Vehicle Assessment",
 };
 export default function ProfilePage() {
   return (
@@ -15,7 +15,7 @@ export default function ProfilePage() {
         <HeaderDashboard />
 
         <Profile />
-        <Footer1 parentClass="boxcar-footer footer-style-one v2" />
+        <Footer1 parentClass="footer-style-one v2" />
       </div>
     </>
   );

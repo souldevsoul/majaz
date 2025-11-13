@@ -292,7 +292,7 @@ export default function CheckoutPage() {
                 {isArabic ? 'إتمام عملية الشراء' : 'Complete Your Purchase'}
               </h1>
 
-              <form onSubmit={handleSubmit} className="checkout-form">
+              <form onSubmit={(e) => { e.preventDefault(); handleInitiatePayment(); }} className="checkout-form">
                 {/* Contact Information */}
                 <div className="form-section">
                   <h3 className="section-title">

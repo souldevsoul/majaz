@@ -1,15 +1,15 @@
 import { NextRequest } from 'next/server'
-import { textToSpeech } from '@/lib/elevenlabs'
+import { streamTextToSpeech } from '@/lib/elevenlabs'
 
 export async function POST(req: NextRequest) {
   try {
     const { text, voiceId } = await req.json()
 
-    const audioStream = await textToSpeech(text, voiceId)
+    const audioStream = await streamTextToSpeech(text, voiceId)
 
     // Convert stream to buffer
     const chunks: Buffer[] = []
-    for await (const chunk of audioStream) {
+    for await (const chunk of audioStream as any) {
       chunks.push(Buffer.from(chunk))
     }
     const audioBuffer = Buffer.concat(chunks)

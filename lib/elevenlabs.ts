@@ -9,10 +9,9 @@ export async function textToSpeech(text: string, voiceId: string = 'pNInz6obpgDQ
   // Alternative: 'EXAVITQu4vr4xnSDxMaL' for Bella (professional American female)
 
   try {
-    const audio = await elevenlabs.generate({
-      voice: voiceId,
+    const audio = await elevenlabs.textToSpeech.convert(voiceId, {
       text,
-      model_id: 'eleven_multilingual_v2',
+      modelId: 'eleven_multilingual_v2',
     })
 
     return audio
@@ -24,11 +23,10 @@ export async function textToSpeech(text: string, voiceId: string = 'pNInz6obpgDQ
 
 export async function streamTextToSpeech(text: string, voiceId: string = 'pNInz6obpgDQGcFmaJgB') {
   try {
-    const audioStream = await elevenlabs.generate({
-      voice: voiceId,
+    const audioStream = await elevenlabs.textToSpeech.convert(voiceId, {
       text,
-      model_id: 'eleven_multilingual_v2',
-      stream: true,
+      modelId: 'eleven_multilingual_v2',
+      outputFormat: 'mp3_44100_128',
     })
 
     return audioStream

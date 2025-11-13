@@ -38,7 +38,7 @@ const getTeamMember = (id: string): TeamMember | null => {
       image: '/images/team/member-1.jpg',
       specialization: 'Business Strategy & Operations',
       bio: 'Ahmed brings over 15 years of experience in the automotive industry, with a proven track record in building successful vehicle assessment businesses across the Middle East. His vision has transformed Majaz into the leading luxury vehicle assessment service in the UAE.',
-      email: 'ahmed@majaz.ae',
+      email: 'support@majaz.ae',
       phone: '+971 50 123 4567',
       linkedin: 'https://linkedin.com/in/ahmed-almansouri',
       stats: {
@@ -57,7 +57,7 @@ const getTeamMember = (id: string): TeamMember | null => {
       image: '/images/team/member-2.jpg',
       specialization: 'Automotive Engineering',
       bio: 'Sarah is a certified automotive engineer with extensive experience in luxury vehicle diagnostics and quality assurance. She leads our inspection team with precision and dedication to excellence.',
-      email: 'sarah@majaz.ae',
+      email: 'support@majaz.ae',
       phone: '+971 50 123 4568',
       linkedin: 'https://linkedin.com/in/sarah-johnson',
       stats: {

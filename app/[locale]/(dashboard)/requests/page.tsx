@@ -210,7 +210,7 @@ export default function RequestsPage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: 'var(--majaz-gold)'
+        color: 'var(--gold)'
       }}>
         <div>{tCommon('loading')}</div>
       </div>
@@ -232,7 +232,7 @@ export default function RequestsPage() {
           <h1 style={{
             fontSize: '2.5rem',
             fontFamily: 'var(--font-display)',
-            color: 'var(--majaz-gold)',
+            color: 'var(--gold)',
             marginBottom: 'var(--spacing-xs)'
           }}>
             {t('title')}
@@ -257,7 +257,7 @@ export default function RequestsPage() {
           <div>
             <label style={{
               display: 'block',
-              color: 'var(--majaz-gold)',
+              color: 'var(--gold)',
               fontSize: '0.875rem',
               marginBottom: 'var(--spacing-xs)',
               fontWeight: '600'
@@ -285,7 +285,7 @@ export default function RequestsPage() {
           <div>
             <label style={{
               display: 'block',
-              color: 'var(--majaz-gold)',
+              color: 'var(--gold)',
               fontSize: '0.875rem',
               marginBottom: 'var(--spacing-xs)',
               fontWeight: '600'
@@ -321,7 +321,7 @@ export default function RequestsPage() {
           <div>
             <label style={{
               display: 'block',
-              color: 'var(--majaz-gold)',
+              color: 'var(--gold)',
               fontSize: '0.875rem',
               marginBottom: 'var(--spacing-xs)',
               fontWeight: '600'
@@ -353,7 +353,7 @@ export default function RequestsPage() {
           <div>
             <label style={{
               display: 'block',
-              color: 'var(--majaz-gold)',
+              color: 'var(--gold)',
               fontSize: '0.875rem',
               marginBottom: 'var(--spacing-xs)',
               fontWeight: '600'
@@ -448,7 +448,7 @@ export default function RequestsPage() {
                       }}
                     >
                       <td style={tableCellStyle}>
-                        <span style={{ color: 'var(--majaz-gold)', fontWeight: '600' }}>
+                        <span style={{ color: 'var(--gold)', fontWeight: '600' }}>
                           {request.id}
                         </span>
                       </td>
@@ -476,7 +476,7 @@ export default function RequestsPage() {
                         </span>
                       </td>
                       <td style={tableCellStyle}>
-                        <span style={{ color: 'var(--majaz-gold)', fontWeight: '600' }}>
+                        <span style={{ color: 'var(--gold)', fontWeight: '600' }}>
                           {request.amount}
                         </span>
                       </td>
@@ -542,7 +542,7 @@ export default function RequestsPage() {
 const tableHeaderStyle: React.CSSProperties = {
   padding: 'var(--spacing-md)',
   textAlign: 'left',
-  color: 'var(--majaz-gold)',
+  color: 'var(--gold)',
   fontSize: '0.875rem',
   fontWeight: '700',
   textTransform: 'uppercase',

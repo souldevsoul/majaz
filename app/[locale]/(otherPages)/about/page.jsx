@@ -11,13 +11,13 @@ import Faqs from "@/components/otherPages/Faqs";
 import React from "react";
 
 export const metadata = {
-  title: "About || Boxcar - React Nextjs Car Template",
-  description: "Boxcar - React Nextjs Car Template",
+  title: "About || MAJAZ - Premium Vehicle Assessment",
+  description: "MAJAZ - Premium Vehicle Assessment",
 };
 export default function AboutPage() {
   return (
     <>
-      <Header1 headerClass="boxcar-header header-style-v1 style-two inner-header cus-style-1" />
+      <Header1 headerClass="majaz-header header-style-v1 style-two inner-header cus-style-1" />
       <section className="about-inner-one layout-radius">
         <About />
         <Features2 />
@@ -29,7 +29,7 @@ export default function AboutPage() {
         <Testimonials />
         <Faqs />
       </section>
-      <Footer1 parentClass="boxcar-footer footer-style-one v1 cus-st-1" />
+      <Footer1 parentClass="footer-style-one v1 cus-st-1" />
     </>
   );
 }

@@ -18,9 +18,9 @@ const requestSchema = z.object({
   (data) => {
     if (data.mode === 'sourcing') {
       return data.brief && data.brief.length >= 10
-    } else {
+    } 
       return data.url && data.url.length > 0
-    }
+    
   },
   {
     message: "URL is required for Remote/Onsite, Brief is required for Sourcing",
@@ -189,7 +189,7 @@ export default function NewRequestPage() {
         <h1 style={{
           fontSize: '2.5rem',
           fontFamily: 'var(--font-display)',
-          color: 'var(--majaz-gold)',
+          color: 'var(--gold)',
           marginBottom: 'var(--spacing-xs)'
         }}>
           {t('title')}
@@ -211,7 +211,7 @@ export default function NewRequestPage() {
             <GlassCard>
               <h2 style={{
                 fontSize: '1.25rem',
-                color: 'var(--majaz-gold)',
+                color: 'var(--gold)',
                 marginBottom: 'var(--spacing-md)',
                 fontFamily: 'var(--font-display)'
               }}>
@@ -225,7 +225,7 @@ export default function NewRequestPage() {
                     style={{
                       padding: 'var(--spacing-md)',
                       background: selectedMode === option.value ? 'rgba(212, 175, 55, 0.15)' : 'rgba(212, 175, 55, 0.05)',
-                      border: `2px solid ${selectedMode === option.value ? 'var(--majaz-gold)' : 'rgba(212, 175, 55, 0.2)'}`,
+                      border: `2px solid ${selectedMode === option.value ? 'var(--gold)' : 'rgba(212, 175, 55, 0.2)'}`,
                       borderRadius: 'var(--radius-md)',
                       cursor: 'pointer',
                       transition: 'all var(--transition-base)',
@@ -273,7 +273,7 @@ export default function NewRequestPage() {
             <GlassCard>
               <h2 style={{
                 fontSize: '1.25rem',
-                color: 'var(--majaz-gold)',
+                color: 'var(--gold)',
                 marginBottom: 'var(--spacing-md)',
                 fontFamily: 'var(--font-display)'
               }}>
@@ -291,7 +291,7 @@ export default function NewRequestPage() {
                     style={{
                       padding: 'var(--spacing-md)',
                       background: selectedTier === option.value ? 'rgba(212, 175, 55, 0.15)' : 'rgba(212, 175, 55, 0.05)',
-                      border: `2px solid ${selectedTier === option.value ? 'var(--majaz-gold)' : 'rgba(212, 175, 55, 0.2)'}`,
+                      border: `2px solid ${selectedTier === option.value ? 'var(--gold)' : 'rgba(212, 175, 55, 0.2)'}`,
                       borderRadius: 'var(--radius-md)',
                       cursor: 'pointer',
                       transition: 'all var(--transition-base)',
@@ -305,7 +305,7 @@ export default function NewRequestPage() {
                       style={{ display: 'none' }}
                     />
                     <div style={{
-                      color: selectedTier === option.value ? 'var(--majaz-gold)' : 'var(--majaz-ivory)',
+                      color: selectedTier === option.value ? 'var(--gold)' : 'var(--majaz-ivory)',
                       fontWeight: '600',
                       fontSize: '0.875rem'
                     }}>
@@ -321,7 +321,7 @@ export default function NewRequestPage() {
               <GlassCard>
                 <h2 style={{
                   fontSize: '1.25rem',
-                  color: 'var(--majaz-gold)',
+                  color: 'var(--gold)',
                   marginBottom: 'var(--spacing-md)',
                   fontFamily: 'var(--font-display)'
                 }}>
@@ -355,7 +355,7 @@ export default function NewRequestPage() {
               <GlassCard>
                 <h2 style={{
                   fontSize: '1.25rem',
-                  color: 'var(--majaz-gold)',
+                  color: 'var(--gold)',
                   marginBottom: 'var(--spacing-md)',
                   fontFamily: 'var(--font-display)'
                 }}>
@@ -391,7 +391,7 @@ export default function NewRequestPage() {
             <GlassCard style={{ position: 'sticky', top: 'var(--spacing-xl)' }}>
               <h2 style={{
                 fontSize: '1.5rem',
-                color: 'var(--majaz-gold)',
+                color: 'var(--gold)',
                 marginBottom: 'var(--spacing-lg)',
                 fontFamily: 'var(--font-display)'
               }}>
@@ -412,7 +412,7 @@ export default function NewRequestPage() {
                     padding: 'var(--spacing-lg)',
                     background: 'rgba(212, 175, 55, 0.1)',
                     borderRadius: 'var(--radius-lg)',
-                    border: '2px solid var(--majaz-gold)',
+                    border: '2px solid var(--gold)',
                     marginBottom: 'var(--spacing-lg)',
                     textAlign: 'center'
                   }}>
@@ -426,7 +426,7 @@ export default function NewRequestPage() {
                     <p style={{
                       fontSize: '3rem',
                       fontWeight: '700',
-                      color: 'var(--majaz-gold)',
+                      color: 'var(--gold)',
                       fontFamily: 'var(--font-display)',
                       marginBottom: 'var(--spacing-xs)'
                     }}>
@@ -442,7 +442,7 @@ export default function NewRequestPage() {
 
                   <div style={{ marginBottom: 'var(--spacing-lg)' }}>
                     <h3 style={{
-                      color: 'var(--majaz-gold)',
+                      color: 'var(--gold)',
                       fontSize: '1rem',
                       marginBottom: 'var(--spacing-md)',
                       fontWeight: '600'
@@ -467,7 +467,7 @@ export default function NewRequestPage() {
                             gap: 'var(--spacing-sm)'
                           }}
                         >
-                          <span style={{ color: 'var(--majaz-gold)' }}>✓</span>
+                          <span style={{ color: 'var(--gold)' }}>✓</span>
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -496,7 +496,7 @@ export default function NewRequestPage() {
                       fontSize: '0.75rem',
                       lineHeight: '1.6'
                     }}>
-                      <strong style={{ color: 'var(--majaz-gold)' }}>Secure Payment:</strong> You will be redirected to Stripe for secure payment processing. Your card information is never stored on our servers.
+                      <strong style={{ color: 'var(--gold)' }}>Secure Payment:</strong> You will be redirected to Stripe for secure payment processing. Your card information is never stored on our servers.
                     </p>
                   </div>
                 </>

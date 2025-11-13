@@ -187,14 +187,14 @@ export default function MessagesPage() {
       return `${diffInMinutes}m ago`
     } else if (diffInHours < 24) {
       return `${diffInHours}h ago`
-    } else {
+    } 
       return date.toLocaleDateString('en-US', {
         month: 'short',
         day: 'numeric',
         hour: '2-digit',
         minute: '2-digit'
       })
-    }
+    
   }
 
   if (loading) {
@@ -204,7 +204,7 @@ export default function MessagesPage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: 'var(--majaz-gold)'
+        color: 'var(--gold)'
       }}>
         <div>{tCommon('loading')}</div>
       </div>
@@ -220,7 +220,7 @@ export default function MessagesPage() {
         <h1 style={{
           fontSize: '2.5rem',
           fontFamily: 'var(--font-display)',
-          color: 'var(--majaz-gold)',
+          color: 'var(--gold)',
           marginBottom: 'var(--spacing-xs)'
         }}>
           {t('messages')}
@@ -241,7 +241,7 @@ export default function MessagesPage() {
         <GlassCard style={{ height: 'fit-content', maxHeight: '80vh', overflow: 'auto' }}>
           <h2 style={{
             fontSize: '1.25rem',
-            color: 'var(--majaz-gold)',
+            color: 'var(--gold)',
             marginBottom: 'var(--spacing-lg)',
             fontFamily: 'var(--font-display)',
             position: 'sticky',
@@ -282,7 +282,7 @@ export default function MessagesPage() {
                       : 'rgba(212, 175, 55, 0.05)',
                     border: `1px solid ${
                       selectedThread?.requestId === thread.requestId
-                        ? 'var(--majaz-gold)'
+                        ? 'var(--gold)'
                         : 'rgba(212, 175, 55, 0.2)'
                     }`,
                     borderRadius: 'var(--radius-md)',
@@ -309,7 +309,7 @@ export default function MessagesPage() {
                       width: '20px',
                       height: '20px',
                       borderRadius: '50%',
-                      background: 'var(--majaz-gold)',
+                      background: 'var(--gold)',
                       color: 'var(--majaz-black)',
                       display: 'flex',
                       alignItems: 'center',
@@ -351,7 +351,7 @@ export default function MessagesPage() {
                   </p>
 
                   <p style={{
-                    color: 'var(--majaz-gold)',
+                    color: 'var(--gold)',
                     fontSize: '0.75rem',
                     fontWeight: '600'
                   }}>
@@ -385,7 +385,7 @@ export default function MessagesPage() {
                 <div>
                   <h2 style={{
                     fontSize: '1.5rem',
-                    color: 'var(--majaz-gold)',
+                    color: 'var(--gold)',
                     marginBottom: 'var(--spacing-xs)',
                     fontFamily: 'var(--font-display)'
                   }}>
@@ -422,12 +422,12 @@ export default function MessagesPage() {
                     padding: 'var(--spacing-md)',
                     background: msg.from === 'operator'
                       ? 'rgba(212, 175, 55, 0.1)'
-                      : 'rgba(59, 130, 246, 0.1)',
+                      : 'rgba(212, 175, 55, 0.1)',
                     borderRadius: 'var(--radius-md)',
                     border: `1px solid ${
                       msg.from === 'operator'
                         ? 'rgba(212, 175, 55, 0.3)'
-                        : 'rgba(59, 130, 246, 0.3)'
+                        : 'rgba(212, 175, 55, 0.3)'
                     }`,
                     marginLeft: msg.from === 'user' ? 'var(--spacing-2xl)' : '0',
                     marginRight: msg.from === 'operator' ? 'var(--spacing-2xl)' : '0',
@@ -442,11 +442,11 @@ export default function MessagesPage() {
                     alignItems: 'center'
                   }}>
                     <span style={{
-                      color: 'var(--majaz-gold)',
+                      color: 'var(--gold)',
                       fontSize: '0.875rem',
                       fontWeight: '600'
                     }}>
-                      {msg.from === 'operator' ? 'MAJAZ Team' : 'You'}
+                      {msg.from === 'operator' ? 'MAJAZ' : 'You'}
                     </span>
                     <span style={{
                       color: 'var(--majaz-text-muted)',
@@ -476,7 +476,7 @@ export default function MessagesPage() {
                           key={i}
                           href="#"
                           style={{
-                            color: 'var(--majaz-gold)',
+                            color: 'var(--gold)',
                             fontSize: '0.875rem',
                             textDecoration: 'underline',
                             display: 'inline-flex',
@@ -535,7 +535,7 @@ export default function MessagesPage() {
                     background: 'transparent',
                     border: '1px solid rgba(212, 175, 55, 0.3)',
                     borderRadius: 'var(--radius-md)',
-                    color: 'var(--majaz-gold)',
+                    color: 'var(--gold)',
                     cursor: 'pointer',
                     fontSize: '1.5rem'
                   }}

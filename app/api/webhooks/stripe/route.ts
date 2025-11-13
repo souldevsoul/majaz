@@ -36,20 +36,23 @@ export async function POST(request: NextRequest) {
 
     // Handle the event
     switch (event.type) {
-      case "payment_intent.succeeded":
+      case "payment_intent.succeeded": {
         const paymentIntent = event.data.object as Stripe.PaymentIntent;
         await handlePaymentSuccess(paymentIntent);
         break;
+      }
 
-      case "payment_intent.payment_failed":
+      case "payment_intent.payment_failed": {
         const failedPayment = event.data.object as Stripe.PaymentIntent;
         await handlePaymentFailure(failedPayment);
         break;
+      }
 
-      case "charge.refunded":
+      case "charge.refunded": {
         const refund = event.data.object as Stripe.Charge;
         await handleRefund(refund);
         break;
+      }
 
       default:
         console.log(`Unhandled event type: ${event.type}`);

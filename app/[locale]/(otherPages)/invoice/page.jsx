@@ -2,8 +2,8 @@ import Invoice from "@/components/otherPages/Invoice";
 import React from "react";
 
 export const metadata = {
-  title: "Invoice || Boxcar - React Nextjs Car Template",
-  description: "Boxcar - React Nextjs Car Template",
+  title: "Invoice || MAJAZ - Premium Vehicle Assessment",
+  description: "MAJAZ - Premium Vehicle Assessment",
 };
 export default function InvoicePage() {
   return (

@@ -43,7 +43,7 @@ export default function AboutPage() {
       <section className="relative h-[60vh] min-h-[500px] w-full overflow-hidden">
         <Image
           src="/images/brand/about-section-team.jpg"
-          alt="Majaz Team"
+          alt="MAJAZ Team"
           fill
           priority
           className="object-cover"

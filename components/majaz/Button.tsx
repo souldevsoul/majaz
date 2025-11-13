@@ -100,24 +100,24 @@ const buttonStyles = `
 
   .btn-secondary {
     background: var(--majaz-bg-surface);
-    color: var(--majaz-gold);
+    color: var(--gold);
     border: 1px solid var(--majaz-border);
   }
 
   .btn-secondary:hover:not(.disabled) {
-    background: var(--majaz-gold);
+    background: var(--gold);
     color: var(--majaz-black);
-    border-color: var(--majaz-gold);
+    border-color: var(--gold);
   }
 
   .btn-outline {
     background: transparent;
-    color: var(--majaz-gold);
-    border: 2px solid var(--majaz-gold);
+    color: var(--gold);
+    border: 2px solid var(--gold);
   }
 
   .btn-outline:hover:not(.disabled) {
-    background: var(--majaz-gold);
+    background: var(--gold);
     color: var(--majaz-black);
   }
 
